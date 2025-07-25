@@ -13,3 +13,11 @@ Bootstrap 기반 반응형 광고 이벤트 페이지를 통해, 고객에게 �
 | 개발 | 성현 |
 | 개발 / 디자인 | 소희, 아현 |
 | 디자인 | 예슬 |
+
+레이아웃 페이지: https://m.site.naver.com/1Nnl8
+
+<img src="https://mun-sunghyun.github.io/moncasa_signature_webapp/infor/layout.png">
+
+작업페이지: https://m.site.naver.com/1Nnm5
+
+<img src="https://mun-sunghyun.github.io/moncasa_signature_webapp/infor/UXUI.png">
