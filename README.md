@@ -23,7 +23,7 @@ Bootstrap 기반 반응형 광고 이벤트 페이지를 통해, 고객에게 �
 <img src="https://mun-sunghyun.github.io/moncasa_signature_webapp/infor/UXUI.png">
 
 🏷️ 말머리
-*feat: 새로운 기능,컨텐츠 추가 (feature)
+- feat: 새로운 기능,컨텐츠 추가 (feature)
 *perf: 성능 개선
 *refactor: 코드 리팩토링 (기능 변경 없이 코드 구조 개선)
 *style: 코드 포맷팅, 세미콜론 누락 등 코드 변경이 없는 스타일 관련 수정
