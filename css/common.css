@@ -70,6 +70,9 @@
   min-height: 100vh;
 }
 
+.ul-text {
+  font-family: "Pretendard-500";
+}
 
 /* event section start */
 .minimal_div{
