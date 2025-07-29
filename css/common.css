@@ -1,3 +1,46 @@
+/* 공통 클래스 */
+
+.col-4 {
+  width: 33.333%;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.aic {
+  align-items: center;
+}
+
+.jcb {
+  justify-content: space-between;
+}
+
+.d-block {
+  display: block;
+}
+
+.container_fluid {
+  padding: 0 0rem;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+
 .footer{
   font-size:10px;
   color:white
@@ -11,7 +54,7 @@
   color:white;
 }
 
-.main_point{
+.main_point_bg{
     background-color: #713131;
 }
 
@@ -22,81 +65,128 @@
 #hd {
     padding: 1rem 0;
 }
+
+.min {
+  min-height: 100vh;
+}
+
+
+/* event section start */
 .minimal_div{
-  width: 33.333%;
+  /* width: 33.333%;
   height: 1080px;
   background-image: url('../img/minimal.jpg');
   background-repeat: no-repeat;
-  user-select: none;
+  user-select: none; */
+  background-image: url(../img/minimal.jpg);
+  background-size: cover;
+  background-position: center;
+  
 }
-.minimal_text{
-  font-size: 64px;
+.minimal_main_text{
+  font-size: 130px;
   color: #713131;
-  font-weight: bold;
-  margin-top: 64px;
-  margin-left: 32px;
+  margin-top: 450px;
+  font-family: "Pretendard-700";
 }
 .minimal_middle_text{
+  font-size: 64px;
+  color: #713131;
+  margin-top: 64px;
+  margin-left: 32px;
+  font-family: "Pretendard-700";
+}
+.minimal_bottom_text{
   font-size: 30px;
   color: #713131;
   margin-left: 32px;
+  font-family: "Pretendard-400";
 }
-.minimal_bottom_text{
-  font-size: 150px;
-  color: #713131;
-  font-weight: bold;
-  margin-top: 450px;
-  margin-left: 32px;
-}
+
 .upcycling_div{
-  width: 33.333%;
+  /* width: 33.333%;
   height: 1080px;
   background-image: url('../img/upcycling.jpg');
   background-repeat: no-repeat;
-  user-select: none;
+  user-select: none; */
+  background-image: url(../img/upcycling.jpg);
+  background-size: cover;
+  background-position: center;
 }
-.upcycling_text{
+.upcycling_main_text{
   transform: rotate(-90deg);
   transform-origin: left top;
   margin-top: 690px;
-  font-size: 150px;
-  font-weight: bold;
+  font-size: 130px;
   color:white;
+  font-family: "Pretendard-700";
 }
 .upcycling_middle_text{
   font-size: 55px;
-  font-weight: bold;
   color:white;
   margin-top: -180px;
   margin-left: 32px;
+  font-family: "Pretendard-700";
 }
 .upcycling_bottom_text{
   font-size: 30px;
   color:white;
   margin-left: 32px;
+  font-family: "Pretendard-400";
 }
+
 .primium_div{
-  width: 33.333%;
+  /* width: 33.333%;
   height: 1080px;
   background-image: url('../img/Primium.jpg');
   background-repeat: no-repeat;
-  user-select: none;
+  user-select: none; */
+  background-image: url(../img/primium.jpg);
+  background-size: cover;
+  background-position: center;
 }
-.primium_text{
-  font-size: 150px;
-  font-weight: bold;
+.primium_main_text{
+  font-size: 130px;
   color:white;
   margin-top: 50px;
+  font-family: "Pretendard-700";
 }
 .primium_middle_text{
   font-size: 64px;
-  font-weight: bold;
   color:white;
   margin-top: 450px;
-  text-align: right
+  text-align: right;
+  font-family: "Pretendard-700";
 }
 .primium_bottom_text{
   font-size: 30px;
   color:white;
-  text-align: right
+  text-align: right;
+  font-family: "Pretendard-400";
+}
+
+@media (max-width: 768px) {
+  .minimal_div,
+  .upcycling_div,
+  .primium_div {
+    background-size: contain;
+  }
+
+}
+/* event section end */
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
