@@ -22,3 +22,81 @@
 #hd {
     padding: 1rem 0;
 }
+.minimal_div{
+  width: 33.333%;
+  height: 1080px;
+  background-image: url('../img/minimal.jpg');
+  background-repeat: no-repeat;
+  user-select: none;
+}
+.minimal_text{
+  font-size: 64px;
+  color: #713131;
+  font-weight: bold;
+  margin-top: 64px;
+  margin-left: 32px;
+}
+.minimal_middle_text{
+  font-size: 30px;
+  color: #713131;
+  margin-left: 32px;
+}
+.minimal_bottom_text{
+  font-size: 150px;
+  color: #713131;
+  font-weight: bold;
+  margin-top: 450px;
+  margin-left: 32px;
+}
+.upcycling_div{
+  width: 33.333%;
+  height: 1080px;
+  background-image: url('../img/upcycling.jpg');
+  background-repeat: no-repeat;
+  user-select: none;
+}
+.upcycling_text{
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  margin-top: 690px;
+  font-size: 150px;
+  font-weight: bold;
+  color:white;
+}
+.upcycling_middle_text{
+  font-size: 55px;
+  font-weight: bold;
+  color:white;
+  margin-top: -180px;
+  margin-left: 32px;
+}
+.upcycling_bottom_text{
+  font-size: 30px;
+  color:white;
+  margin-left: 32px;
+}
+.primium_div{
+  width: 33.333%;
+  height: 1080px;
+  background-image: url('../img/Primium.jpg');
+  background-repeat: no-repeat;
+  user-select: none;
+}
+.primium_text{
+  font-size: 150px;
+  font-weight: bold;
+  color:white;
+  margin-top: 50px;
+}
+.primium_middle_text{
+  font-size: 64px;
+  font-weight: bold;
+  color:white;
+  margin-top: 450px;
+  text-align: right
+}
+.primium_bottom_text{
+  font-size: 30px;
+  color:white;
+  text-align: right
+}
