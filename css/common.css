@@ -1,5 +1,13 @@
 /* 공통 클래스 */
 
+.container_1450 {
+  width: 1450px;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 1rem;
+  align-items: center;
+}
+
 .col-4 {
   width: 33.333%;
 }
@@ -83,8 +91,7 @@
   user-select: none; */
   background-image: url(../img/minimal.jpg);
   background-size: cover;
-  background-position: center;
-  
+  background-position: center
 }
 .minimal_main_text{
   font-size: 130px;
@@ -138,7 +145,7 @@
   font-family: "Pretendard-400";
 }
 
-.primium_div{
+.premium_div{
   /* width: 33.333%;
   height: 1080px;
   background-image: url('../img/Primium.jpg');
@@ -148,26 +155,25 @@
   background-size: cover;
   background-position: center;
 }
-.primium_main_text{
+.premium_main_text{
   font-size: 130px;
   color:white;
   margin-top: 50px;
   font-family: "Pretendard-700";
 }
-.primium_middle_text{
+.premium_middle_text{
   font-size: 64px;
   color:white;
   margin-top: 450px;
   text-align: right;
   font-family: "Pretendard-700";
 }
-.primium_bottom_text{
+.premium_bottom_text{
   font-size: 30px;
   color:white;
   text-align: right;
   font-family: "Pretendard-400";
 }
-
 /* event section end */
 
 .order-1 {
