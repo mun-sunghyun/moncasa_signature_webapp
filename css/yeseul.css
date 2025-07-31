@@ -1,0 +1,25 @@
+.max-width{
+    width:1500px;
+}
+.img3list ul{
+    gap: 20px;
+    list-style: none;
+}
+.img3title p{
+    font-size: 15px;
+}
+.img3title h3{
+    font-size: 50px;
+}.container {
+    width: 1450px;
+    height: 484px;
+    justify-content: space-between; /* 기존 정렬 유지 */
+}
+  button{
+    width: 173px;
+    height: 68px;
+    background-color: #713131;
+    appearance: 150px;
+    radius: 150px;
+    border-radius: 150px;
+  }
