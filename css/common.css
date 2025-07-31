@@ -70,6 +70,9 @@
   min-height: 100vh;
 }
 
+.ul-font {
+  font-family: "Pretendard-400";
+}
 
 /* event section start */
 .minimal_div{
@@ -165,14 +168,6 @@
   font-family: "Pretendard-400";
 }
 
-@media (max-width: 768px) {
-  .minimal_div,
-  .upcycling_div,
-  .primium_div {
-    background-size: contain;
-  }
-
-}
 /* event section end */
 
 .order-1 {
