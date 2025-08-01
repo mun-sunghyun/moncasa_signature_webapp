@@ -41,7 +41,7 @@ body {
 
   }
   
-  /* 아현수정 */
+
   .product_set img {
     display: flex;
     width: 300px;
@@ -50,7 +50,7 @@ body {
     justify-content: center;
     align-self: flex-start;
   }
-
+  
   .product_card {
     position: relative;
     max-width: 301px;
@@ -61,16 +61,7 @@ body {
             
   }
  
-
-  /* .imgfit{
-     height:300px;
-     overflow: hidden;
-  } */
-  .product_card img {
-    width: 100%;
-   
-  }
-   
+  
   .product_name {
     margin: 0;
     font-weight: 700;
@@ -96,12 +87,8 @@ body {
   .priceset{
     margin-top: 20px;
   }
-  /* 뱃지 */
 
-  .product_card1, .product_card2, .product_card3, .product_card4{
-    position: relative;
-    
-  }
+  /* 뱃지 */
   
 
 
@@ -201,11 +188,13 @@ body {
   }
 
   .adleft {
-    background-image: url(../img/upcycling.jpg);
+    background-image: url(../img/eco_banner1\ \(2\).jpg);
+    background-size: 100%
   }
   
   .adright {
-    background-image: url(../img/upcycling.png);
+    background-image: url(../img/eco_banner1\ \(1\).jpg);
+    background-size: 100%
   }
   
   .adleftright h3 {
@@ -226,3 +215,15 @@ body {
     height: 300px !important;
     overflow: hidden;
   }
+.product_card1 img{
+  transform: translateY(-20px);
+}
+.product_card2 img{
+  transform: translateY(-20px);
+}
+.product_card3 img{
+  transform: translateY(-100px);
+}
+.product_card4 img{
+  transform: translateY(-30px);
+}
