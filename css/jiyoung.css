@@ -1,123 +1,199 @@
 /* 수정할것 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     margin: 0;
-    font-family: "Arial", sans-serif;
+    font-family: "Montserrat","Pretendard", sans-serif;
     background: #fff;
+    font-weight: 400;
+    max-width: 1920px;
   }
    
   .ecoevent {
     max-width: 1450px;
-    margin: 0 auto;
+    margin: 0;
   }
 
-  
-  /* 스와이퍼 */
-  .swiper-slide{
-    background-color: orange;
-    text-align: end;
-    justify-content: center;
-   
-  }
-  .swiper{
-    height: 798px
 
-  }
-  
-  .container{
-    max-width: 783px;
-    display: flex;
-  }
+
 
   /* 상품 카드 */
 
+  #special-plans p{
+    margin-bottom: 0;
+  }
+
+  .img_bg{
+    background-color: #F5F5F5;
+  }
+
   .plan_project_special{
-    background-color: gray;
     max-height: 798px;
   }
 
   .product_set{
-    background-color: yellow;
-   
+    max-width: 650px;
+    max-height: 798px;
+
+    
+
+  }
+  
+  /* 아현수정 */
+  .product_set img {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
   }
 
   .product_card {
     position: relative;
-    border: 1px solid #ddd;
+    max-width: 301px;
+    max-height: 374px;
+    margin-bottom: 50px;
+
   
-        
+            
   }
-  
+ 
+
+  /* .imgfit{
+     height:300px;
+     overflow: hidden;
+  } */
   .product_card img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+   
   }
-  
+   
   .product_name {
-    margin: 10px 0 5px;
-    font-weight: bold;
+    margin: 0;
+    font-weight: 700;
+    font-size: 25px;
   }
   
   .product_price {
     color: #713131;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 25px;
   }
+  
   
   .product_original {
     color: #888;
-    font-size: 13px;
+    font-size: 20px;
+    font-weight: 500;
   }
 
   .product_original, .product_price{
     justify-content: space-between;
   }
-  
+  .priceset{
+    margin-top: 20px;
+  }
   /* 뱃지 */
+
+  .product_card1, .product_card2, .product_card3, .product_card4{
+    position: relative;
+    
+  }
+  
+
+
   .eco_badge, .discount_badge {
-    top: 10px;
     padding: 4px 8px;
-    font-size: 12px;
+    font-size: 15px;
+    font-weight: 700;
     border-radius: 50px;
     height: 55px;
     width: 55px;
-    position: absolute;  
+    
+
 }
-  
+  .badge {
+    margin-bottom: 10px;
+  }
   .eco_badge {
-    left: 10px;
-    background-color: #6a9c2e;
+    background-color: #777255;    
   }
   
   .discount_badge {
-    right: 10px;
-    background-color: #800000;
+    background-color: #713131;
+   
   }
   
   /* 기획전 이미지 */
+  
   .eco_event_img {
-    height: 100%;
+    max-height: 798px;
+    width: 667px;
+    background-image: url('../img/product/event2_main.jpg');
+    background-size: auto 100%;
   }
   
   .eco_event_img h3 {
-    font-size: 28px;
+    font-size: 100px;
+    font-weight: 700;
+
   }
   
   .eco_event_img h4 {
-    font-size: 20px;
+    font-size: 36px;
+    font-weight: 700;
     margin-bottom: 5px;
   }
-  
-  .eco_event_img p {
-    font-size: 16px;
-  }
-  .eco_event_img ul {
-    font-size: 30px;
+
+  .img_title{
+    padding-left: 50px;
   }
 
-  .eco_event_img ul {
-    font-size: 13;
+  .ecombt{
+    position: relative;
+    height: 798px;
+    width: 100%;
+    
   }
   
+  .ecombt1 p {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .ecombt1, .ecombt2{
+    padding: 30px;
+    
+
+  }
+  .ecombt2{
+    max-height: 140px;
+    align-items: end;
+    max-width: 667px;
+  }
+  .ecombt2 h3 { 
+    /* 20% */
+    font-size: 100px;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: end;
+  }
+
+  .textbadge p{
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 0 20px;
+    background-color: #1D220C80;
+    border-radius: 20px;
+    margin-bottom: 0;
+  }
+  .textbadge{
+    gap: 13px;
+  }
   /* 광고 배너 */
   .adleftright {
     margin-top: 70px;   
@@ -125,18 +201,28 @@ body {
   }
 
   .adleft {
-    background-color: #6a9c2e;
+    background-image: url(../img/upcycling.jpg);
   }
   
   .adright {
-    background-color: #2f4f4f;
+    background-image: url(../img/upcycling.png);
   }
   
   .adleftright h3 {
     font-size: 20px;
+    font-weight: 800;
   }
   
   .adleftright p {
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 800;
   }
- 
+
+  .adleft, .adright{
+    padding: 23px 20px;
+  }
+
+  .h300{
+    height: 300px !important;
+    overflow: hidden;
+  }

@@ -1,20 +1,8 @@
 /* 공통 클래스 */
 
-.col-4 {
-  width: 33.333%;
-}
 
-.flex-column {
-  flex-direction: column;
-}
 
-.justify-content-between {
-  justify-content: space-between;
-}
 
-.d-flex {
-  display: flex;
-}
 
 .aic {
   align-items: center;
@@ -24,21 +12,14 @@
   justify-content: space-between;
 }
 
-.d-block {
-  display: block;
-}
 
 .container_fluid {
   padding: 0 0rem;
 }
 
-.vh-100 {
-  height: 100vh;
-}
 
-.w-100 {
-  width: 100%;
-}
+
+
 
 
 .footer{
