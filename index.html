@@ -6,11 +6,13 @@
         
         <!-- 파비콘 -->
         <link rel="shortcut icon" type="image/x-icon" href="https://mun-sunghyun.github.io/moncasa_signature_webapp/img/logo/favicon.png" />
+
         <!-- 바로가기 -->
         <link rel="apple-touch-icon" href="https://mun-sunghyun.github.io/moncasa_signature_webapp/img/logo/icon.png" /> 
         <link rel="apple-touch-icon-precomposed" href="https://mun-sunghyun.github.io/moncasa_signature_webapp/img/logo/icon.png">
         <meta name="msapplication-TileImage" content="https://mun-sunghyun.github.io/moncasa_signature_webapp/img/logo/icon.png" size="270x270" />
         <meta name="msapplication-TileImage" content="https://mun-sunghyun.github.io/moncasa_signature_webapp/img/logo/icon.png" size="270x270" /><meta name="description" content="설명" /> 
+        
         <!-- SEO 최적화 -->
         <meta property="og:locale" content="ko_KR" />    
         <meta property="og:site_name" content="MONCASA" />    
@@ -22,6 +24,7 @@
         <meta name="twitter:description" content="몬까사, 포근함을 완성하다" />   
         <meta name="twitter:image" content="https://mun-sunghyun.github.io/moncasa_signature_webapp/img/logo/seo.jpg" />
         <title>MONCASA, 포근함을 완성하다</title>
+
         <!-- 폰트 CDN / reset / 그리드 / 공통 클래스 -->
         <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
         
@@ -36,6 +39,10 @@
         <link rel="stylesheet" href="./css/sohee.css">
         <link rel="stylesheet" href="./css/ahhyeon.css">
         <link rel="stylesheet" href="./css/yeseul.css">
+
+        <!-- 부트스트랩 연결 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     </head>
     <body>
         <header class="main_point_bg" id="hd">
@@ -81,7 +88,7 @@
                             <a href="#upcycling" class="gnb_li_a d-block text-white">친환경</a>
                         </li>
                         <li>
-                            <a href="#primium" class="gnb_li_a d-block text-white">프리미엄</a>
+                            <a href="#premium" class="gnb_li_a d-block text-white">프리미엄</a>
                         </li>
                         <li>
                             <a href="#taste" class="gnb_li_a d-block text-white">취향찾기</a>
@@ -147,74 +154,104 @@
                 </section>
 
                 <!-- 아현 작업 시작 -->
-                <section id="ex1" class="vh-100">
+                <section id="minimal" class="vh-100">
                     <div class="ex1_container d-flex justify-content-between">
                     <!-- 왼쪽 배너 -->
-                        <div class="img-wrapper ex1_banner">
-                        <img class="ex1_main_img d-block" src="./img/product/event1_main.jpg" alt="첫번째 기획전 메인 배너">
-                        <div class="text-overlay">
-                            <h2 class="ex1_main_text">
-                                Minimal
-                            </h2>
-                            <p class="ex1_middle_text">1인가구, 신혼 부부를 위한 작지만 깊은 가을 감성</p>
-                            <p class="ex1_middle_text_2">가을 감성,<br>우리 사이 만큼</p>
-                            <p class="tag">인기상품</p>
-                            <p class="tag">무료 설치 홈서비스</p>
-                            <p class="discount">~40%</p>
+                        <div class="img-wrapper ex1_banner d-flex">
+                            <div class="bg-img">
+                                <div class="main_title">
+                                        <h2 class="ex1_main_text d-flex">
+                                        Minimal
+                                        </h2>
+                                    
+                                    <p class="ex1_middle_text">
+                                        1인가구, 신혼 부부를<br>
+                                        위한 작지만 깊은 가을 감성</p>
+                                </div>
+                                <div class="detial_title">
+                                    <h2 class=" ex1_middle_text_2 text-right">
+                                        가을 감성,<br>
+                                        우리 사이 만큼
+                                    </h2>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="category">
+                                        <p class="tag">인기상품</p>
+                                        <p class="tag">무료 설치 홈서비스</p>
+                                    </div>
+                                    <div class="discount">
+                                        ~40%
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                    
                     <!-- 메인베너 end -->
                     <!-- 상품 리스트 start -->
-                    <div class="product-list">
-                        <div class="product-card">
-                            <img src="./img/product/mi_sofa1_1p.jpg" alt="브라운 1인소파">
-                            <span class="badge">40%</span>
-                            <div class="name">상품명</div>
-                            <div class="price">원가</div>
-                            <div class="sale-price ">세일가</div>
-                        </div>
-
-                        <div class="product-card">
-                            <img src="./img/product/mi_sofa2_1p.jpg" alt="리클라이너 1인소파">
+                        <div class="product-list">
                             
-                            <span class="badge">40%</span>
-                            <div class="name">상품명</div>
-                            <div class="price">원가</div>
-                            <div class="sale-price">세일가</div>
-                        </div>
-
-                        <div class="product-card">
-                            <img src="./img/product/mi_sofa1_2p.jpg" alt="리클라이너 2인소파">
+                            <div class="product-card1">
+                                <img src="./img/product/mi_sofa1_1p.jpg" alt="브라운 1인소파">
+                                <span class="badge">40%</span>
+                                <div class="product-text">
+                                        <div class="product-main-text">브라운 500 1인</div>
+                                            <div class="product-price-row">
+                                                <div class="product-price-text">원가</div>
+                                                <div class="product-sale-text">세일가</div>
+                                            </div>   
+                                </div>
+                            </div>
                             
-                            <span class="badge">40%</span>
-                            <div class="name">상품명</div>
-                            <div class="price">원가</div>
-                            <div class="sale-price">세일가</div>
-                        </div>
+                            <div class="product-card2">
+                                <img src="./img/product/mi_sofa2_1p.jpg" alt="리클라이너 1인소파">
+                                <span class="badge">40%</span>
+                                <div class="product-text">
+                                        <div class="product-main-text">상품명</div>
+                                        <div class="product-price-row">
+                                            <div class="product-price-text">원가</div>
+                                            <div class="product-sale-text">세일가</div>
+                                        </div>
+                                </div>
+                            </div>
 
-                        <div class="product-card">
-                            <img src="./img/product/mi_sofa2_2p.jpg" alt="네이버 2인소파">
-                            
-                            <span class="badge">40%</span>
-                            <div class="name">상품명</div>
-                            <div class="price">원가</div>
-                            <div class="sale-price">세일가</div>
+                            <div class="product-card3">
+                                <img src="./img/product/mi_sofa1_2p.jpg" alt="리클라이너 2인소파">
+                                <span class="badge">40%</span>
+                                <div class="product-text">
+                                        <div class="product-main-text">상품명</div>
+                                        <div class="product-price-row">
+                                            <div class="product-price-text">원가</div>
+                                            <div class="product-sale-text">세일가</div>
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card4">
+                                <img src="./img/product/mi_sofa2_2p.jpg" alt="네이버 2인소파">
+                                <span class="badge">40%</span>
+                                <div class="product-text">
+                                        <div class="product-main-text">상품명</div>
+                                        <div class="product-price-row">
+                                            <div class="product-price-text">원가</div>
+                                            <div class="product-sale-text">세일가</div>
+                                        </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                    <div class="bottom-banner">세트 상품 할인전 바로가기</div>
+                    <div class="bottom-banner container_1450">
+                        세트 상품 할인전 바로가기
+                    </div>
                 </section>
                 <!-- 아현 작업 end -->
 
-                <section id="special-plans" class="vh-100">
+                <section id="upcycling" class="vh-100">
                     <h2>기획2</h2>
                 </section>
-                <section id="premium-plans" class="vh-100">
+                <section id="premium" class="vh-100">
                     <h2>기획3</h2>
                 </section>
-                <section id="question" class="vh-100">
+                <section id="taste" class="vh-100">
                     <h2>취향찾기
                 </section>
                 <section id="review" class="vh-100">
@@ -284,5 +321,6 @@
                 
         </section>
     <script src="./vendor/bt.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html> 

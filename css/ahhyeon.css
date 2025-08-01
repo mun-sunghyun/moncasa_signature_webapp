@@ -1,4 +1,4 @@
-#ex1 {
+#minimal {
   width: 100%;
   padding: 0;
   margin: 0;
@@ -14,10 +14,9 @@ html, body {
     width: 1450px;
     margin: 0 auto;
     display: flex;
-    gap: 0;
-    padding: 0;
-    align-items: center;
-    background-color: white;
+    gap: 10px;
+    align-items: flex-start;
+    padding-top: 50px;
 }
 
 * {
@@ -33,19 +32,10 @@ html, body {
     gap: 40px;
 }
 
-.ex1_banner {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
+.main_title {
+    margin-bottom: 10px;
     margin: 0;
     padding: 0;
-}
-
-.ex1_main_img {
-    width: 600px;
-    height: 700px;
 }
 
 .ex1_main_text {
@@ -53,79 +43,68 @@ html, body {
     color: #713131;
     margin-bottom: 10px;
     font-family: "pretendard-700";
+    text-align: right;
+    font-style: normal;
+    line-height: 150%; /* 150px */
+    letter-spacing: -1.1px;
+    margin-left:  64px;
 }
 
 .ex1_middle_text {
     color: #713131;
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.10);
+    font-family: "Pretendard-700";
+    font-style: normal;
+    line-height: 36px;
+    letter-spacing: -0.264px;
+    margin-left: 28px;
 }
 
 .ex1_middle_text_2 {
-    font-size: 36px;
-    color: white;
+    font-size: 64px;
     margin-bottom: 10px;
     font-family: "pretendard-700";
-}
-
-.ex1_banner .discount {
-    font-size: 40px;
-    color: #fff;
-    font-weight: bold;
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-}
-
-.ex1_banner .tag {
-    background: #713131;
     color: white;
-    font-size: 14px;
-    padding: 6px 12px;
-    border-radius: 20px;
-    display: inline-block;
-    margin-top: 10px;
+    text-align: right;
+    text-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    line-height: normal;
 }
 
-.ex1_banner .img {
-    width: 100%;
-    margin-top: 20px;
+.discount {
+    margin-left: auto;
+    color: white;
+    font-size: 100px;
+    font-family: "Pretendard-700";
 }
 
 .product-list {
     display: grid;
-    flex: 0 0 40%;
+    flex: 0 0 600px;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-    width: 50%;
-}
-
-
-.product-card {
-    background-color: #f5f5f5;
-    text-align: center;
-    position: relative;
-    display: flex;
+    gap: 50px;
+    width: 652px;
     flex-direction: column;
-    align-items: center;
-    height: auto;
+    align-items: flex-start;
 }
 
-
-.product-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    margin-bottom: 1rem;
+.product-list img {
+    display: flex;
+    width: 298px;
+    height: 298px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-
-.product-card .badge {
+.badge {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    bottom: 90px;
+    right: 10px;   
     background: #713131;
     color: white;
     font-size: 15px;
@@ -133,63 +112,131 @@ html, body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    }
+
+.product-text {
+    display: flex;
+    width: 300px;
+    height: 56px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
 }
 
-.product-card .name {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 6px 0;
+.product-main-text { 
+    font-family: "Pretendard-700";
+    font-size: 25px;
+    width: 300px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    align-self: stretch;
 }
 
-.product-card .price {
-    font-size: 14px;
-    color: #888;
-    text-decoration: line-through;
+.product-price-row {
+    width: 300px;
+    height: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
-.product-card .sale-price {
-    font-size: 16px;
-    font-weight: bold;
+.product-price-text {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    color: #ADADAD;
+    font-family: "Pretendard-500";
+    font-size: 20px;
+    font-style: normal;
+    line-height: normal;
+    text-decoration-line: line-through;
+}
+.product-sale-text {
     color: #713131;
+    font-family: "Pretendard-700";
+    font-size: 25px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.product-card1,
+.product-card2,
+.product-card3,
+.product-card4 {
+    position: relative;
 }
 
 .bottom-banner {
-    margin-top: 40px;
+    margin-top: 80px;
     text-align: center;
-    background-image: url();
-    padding: 20px;
-    font-size: 18px;
-    font-weight: bold;
+    background-color: #713131;
+    padding: 50px 100px;
+    font-size: 35px;
     color: white;
-    border-radius: 8px;
+    font-family: "Pretendard-600";
 }
 
 .ex1_banner {
-    flex: 0 0 40%;
-    background-color: white;
-    position: relative;
-    width: 50%;
-}
+    width: 690px;
+    height: 820px;
+    flex-shrink: 0;
+    }
+
 .ex1_banner .img-wrapper {
     position: relative;
     width: 100%;
     height: auto;
 }
 
-.text-overlay {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1;
-}
-
-.text-overlay .h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.text-overlay .discount {
-    font-size: 36px;
-    font-weight: bold;
+.tag {
+    display: flex;
+    font-family: "pretendard-500";
+    flex-direction: column;
+    background: rgba(113, 49, 49, 0.80);
     color: white;
+    border-radius: 30px;
+    font-size: 25px;
+    gap: 2px;
+    height: fit-content;
+    display: inline-flex;
+    padding: 5px 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+.text-right {
+    text-align: right;
+}
+
+.bg-img {
+    position: relative;
+    width: 670px;
+    height: 800px;
+    background: url('../img/product/event1_main.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+}
+ 
+.detial_title {
+    margin-top: auto;
+    margin-bottom: 100px;
+    text-align: right;
+}
+
+.category {
+    margin-top: 25px;
 }
