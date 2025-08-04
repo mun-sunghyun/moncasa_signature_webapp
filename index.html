@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -633,6 +634,29 @@
                 <section id="lineup" >
                     <h2>lineup</h2>
                 </section>
+                  <!-- 예슬작업분 -->
+                <section id="yeseul" class="vh-100 d-flex flex-column justify-content-center align-items-center">
+                    <div class="max-width d-flex justify-content-between ">
+                              <div class="img3list">
+                                  <ul class="d-flex ">
+                                      <li><img src="./img/yesul/reviewThumb1.jpg" alt=""></li>
+                                      <li><img src="./img/yesul/reviewThumb2.jpg" alt=""></li>
+                                      <li><img src="./img/yesul/reviewThumb3.jpg" alt=""></li>
+                                  </ul>
+                              </div>
+                              <div class="img3title d-flex flex-column justify-content-center">
+                                  <div class="d-flex flex-column gap-20">
+                                      <p>다양한 고객님들의</p>
+                                  </div>
+                                  
+                                  <div class="content-container">
+                                      <h3 class="mb-50">집들이<br>
+                                          구경해보세요</h3>
+                                      <button class="a">구경하러 가기</button>
+                                  </div>
+                              </div>
+                    </div>
+               </section>
             </section>
         </main>
         <section id="footer" class="main_point_bg px-4 pb-5 d-flex flex-column justify-content-between">
@@ -689,45 +713,51 @@
                     </div>       
         </section>
 
-    <script src="./vendor/bt.js"></script>
+        <script src="./vendor/bt.js"></script>
     
      
-    <!-- premium planning swiper -->
-    <script>
-      const swiper = new Swiper(".premium_mySwiper", {
-        slidesPerView: "auto",
-        spaceBetween: 50,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        autoplay: {
-           delay: 2500,
-           disableOnInteraction: false,
-        },
-        loop: true,
-      });
-    </script>
-
-
-
-    <script>
-    var review_swiper = new Swiper(".review_swiper", {
-        slidesPerView: 4.5,
-        spaceBetween: 30,
-        loop:true,
-        pagination: {
-            el: ".review_swiper .swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".review_swiper .swiper-button-next",
-            prevEl: ".review_swiper .swiper-button-prev",
-        },
+        <!-- premium planning swiper -->
+        <script>
+        const swiper = new Swiper(".premium_mySwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 50,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+            },
+            loop: true,
         });
-    </script>    
+        </script>
+
+
+
+        <script>
+        var review_swiper = new Swiper(".review_swiper", {
+            slidesPerView: 4.5,
+            spaceBetween: 30,
+            loop:true,
+            pagination: {
+                el: ".review_swiper .swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".review_swiper .swiper-button-next",
+                prevEl: ".review_swiper .swiper-button-prev",
+            },
+            });
+        </script>    
 
 </body>
 </html> 
 
+
+
+               
+              
+            
+    
 
