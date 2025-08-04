@@ -527,7 +527,7 @@
                     <div class="review_title">고객님들의 공간이 담긴 솔직 후기</div>
                     <div class="container">
                         <!-- Swiper -->
-                            <div class="swiper review_mySwiper overflow-visible">
+                            <div class="swiper review_swiper overflow-visible">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="review1"></div>
@@ -712,17 +712,17 @@
 
 
     <script>
-    var review_swiper = new Swiper(".review_mySwiper", {
+    var review_swiper = new Swiper(".review_swiper", {
         slidesPerView: 4.5,
         spaceBetween: 30,
         loop:true,
         pagination: {
-            el: "review_mySwiper .swiper-pagination",
+            el: ".review_swiper .swiper-pagination",
             clickable: true,
         },
         navigation: {
-            nextEl: "review_mySwiper .swiper-button-next",
-            prevEl: "review_mySwiper .swiper-button-prev",
+            nextEl: ".review_swiper .swiper-button-next",
+            prevEl: ".review_swiper .swiper-button-prev",
         },
         });
     </script>    
