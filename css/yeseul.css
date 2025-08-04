@@ -10,8 +10,8 @@
     color: #000000;
     opacity: 50%;
     font-weight: 500;
-    line-height: 20px;
-
+    line-height: 1;
+    margin-bottom: 20px;
 }
 #yeseul .content-container {
     width: 260px;
@@ -24,6 +24,7 @@
     font-size: 50px;
     color: #000000;
     font-weight: 700;
+    line-height: 1;
 }
 
 #yeseul  button{
