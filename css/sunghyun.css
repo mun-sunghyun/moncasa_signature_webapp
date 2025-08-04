@@ -17,13 +17,13 @@
   font-weight: 700;
   font-style: normal;
 }
-.swiper {
+.review_swiper {
     width: 1500px;
     height: 600px;
     margin-bottom: 50px;
 }
 
-.swiper-slide {
+.review_swiper .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #EDDFDF;
@@ -34,8 +34,8 @@
     border-top-right-radius: 20px;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+.review_swiper .swiper-button-next,
+.review_swiper .swiper-button-prev {
     color: white !important;
     user-select: none;
 }  

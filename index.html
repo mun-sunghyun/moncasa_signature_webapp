@@ -147,24 +147,24 @@
                     </div>
                     </div>
                 </section>
-                <section id="theme-plans" class="vh-100">
+                <section id="theme-plans" >
                     <h2>기획1</h2>
                     
                 </section>
-                <section id="special-plans" class="vh-100">
+                <section id="special-plans" >
                     <h2>기획2</h2>
                 </section>
-                <section id="premium-plans" class="vh-100">
+                <section id="premium-plans" >
                     <h2>기획3</h2>
                 </section>
-                <section id="question" class="vh-100">
+                <section id="question" >
                     <h2>취향찾기
                 </section>
-                <section id="review" class="vh-100">
+                <section id="review" >
                     <div class="review_title">고객님들의 공간이 담긴 솔직 후기</div>
                     <div class="container">
                         <!-- Swiper -->
-                            <div class="swiper mySwiper overflow-visible">
+                            <div class="swiper review_mySwiper overflow-visible">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="review1"></div>
@@ -264,10 +264,10 @@
                     </div>
                     <div class="review_word"><span class="review_bold">포토 리뷰 이벤트</span>&nbsp;사은품 증정 기회 놓치지 마세요</div>
                 </section>
-                <section id="interior" class="vh-100">
+                <section id="interior" >
                     <h2>인테리어</h2>
                 </section>
-                <section id="lineup" class="vh-100">
+                <section id="lineup" >
                     <h2>lineup</h2>
                 </section>
             
@@ -332,17 +332,17 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-    var swiper = new Swiper(".mySwiper", {
+    var review_swiper = new Swiper(".review_mySwiper", {
         slidesPerView: 4.5,
         spaceBetween: 30,
         loop:true,
         pagination: {
-            el: ".swiper-pagination",
+            el: "review_mySwiper .swiper-pagination",
             clickable: true,
         },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: "review_mySwiper .swiper-button-next",
+            prevEl: "review_mySwiper .swiper-button-prev",
         },
         });
     </script>    
