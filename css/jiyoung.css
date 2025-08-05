@@ -54,9 +54,7 @@ body {
             
   }
  
-  .prod_cost, .prod_price{
-    justify-content: space-between;
-  }
+
   .product_price_set{
     margin-top: 20px;
   }
@@ -75,13 +73,11 @@ body {
   
   .event_main_title2 {
     font-size: 100px;
-    font-weight: 700;
 
   }
   
   .event_title2 {
     font-size: 36px;
-    font-weight: 700;
     margin-bottom: 5px;
   }
 
@@ -98,7 +94,6 @@ body {
   
   .event_serve_title2 {
     font-size: 24px;
-    font-weight: 700;
   }
 
   .ecombt1, .ecombt2{
@@ -114,18 +109,29 @@ body {
   .percent { 
     /* 20% */
     font-size: 100px;
-    font-weight: 700;
     margin-bottom: 0;
-    text-align: end;
+    
   }
 
   .textbadge {
     gap: 13px;
   }
+
+  .tag2 {
+    background-color: #1D220C;
+    font-family: "Pretendard-500";
+    border-radius: 30px;
+    padding: 5px 20px;
+    color: #ffffff;
+    font-size: 25px;
+    display: inline-block;
+  }
+
   /* 광고 배너 */
   .banner_set {
     margin-top: 70px;   
     gap: 10px;
+
   }
 
   .banner_eco1 {
@@ -163,8 +169,8 @@ body {
   transform: translateY(-20px);
 }
 .product_card3 img{
-  transform: translateY(-100px);
+  transform: translateY(-40px);
 }
 .product_card4 img{
-  transform: translateY(-30px);
+  transform: translateY(-20px);
 }
