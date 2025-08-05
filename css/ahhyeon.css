@@ -12,7 +12,6 @@
   display: flex;
   gap: 10px;
   align-items: flex-start;
-  padding-top: 50px;
 }
 .ex1_container .ex1_banner {
   width: 690px;
@@ -94,12 +93,7 @@
   margin-bottom: 20px;
 }
 
-#minimal {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-#minimal .badge {
+.badge {
   position: absolute;
   bottom: 90px;
   right: 10px;
@@ -114,7 +108,8 @@
   justify-content: center !important;
   z-index: 10;
 }
-#minimal .product-text {
+
+.product-text {
   display: flex;
   width: 300px;
   height: 56px;
@@ -123,7 +118,8 @@
   gap: 20px;
   flex-shrink: 0;
 }
-#minimal .product-main-text {
+
+.product-main-text {
   font-family: "Pretendard-700";
   font-size: 25px;
   width: 300px;
@@ -133,7 +129,8 @@
   gap: 36px;
   align-self: stretch;
 }
-#minimal .product-price-row {
+
+.product-price-row {
   width: 300px;
   height: 18px;
   display: flex;
@@ -142,7 +139,7 @@
   justify-content: space-between;
   margin-top: 10px;
 }
-#minimal .product-price-row .product-price-text {
+.product-price-row .product-price-text {
   display: flex;
   align-items: center;
   align-self: stretch;
@@ -153,21 +150,23 @@
   line-height: normal;
   text-decoration-line: line-through;
 }
-#minimal .product-price-row .product-sale-text {
+.product-price-row .product-sale-text {
   color: #713131;
   font-family: "Pretendard-700";
   font-size: 25px;
   font-style: normal;
   line-height: normal;
 }
-#minimal .product-card1,
-#minimal .product-card2,
-#minimal .product-card3,
-#minimal .product-card4 {
+
+.product-card1,
+.product-card2,
+.product-card3,
+.product-card4 {
   position: relative;
   overflow: visible;
 }
-#minimal .bottom-banner {
+
+.bottom-banner {
   margin-top: 80px;
   text-align: center;
   background-image: url(../img/product/mi_bottom_bg_img.jpg);
@@ -179,7 +178,8 @@
   color: white;
   font-family: "Pretendard-600";
 }
-#minimal .tag {
+
+.tag {
   display: inline-flex;
   font-family: "pretendard-500";
   flex-direction: column;
@@ -188,15 +188,18 @@
   border-radius: 50px;
   font-size: 25px;
   gap: 2px;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 5px 20px;
   justify-content: center;
   align-items: center;
 }
-#minimal .text-right {
+
+.text-right {
   text-align: right;
 }
-#minimal .bg-img {
+
+.bg-img {
   position: relative;
   width: 670px;
   height: 800px;
@@ -207,15 +210,18 @@
   flex-direction: column;
   justify-content: space-between;
 }
-#minimal .detial_title {
+
+.detial_title {
   margin-top: auto;
   margin-bottom: 100px;
   text-align: right;
 }
-#minimal .category {
+
+.category {
   margin-top: 25px;
 }
-#minimal .brown_sofa_1 {
+
+.brown_sofa_1 {
   padding-block: 60px;
   padding-inline: 60px;
 }
