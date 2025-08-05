@@ -17,8 +17,6 @@ body {
   }
 
 
-
-
   /* 상품 카드 */
 
   #special-plans p{
@@ -35,13 +33,10 @@ body {
 
   .product_set{
     max-width: 650px;
-    max-height: 798px;
-
-    
+    max-height: 798px;   
 
   }
   
-
   .product_set img {
     display: flex;
     width: 300px;
@@ -55,81 +50,36 @@ body {
     position: relative;
     max-width: 301px;
     max-height: 374px;
-    margin-bottom: 50px;
-
-  
+    margin-bottom: 50px;  
             
   }
  
-  
-  .product_name {
-    margin: 0;
-    font-weight: 700;
-    font-size: 25px;
-  }
-  
-  .product_price {
-    color: #713131;
-    font-weight: 700;
-    font-size: 25px;
-  }
-  
-  
-  .product_original {
-    color: #888;
-    font-size: 20px;
-    font-weight: 500;
-  }
-
-  .product_original, .product_price{
+  .prod_cost, .prod_price{
     justify-content: space-between;
   }
-  .priceset{
+  .product_price_set{
     margin-top: 20px;
   }
 
-  /* 뱃지 */
-  
-
-
-  .eco_badge, .discount_badge {
-    padding: 4px 8px;
-    font-size: 15px;
-    font-weight: 700;
-    border-radius: 50px;
-    height: 55px;
-    width: 55px;
-    
-
-}
-  .badge {
-    margin-bottom: 10px;
-  }
-  .eco_badge {
-    background-color: #777255;    
-  }
-  
-  .discount_badge {
-    background-color: #713131;
-   
-  }
+  /* 뱃지 공통 클래스*/
+ 
   
   /* 기획전 이미지 */
   
-  .eco_event_img {
+  .event {
     max-height: 798px;
     width: 667px;
     background-image: url('../img/product/event2_main.jpg');
     background-size: auto 100%;
   }
   
-  .eco_event_img h3 {
+  .event_main_title2 {
     font-size: 100px;
     font-weight: 700;
 
   }
   
-  .eco_event_img h4 {
+  .event_title2 {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 5px;
@@ -146,7 +96,7 @@ body {
     
   }
   
-  .ecombt1 p {
+  .event_serve_title2 {
     font-size: 24px;
     font-weight: 700;
   }
@@ -161,7 +111,7 @@ body {
     align-items: end;
     max-width: 667px;
   }
-  .ecombt2 h3 { 
+  .percent { 
     /* 20% */
     font-size: 100px;
     font-weight: 700;
@@ -169,45 +119,36 @@ body {
     text-align: end;
   }
 
-  .textbadge p{
-    display: inline-block;
-    font-size: 25px;
-    font-weight: 500;
-    padding: 0 20px;
-    background-color: #1D220C80;
-    border-radius: 20px;
-    margin-bottom: 0;
-  }
-  .textbadge{
+  .textbadge {
     gap: 13px;
   }
   /* 광고 배너 */
-  .adleftright {
+  .banner_set {
     margin-top: 70px;   
     gap: 10px;
   }
 
-  .adleft {
+  .banner_eco1 {
     background-image: url(../img/eco_banner1\ \(2\).jpg);
     background-size: 100%
   }
   
-  .adright {
+  .banner_eco2 {
     background-image: url(../img/eco_banner1\ \(1\).jpg);
     background-size: 100%
   }
   
-  .adleftright h3 {
+  .banner_set strong {
     font-size: 20px;
     font-weight: 800;
   }
   
-  .adleftright p {
+  .banner_set span {
     font-size: 15px;
     font-weight: 800;
   }
 
-  .adleft, .adright{
+  .banner_eco1, .banner_eco2{
     padding: 23px 20px;
   }
 
