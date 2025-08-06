@@ -1,3 +1,8 @@
+:root {
+  --basic--text: #000;
+  --main--point-color: #ff5a5a;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -7,22 +12,50 @@ h3, p {
   margin: 0;
 }
 
-a{
+a {
   text-decoration: none;
-  color:var(--basic--text)
+  color: var(--basic--text);
 }
 
-.line-height-1 { line-height: 1; } 
+.line-height-1 {
+  line-height: 1;
+}
 
-.fw-100 { font-weight: 100 !important; }
-.fw-200 { font-weight: 200 !important; }
-.fw-300 { font-weight: 300 !important; }
-.fw-400 { font-weight: 400 !important; }
-.fw-500 { font-weight: 500 !important; }
-.fw-600 { font-weight: 600 !important; }
-.fw-700 { font-weight: 700 !important; }
-.fw-800 { font-weight: 800 !important; }
-.fw-900 { font-weight: 900 !important; }
+.fw-100 {
+  font-weight: 100 !important;
+}
+
+.fw-200 {
+  font-weight: 200 !important;
+}
+
+.fw-300 {
+  font-weight: 300 !important;
+}
+
+.fw-400 {
+  font-weight: 400 !important;
+}
+
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+.fw-800 {
+  font-weight: 800 !important;
+}
+
+.fw-900 {
+  font-weight: 900 !important;
+}
 
 .container_1280 {
   max-width: 1280px;
@@ -37,7 +70,6 @@ a{
 .section_p {
   padding: 3rem 0;
 }
-
 @media (min-width: 1280px) {
   .section_p {
     padding: 50px 0;
@@ -48,11 +80,12 @@ a{
     padding: 100px 0;
   }
 }
+
 .tag {
   font-family: "Pretendard-500";
   border-radius: 30px;
   padding: 10px 20px;
-  color: #ffffff;
+  color: #fff;
   font-size: 25px;
   display: inline-block;
 }
@@ -66,7 +99,6 @@ a{
 .prod_text h3 {
   width: 100%;
 }
-
 .prod_text .prod_name {
   font-family: "Pretendard-700";
   font-size: 25px;
@@ -74,14 +106,15 @@ a{
 .prod_text .prod_cost {
   font-family: "Pretendard-500";
   font-size: 20px;
-  color: #ADADAD;
-  text-decoration-line: line-through;
+  color: #adadad;
+  text-decoration: line-through;
 }
 .prod_text .prod_price {
   font-family: "Pretendard-700";
   font-size: 25px;
   color: var(--main--point-color);
 }
+
 .icon_group {
   display: flex;
   align-items: center;
@@ -93,7 +126,7 @@ a{
   color: white;
   font-size: 15px;
 }
-.icon_group strong{
+.icon_group strong {
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -103,131 +136,20 @@ a{
 }
 .icon_group .eco {
   background-color: #777255;
-
 }
 .icon_group .sale {
   background-color: var(--main--point-color);
 }
 
-.ul-font {
-  font-family: "Pretendard-400";
-}
-
 .footer {
-  font-size: 15px;
+  font-size: 10px;
   color: white;
 }
 .footer_wrapper {
   padding-top: 180px;
   padding-bottom: 100px;
 }
-.footer_d-flex-custom{
-  display:flex;
-  gap:80px;
-  margin-right:200px;
-}
 .footer_customer_center {
   font-size: 20px;
   color: white;
-}
-
-.main_point_bg {
-  background-color: #713131;
-}
-
-.gnb_li_a {
-  text-decoration: none;
-}
-
-#hd {
-  padding: 1rem 0;
-}
-
-
-
-.premium_div, .upcycling_div, .minimal_div {
-  background-size: cover;
-  background-position: center;
-}
-
-.minimal_div {
-  background-image: url(../img/minimal.jpg);
-}
-
-.minimal_main_text {
-  font-size: 130px;
-  color: #713131;
-  margin-top: 450px;
-  font-family: "Pretendard-700";
-  margin-left: 80px;
-  margin-bottom: 75px;
-}
-
-.minimal_middle_text {
-  font-size: 64px;
-  color: #713131;
-  margin-top: 64px;
-  margin-left: 32px;
-  font-family: "Pretendard-700";
-}
-
-.minimal_bottom_text {
-  font-size: 30px;
-  color: #713131;
-  margin-left: 32px;
-  font-family: "Pretendard-400";
-}
-
-.upcycling_div {
-  background-image: url(../img/upcycling.jpg);
-}
-
-.upcycling_main_text {
-  transform: rotate(-90deg);
-  transform-origin: left top;
-  margin-top: 690px;
-  font-size: 130px;
-  color: white;
-  font-family: "Pretendard-700";
-}
-
-.upcycling_middle_text {
-  font-size: 55px;
-  color: white;
-  margin-top: -180px;
-  margin-left: 32px;
-  font-family: "Pretendard-700";
-}
-
-.upcycling_bottom_text {
-  font-size: 30px;
-  color: white;
-  margin-left: 32px;
-  font-family: "Pretendard-400";
-}
-
-.premium_div {
-  background-image: url(../img/primium.jpg);
-}
-
-.premium_main_text {
-  font-size: 130px;
-  color: white;
-  margin-top: 50px;
-  font-family: "Pretendard-700";
-}
-
-.premium_middle_text {
-  font-size: 64px;
-  color: white;
-  margin-top: 450px;
-  text-align: right;
-  font-family: "Pretendard-700";
-}
-
-.premium_bottom_text {
-  font-size: 30px;
-  color: white;
-  text-align: right;
-  font-family: "Pretendard-400";
 }

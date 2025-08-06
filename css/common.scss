@@ -1,4 +1,10 @@
-// 기본 설정
+// 변수 정의 (예시)
+:root {
+  --basic--text: #000;
+  --main--point-color: #ff5a5a;
+}
+
+// Reset
 html, body {
   margin: 0;
   padding: 0;
@@ -6,45 +12,53 @@ html, body {
 h3, p {
   margin: 0;
 }
+a {
+  text-decoration: none;
+  color: var(--basic--text);
+}
 
-// 공통 컨테이너
+// 유틸리티 클래스
+.line-height-1 { line-height: 1; }
+
+@for $i from 1 through 9 {
+  .fw-#{$i}00 {
+    font-weight: #{$i}00 !important;
+  }
+}
+
+// 컨테이너
 .container_1280 {
   max-width: 1280px;
   margin: 0 auto;
 }
-
 .container_1450 {
   max-width: 1450px;
   margin: 0 auto;
 }
 
+// 섹션 공통 패딩
 .section_p {
   padding: 3rem 0;
-}
 
-@media(min-width: 1280px) {
-  .section_p {
+  @media (min-width: 1280px) {
     padding: 50px 0;
   }
-}
-
-@media(min-width: 1450px) {
-  .section_p {
+  @media (min-width: 1450px) {
     padding: 100px 0;
   }
 }
 
-// 기획전 배너 공통 스타일
+// 태그 배지 스타일
 .tag {
   font-family: "Pretendard-500";
   border-radius: 30px;
   padding: 10px 20px;
-  color: #ffffff;
+  color: #fff;
   font-size: 25px;
   display: inline-block;
 }
 
-// 기획전 상품 공통 스타일
+// 상품 텍스트
 .prod_text {
   max-width: 300px;
   flex-wrap: wrap;
@@ -63,8 +77,8 @@ h3, p {
   .prod_cost {
     font-family: "Pretendard-500";
     font-size: 20px;
-    color: #ADADAD;
-    text-decoration-line: line-through;
+    color: #adadad;
+    text-decoration: line-through;
   }
 
   .prod_price {
@@ -74,38 +88,38 @@ h3, p {
   }
 }
 
+// 아이콘 그룹
 .icon_group {
-  font-family: "Pretendard-700";
-  width: 55px;
-  height: 55px;
-  border-radius: 100%;
-  color: white;
-  font-size: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
-    &.eco {
-      background-color: #777255;
-    }
-    
-    &.sale {
-      background-color: var(--main--point-color);
-    }
+  bottom: 10px;
+  right: 10px;
+  gap: 10px;
+  font-family: "Pretendard-700";
+  color: white;
+  font-size: 15px;
+
+  strong {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
+  .eco {
+    background-color: #777255;
+  }
 
-
-
-
-// 아래 확인 후 정리 필요 //
-
-
-.ul-font {
-  font-family: "Pretendard-400";
+  .sale {
+    background-color: var(--main--point-color);
+  }
 }
 
-// footer
+
+// 푸터
 .footer {
   font-size: 10px;
   color: white;
@@ -121,114 +135,4 @@ h3, p {
   }
 }
 
-// 공통 배경
-.main_point_bg {
-  background-color: #713131;
-}
 
-// 링크
-.gnb_li_a {
-  text-decoration: none;
-}
-
-// 헤더
-#hd {
-  padding: 1rem 0;
-}
-
-// 정렬 순서
-.order-1 { order: 1; }
-.order-2 { order: 2; }
-.order-3 { order: 3; }
-.mt-auto { margin-top: auto; }
-
-// 섹션 스타일 (event section)
-%section-common {
-  background-size: cover;
-  background-position: center;
-}
-
-.minimal_div {
-  @extend %section-common;
-  background-image: url(../img/minimal.jpg);
-}
-
-.minimal_main_text {
-  font-size: 130px;
-  color: #713131;
-  margin-top: 450px;
-  font-family: "Pretendard-700";
-  margin-left: 80px;
-  margin-bottom: 75px;
-}
-
-.minimal_middle_text {
-  font-size: 64px;
-  color: #713131;
-  margin-top: 64px;
-  margin-left: 32px;
-  font-family: "Pretendard-700";
-}
-
-.minimal_bottom_text {
-  font-size: 30px;
-  color: #713131;
-  margin-left: 32px;
-  font-family: "Pretendard-400";
-}
-
-.upcycling_div {
-  @extend %section-common;
-  background-image: url(../img/upcycling.jpg);
-}
-
-.upcycling_main_text {
-  transform: rotate(-90deg);
-  transform-origin: left top;
-  margin-top: 690px;
-  font-size: 130px;
-  color: white;
-  font-family: "Pretendard-700";
-}
-
-.upcycling_middle_text {
-  font-size: 55px;
-  color: white;
-  margin-top: -180px;
-  margin-left: 32px;
-  font-family: "Pretendard-700";
-}
-
-.upcycling_bottom_text {
-  font-size: 30px;
-  color: white;
-  margin-left: 32px;
-  font-family: "Pretendard-400";
-}
-
-.premium_div {
-  @extend %section-common;
-  background-image: url(../img/primium.jpg);
-}
-
-.premium_main_text {
-  font-size: 130px;
-  color: white;
-  margin-top: 50px;
-  font-family: "Pretendard-700";
-}
-
-.premium_middle_text {
-  font-size: 64px;
-  color: white;
-  margin-top: 450px;
-  text-align: right;
-  font-family: "Pretendard-700";
-}
-
-.premium_bottom_text {
-  font-size: 30px;
-  color: white;
-  text-align: right;
-  font-family: "Pretendard-400";
-}
