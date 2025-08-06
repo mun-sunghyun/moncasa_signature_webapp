@@ -1,53 +1,31 @@
 /* 수정할것 */
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
-    margin: 0;
-    font-family: "Montserrat","Pretendard", sans-serif;
-    background: #fff;
-    font-weight: 400;
-    max-width: 1920px;
-  }
-   
-  .ecoevent {
-    max-width: 1450px;
-    margin: 0;
-  }
 
 
   /* 상품 카드 */
 
-  #special-plans p{
-    margin-bottom: 0;
-  }
 
-  .img_bg{
+  #upcycling .img_bg{
     background-color: #F5F5F5;
   }
 
-  .plan_project_special{
-    max-height: 798px;
+  #upcycling .plan_project_special{
+ 
   }
 
-  .product_set{
+  #upcycling .product_set{
     max-width: 650px;
-    max-height: 798px;   
+ 
 
   }
   
-  .product_set img {
-    display: flex;
+  #upcycling .product_set img {
     width: 300px;
-    height: 300px;
-    flex-direction: column;
-    justify-content: center;
-    align-self: flex-start;
+    height: 300px;    
   }
   
-  .product_card {
-    position: relative;
+  #upcycling .product_card {
     max-width: 301px;
     max-height: 374px;
     margin-bottom: 50px;  
@@ -55,7 +33,7 @@ body {
   }
  
 
-  .product_price_set{
+  #upcycling .product_price_set{
     margin-top: 20px;
   }
 
@@ -64,113 +42,110 @@ body {
   
   /* 기획전 이미지 */
   
-  .event {
-    max-height: 798px;
+  #upcycling .event {    
     width: 667px;
     background-image: url('../img/product/event2_main.jpg');
     background-size: auto 100%;
   }
   
-  .event_main_title2 {
+  #upcycling .event_main_title2 {
     font-size: 100px;
+    margin-bottom: 20px;
+    font-family: "Pretendard-700";
 
   }
   
-  .event_title2 {
+  #upcycling .event_title2 {
     font-size: 36px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
   }
 
-  .img_title{
+  #upcycling  .img_title{
     padding-left: 50px;
   }
 
-  .ecombt{
-    position: relative;
-    height: 798px;
-    width: 100%;
-    
-  }
   
-  .event_serve_title2 {
+  #upcycling .event_serve_title2 {
     font-size: 24px;
-  }
+    line-height: 1.5;
+    }
 
-  .ecombt1, .ecombt2{
+  #upcycling .ecombt1, .ecombt2{
     padding: 30px;
     
 
   }
-  .ecombt2{
+  #upcycling .ecombt1{
+
+  }
+  #upcycling  .ecombt2{
     max-height: 140px;
-    align-items: end;
     max-width: 667px;
   }
-  .percent { 
+  #upcycling  .percent { 
     /* 20% */
     font-size: 100px;
-    margin-bottom: 0;
+    font-family: "Pretendard-700";
+   
     
   }
 
-  .textbadge {
+  #upcycling .textbadge {
     gap: 13px;
   }
 
-  .tag2 {
-    background-color: #1D220C;
-    font-family: "Pretendard-500";
+  #upcycling .tag2 {
+    background-color: #1D220C95;
     border-radius: 30px;
     padding: 5px 20px;
-    color: #ffffff;
     font-size: 25px;
-    display: inline-block;
+    line-height: var(--bs-body-line-height);
   }
 
   /* 광고 배너 */
-  .banner_set {
+  #upcycling .banner_set {
     margin-top: 70px;   
     gap: 10px;
 
   }
 
-  .banner_eco1 {
+  #upcycling .banner_eco1 {
     background-image: url(../img/eco_banner1\ \(2\).jpg);
     background-size: 100%
   }
   
-  .banner_eco2 {
+  #upcycling .banner_eco2 {
     background-image: url(../img/eco_banner1\ \(1\).jpg);
     background-size: 100%
   }
   
-  .banner_set strong {
-    font-size: 20px;
-    font-weight: 800;
+  #upcycling .banner_set strong {
+    font-size: 24px;
+    line-height: 1.5;
   }
   
-  .banner_set span {
+  #upcycling .banner_set span {
     font-size: 15px;
-    font-weight: 800;
+    line-height: 1.5;
   }
 
-  .banner_eco1, .banner_eco2{
+  #upcycling .banner_eco1, .banner_eco2{
     padding: 23px 20px;
   }
 
-  .h300{
+  #upcycling .h300{
     height: 300px !important;
-    overflow: hidden;
   }
-.product_card1 img{
+
+  #upcycling .product_card1 img{
   transform: translateY(-20px);
 }
-.product_card2 img{
+#upcycling .product_card2 img{
   transform: translateY(-20px);
 }
-.product_card3 img{
+#upcycling .product_card3 img{
   transform: translateY(-40px);
 }
-.product_card4 img{
+#upcycling  .product_card4 img{
   transform: translateY(-20px);
 }
