@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,31 +5,18 @@
   font-family: "Pretendard-400";
 }
 
-.ex1_container {
-  width: 1450px;
-  margin: 0 auto;
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-}
-.ex1_container .ex1_banner {
-  width: 690px;
-  height: 820px;
+#minimal .ex1_banner {
+  width: 670px;
+  height: 800px;
   flex-shrink: 0;
 }
-.ex1_container .ex1_banner .img-wrapper {
-  position: relative;
+#minimal .ex1_banner .img-wrapper {
+  position: fixed;
   width: 100%;
   height: auto;
 }
 
-.main_title {
-  margin-bottom: 10px;
-  margin: 0;
-  padding: 0;
-}
-
-.ex1_main_text {
+#minimal .event_main_title1 {
   font-size: 100px;
   color: #713131;
   margin-bottom: 10px;
@@ -42,7 +28,7 @@
   margin-left: 64px;
 }
 
-.ex1_middle_text {
+#minimal .event_serve_title1 {
   color: #713131;
   font-size: 24px;
   margin-bottom: 10px;
@@ -51,49 +37,28 @@
   font-style: normal;
   line-height: 36px;
   letter-spacing: -0.264px;
-  margin-left: 28px;
+  margin-left: 55px;
 }
 
-.ex1_middle_text_2 {
+#minimal .event_title1 {
   font-size: 64px;
-  margin-bottom: 10px;
   font-family: "pretendard-700";
   color: white;
-  text-align: right;
-  text-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
   font-style: normal;
   line-height: normal;
+  margin-top: auto;
+  margin-bottom: 100px;
 }
 
-.discount {
+#minimal .percent {
   margin-left: auto;
   color: white;
   font-size: 100px;
   font-family: "Pretendard-700";
 }
 
-.product-list {
-  display: grid;
-  flex: 0 0 600px;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  width: 652px;
-  flex-direction: column;
-}
-.product-list img {
-  display: flex;
-  width: 298px;
-  height: 298px;
-  flex-shrink: 0;
-  aspect-ratio: 1/1;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #F5F5F5;
-  margin-bottom: 20px;
-}
-
-.badge {
+#minimal .badge {
   position: absolute;
   bottom: 90px;
   right: 10px;
@@ -109,7 +74,13 @@
   z-index: 10;
 }
 
-.product-text {
+#minimal .product_set {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+#minimal .product-text {
   display: flex;
   width: 300px;
   height: 56px;
@@ -119,7 +90,7 @@
   flex-shrink: 0;
 }
 
-.product-main-text {
+#minimal .prod_name {
   font-family: "Pretendard-700";
   font-size: 25px;
   width: 300px;
@@ -128,9 +99,10 @@
   align-items: center;
   gap: 36px;
   align-self: stretch;
+  color: black;
 }
 
-.product-price-row {
+#minimal .product_price_set {
   width: 300px;
   height: 18px;
   display: flex;
@@ -139,7 +111,7 @@
   justify-content: space-between;
   margin-top: 10px;
 }
-.product-price-row .product-price-text {
+#minimal .product_price_set .prod_cost {
   display: flex;
   align-items: center;
   align-self: stretch;
@@ -150,7 +122,7 @@
   line-height: normal;
   text-decoration-line: line-through;
 }
-.product-price-row .product-sale-text {
+#minimal .product_price_set .prod_price {
   color: #713131;
   font-family: "Pretendard-700";
   font-size: 25px;
@@ -158,20 +130,20 @@
   line-height: normal;
 }
 
-.product-card1,
-.product-card2,
-.product-card3,
-.product-card4 {
+#minimal .product-card1,
+#minimal .product-card2,
+#minimal .product-card3,
+#minimal .product-card4 {
   position: relative;
   overflow: visible;
 }
 
-.bottom-banner {
+#minimal .bottom-banner {
   margin-top: 80px;
   text-align: center;
   background-image: url(../img/product/mi_bottom_bg_img.jpg);
   background-size: cover;
-  background-position: center 46%; /* 이미지 가운데 기준으로 정렬 */
+  background-position: center 46%;
   background-repeat: no-repeat;
   padding: 36px 100px;
   font-size: 35px;
@@ -179,7 +151,7 @@
   font-family: "Pretendard-600";
 }
 
-.tag {
+#minimal .tag {
   display: inline-flex;
   font-family: "pretendard-500";
   flex-direction: column;
@@ -188,18 +160,17 @@
   border-radius: 50px;
   font-size: 25px;
   gap: 2px;
-  height: -moz-fit-content;
   height: fit-content;
   padding: 5px 20px;
   justify-content: center;
   align-items: center;
 }
 
-.text-right {
+#minimal .text-right {
   text-align: right;
 }
 
-.bg-img {
+#minimal .bg-img {
   position: relative;
   width: 670px;
   height: 800px;
@@ -211,90 +182,10 @@
   justify-content: space-between;
 }
 
-.detial_title {
-  margin-top: auto;
-  margin-bottom: 100px;
-  text-align: right;
-}
-
-.category {
+#minimal .category {
   margin-top: 25px;
 }
 
-.brown_sofa_1 {
-  padding-block: 60px;
-  padding-inline: 60px;
-}
-
-/* 취향찾기 css */
-
-.taste_swiper {
-  font-family: "pretendard-500";
-  width: 100%;
-  max-width: 900px;
-  margin: auto;
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 40px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.05);
-}
-
-.question-title {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.question-sub {
-  font-size: 14px;
-  color: #888;
-  margin-bottom: 10px;
-}
-
-.options button {
-  border: 1px solid #ccc;
-  background-color: #fff;
-  border-radius: 30px;
-  padding: 10px 24px;
-  margin: 5px;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-.options button:hover {
-  background-color: #000;
-  color: #fff;
-}
-
-.step-indicator {
-  font-size: 12px;
-  color: #aaa;
-}
-
-.top-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.right-info {
-  font-size: 14px;
-  text-align: right;
-  line-height: 1.3;
-}
-
-.right-info img {
-  width: 24px;
-  vertical-align: middle;
-  margin-left: 4px;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #ccc;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  color: #000;
+#minimal a {
+  text-decoration: none;
 }
