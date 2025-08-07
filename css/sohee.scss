@@ -1,3 +1,9 @@
+// 변수
+$main-color: var(--main--point-color);
+$text-main: #713131;
+$text-white: #ffffff;
+
+
 // 기본 스타일
 dl, ol, ul {
   margin-top: 0;
@@ -14,18 +20,132 @@ ol, ul {
   padding-right: 0;
 }
 
+
+/* gnb */
+.container_fluid {
+  background-color: $main-color;
+  height: 130px;
+  padding: 0 110px;
+
+  .gnb {
+    gap: 55px;
+
+    .gnb_li_a {
+      font-size: 25px;
+    }
+
+    .gnb_li_a_bold {
+      font-size: 25px;
+    }
+  }
+}
+
+.global_bt {
+  font-size: 20px;
+  gap: 5px;
+}
+
+
+// main banner
+.scalebanner {
+  > * {
+    padding: 2vw;
+    background-size: 100%;
+    background-position: center;
+    transition: all 0.25s ease;
+    text-decoration: none;
+
+    &:hover {
+      background-size: 120%;
+    }
+  }
+
+  .scalechild1 {
+    background-image: url(../img/minimal.jpg);
+
+    h3 {
+      font-family: "Pretendard-700";
+      font-size: 150px;
+      color: $text-main;
+      letter-spacing: -0.64px;
+    }
+
+    p {
+      font-family: "Pretendard-700";
+      font-size: 64px;
+      color: $text-main;
+      letter-spacing: -0.6px;
+    }
+
+    span {
+      font-family: "Pretendard-400";
+      font-size: 30px;
+      color: $text-main;
+      line-height: normal;
+      margin-top: 1rem;
+    }
+  }
+
+  .scalechild2 {
+    background-image: url(../img/upcycling.jpg);
+
+    h3 {
+      font-family: "Pretendard-700";
+      font-size: 150px;
+      transform: rotate(-90deg);
+      left: -40%;
+      top: 26%;
+    }
+
+    p {
+      font-family: "Pretendard-700";
+      font-size: 64px;
+      margin-top: 127%;
+    }
+
+    span {
+      font-family: "Pretendard-400";
+      font-size: 30px;
+      line-height: normal;
+      margin-top: 1rem;
+    }
+  }
+
+  .scalechild3 {
+    background-image: url(../img/primium.jpg);
+
+    h3 {
+      font-family: "Pretendard-700";
+      font-size: 130px;
+    }
+
+    p {
+      font-family: "Pretendard-700";
+      font-size: 64px;
+    }
+
+    span {
+      font-family: "Pretendard-400";
+      font-size: 30px;
+      line-height: normal;
+      margin-top: 2rem;
+    }
+  }
+}
+
+
 // Premium Planning
-.premium_container {
+.event_section3 {
   max-width: 100vw;
-  height: 500px;
   background-image: url(../img/premium_planning.jpg);
   background-size: cover;
   background-position: bottom right;
   background-repeat: no-repeat;
 }
-.premium_content {
+.event3 {
   margin: 0 auto;
   width: 100%;
+  height: 500px;
   max-width: 1450px;
   padding: 2vw;
   position: relative;
@@ -43,7 +163,7 @@ ol, ul {
     bottom: 1vw;
   }
 
-  h3 {
+  .event_main_title3 {
     font-family: "Pretendard-700";
     font-size: 3.125rem;
     color: #ffffff;
@@ -51,7 +171,7 @@ ol, ul {
     line-height: 1.3;
   }
 
-  p {
+  .event_title3 {
     font-family: "Pretendard-500";
     font-size: 2.188rem;
     color: #ffffff;
@@ -96,7 +216,7 @@ ol, ul {
   height: 300px;
   position: relative;
 
-  div.icon {
+  div.icon_group {
     position: absolute;
     display: flex;
     gap: 5px;
@@ -104,3 +224,4 @@ ol, ul {
     bottom: 5%;
   }
 }
+
