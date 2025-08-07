@@ -13,23 +13,120 @@ ol, ul {
   padding-right: 0;
 }
 
-.premium_container {
-  max-width: 100vw;
-  height: 500px;
-  background-image: url(../img/premium_planning.jpg);
-  background-size: cover;
-  background-position: bottom right;
-  background-repeat: no-repeat;
+/* gnb */
+.container_fluid {
+  background-color: var(--main--point-color);
+  height: 130px;
+  padding: 0 110px;
+}
+.container_fluid .gnb {
+  gap: 55px;
+}
+.container_fluid .gnb .gnb_li_a {
+  font-size: 25px;
+}
+.container_fluid .gnb .gnb_li_a_bold {
+  font-size: 25px;
 }
 
-.premium_content {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1450px;
-  padding: 2vw;
-  position: relative;
+.global_bt {
+  font-size: 20px;
+  gap: 5px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 50px;
+  border: white solid 1.5px;
+  margin-left: 25px;
 }
-.premium_content::after {
+.global_bt svg.global_icon {
+  transition: fill 0.2s ease;
+  color: currentColor;
+}
+.global_bt:hover {
+  background-color: white !important;
+  color: var(--main--point-color) !important;
+}
+.global_bt:hover svg.global_icon {
+  color: currentColor;
+}
+
+.scalebanner > * {
+  padding: 2vw;
+  height: 1080px;
+  background-size: 100%;
+  background-position: center;
+  transition: all 0.25s ease;
+}
+.scalebanner > *:hover {
+  background-size: 120%;
+}
+.scalebanner .scalechild1 {
+  background-image: url(../img/minimal_size.jpg);
+}
+.scalebanner .scalechild1 h3 {
+  font-family: "Pretendard-700";
+  font-size: 150px;
+  color: #713131;
+  letter-spacing: -0.64px;
+}
+.scalebanner .scalechild1 p {
+  font-family: "Pretendard-700";
+  font-size: 64px;
+  color: #713131;
+  letter-spacing: -0.6px;
+}
+.scalebanner .scalechild1 span {
+  font-family: "Pretendard-400";
+  font-size: 30px;
+  color: #713131;
+  line-height: normal;
+}
+.scalebanner .scalechild2 {
+  background-image: url(../img/upcycling_size.jpg);
+}
+.scalebanner .scalechild2 h3 {
+  font-family: "Pretendard-700";
+  font-size: 150px;
+  transform: rotate(-90deg);
+  left: -40%;
+  top: 24%;
+}
+.scalebanner .scalechild2 p {
+  font-family: "Pretendard-700";
+  font-size: 64px;
+}
+.scalebanner .scalechild2 span {
+  font-family: "Pretendard-400";
+  font-size: 30px;
+  margin-bottom: 120px;
+}
+.scalebanner .scalechild3 {
+  background-image: url(../img/primium_size.jpg);
+}
+.scalebanner .scalechild3 h3 {
+  font-family: "Pretendard-700";
+  font-size: 130px;
+}
+.scalebanner .scalechild3 p {
+  font-family: "Pretendard-700";
+  font-size: 64px;
+  letter-spacing: -0.64px;
+}
+.scalebanner .scalechild3 span {
+  font-family: "Pretendard-400";
+  font-size: 30px;
+}
+
+.event_section3 {
+  background-image: url(../img/premium_planning.jpg);
+  background-position: bottom right;
+}
+
+.event3 {
+  height: 500px;
+  padding: 2vw;
+}
+.event3::after {
   font-family: "Pretendard-700";
   content: "Premium ~20%";
   font-size: 6.25rem;
@@ -41,23 +138,17 @@ ol, ul {
   right: 2vw;
   bottom: 1vw;
 }
-.premium_content h3 {
+.event3 .event_main_title3 {
   font-family: "Pretendard-700";
   font-size: 3.125rem;
-  color: #ffffff;
   letter-spacing: -0.55px;
   line-height: 1.3;
 }
-.premium_content p {
+.event3 .event_title3 {
   font-family: "Pretendard-500";
   font-size: 2.188rem;
-  color: #ffffff;
   opacity: 0.7;
   letter-spacing: -0.385px;
-  margin-bottom: 6rem;
-}
-.premium_content .premium_tags {
-  width: 50%;
 }
 
 .tag {
@@ -66,12 +157,8 @@ ol, ul {
 }
 
 .premium_mySwiper {
-  max-width: 1450px;
   margin: 70px auto 0;
   padding: 0 50px;
-}
-.premium_mySwiper .swiper-wrapper {
-  width: 100%;
 }
 .premium_mySwiper .swiper-slide {
   width: 300px;
@@ -85,12 +172,4 @@ ol, ul {
   background-color: #F5F5F5;
   width: 300px;
   height: 300px;
-  position: relative;
-}
-.img div.icon {
-  position: absolute;
-  display: flex;
-  gap: 5px;
-  right: 5%;
-  bottom: 5%;
 }
