@@ -141,7 +141,7 @@
 // 스와이퍼
 
 #taste {
-.slide-title {
+.slide_title {
     font-size: 38px;
     font-family: "pretendard-700";
 }
@@ -152,7 +152,7 @@
     margin-left: 110px;
 }
 
-.slide-question {
+.slide_question {
     font-family: "Pretendard-700";
     font-size: 30px;
     line-height: normal;
@@ -176,15 +176,15 @@
     padding-top: 140px;
 }
 
-.option-btn {
+.option_btn {
     border: 2px solid #909090;
     padding: 20px 90px;
     transition: all 0.3s;
     font-family: "pretendard-600";
 }
 
-.option-btn:hover {
-    background-color: #eee;
+.option_btn:hover {
+    background-color: #eee !important;
 }
 
 .swiper-button-next,
@@ -206,7 +206,7 @@
     z-index: 10;
 }
 
-.progress-fixed-wrapper {
+.progress_fixed_wrapper {
     gap: 10px;
     width: 400px;
     top: calc(50% + 2.5rem);
@@ -234,3 +234,32 @@
     position: unset !important;
 }
 }
+
+// 퀵메뉴
+
+.quick-menu {
+  top: calc(55% + 3rem);
+  right: 10px;
+  z-index: 1000;
+}
+
+.quick-menu ul {
+  list-style: none;
+}
+
+.quick-menu a.quick-btn {
+  font-family: "pretendard-500";
+  width: 93px;
+  height: 93px;
+  background-color: #713131;
+  font-size: 17px;
+  transition: background-color 0.3s ease;
+}
+
+.quick-menu a.quick-btn:hover,
+.quick-menu a.quick-btn:focus {
+  background-color: #a8a39f;
+  outline: none;
+}
+
+

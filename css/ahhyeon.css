@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -133,7 +134,7 @@
   padding: 40px;
 }
 
-#taste .slide-title {
+#taste .slide_title {
   font-size: 38px;
   font-family: "pretendard-700";
 }
@@ -142,7 +143,7 @@
   color: #999;
   margin-left: 110px;
 }
-#taste .slide-question {
+#taste .slide_question {
   font-family: "Pretendard-700";
   font-size: 30px;
   line-height: normal;
@@ -162,14 +163,14 @@
   gap: 35px;
   padding-top: 140px;
 }
-#taste .option-btn {
+#taste .option_btn {
   border: 2px solid #909090;
   padding: 20px 90px;
   transition: all 0.3s;
   font-family: "pretendard-600";
 }
-#taste .option-btn:hover {
-  background-color: #eee;
+#taste .option_btn:hover {
+  background-color: #eee !important;
 }
 #taste .swiper-button-next,
 #taste .swiper-button-prev {
@@ -186,7 +187,7 @@
 #taste .top_fixed_box {
   z-index: 10;
 }
-#taste .progress-fixed-wrapper {
+#taste .progress_fixed_wrapper {
   gap: 10px;
   width: 400px;
   top: calc(50% + 2.5rem);
@@ -207,4 +208,36 @@
 }
 #taste .position-unset {
   position: unset !important;
+}
+
+.quick-menu {
+  top: calc(55% + 3rem);
+  right: 10px;
+  z-index: 1000;
+}
+
+.quick-menu ul {
+  list-style: none;
+}
+
+.quick-menu a.quick-btn {
+  font-family: "pretendard-500";
+  width: 93px;
+  height: 93px;
+  background-color: #713131;
+  font-size: 17px;
+  transition: background-color 0.3s ease;
+}
+
+.quick-menu a.quick-btn:hover,
+.quick-menu a.quick-btn:focus {
+  background-color: #B0B0A8;
+  outline: none;
+}
+
+/* 데스크탑 전용: 992px 미만에서는 숨김 */
+@media (max-width: 991.98px) {
+  .quick-menu {
+    display: none;
+  }
 }
