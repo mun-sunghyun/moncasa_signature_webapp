@@ -4,3 +4,14 @@
 @import './ahhyeon';
 @import './sohee';
 @import './yeseul';
+
+
+
+#hd{
+    position: absolute;
+    left:0;
+    right:0;
+    &.fixed-top{
+        position:  fixed !important;
+    }
+}
