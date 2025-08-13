@@ -75,34 +75,16 @@
   flex-shrink: 0;
 }
 
-#minimal .prod_name {
-  font-family: $mainFont700;
-  font-size: 25px;
-  width: 300px;
-  height: 18px;
-  gap: 36px;
-  align-self: stretch;
-  color: black;
-}
-
 #minimal .product_price_set {
   width: 340px;
   height: 18px;
-  margin-top: 10px;
 
 .prod_cost {
   align-self: stretch;
-  color: #ADADAD;
-  font-family: $mainFont500;
-  font-size: 20px;
   line-height: normal;
-  text-decoration-line: line-through;
   }
 
 .prod_price {
-  color: $mainColor;
-  font-family: $mainFont700;
-  font-size: 25px;
   line-height: normal;
   }
 }
@@ -120,14 +102,8 @@
 }
 
 #minimal .tag {
-  display: inline-flex;
-  font-family: $mainFont500;
   background: $mainColor;
- 
-  border-radius: 50px;
-  font-size: 25px;
   height: fit-content;
-  padding: 5px 20px;
 }
 
 #minimal .bg-img {
@@ -234,3 +210,34 @@
     position: unset !important;
 }
 }
+
+// 퀵메뉴
+
+// 퀵메뉴
+#quick {
+  top: calc(55% + 3rem);
+  right: 10px;
+  z-index: 1000;
+
+  ul {
+    list-style: none;
+  }
+
+  a.quick-btn {
+    font-family: $mainFont500;
+    width: 93px;
+    height: 93px;
+    background-color: $mainColor;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+
+    @include flex-center;
+
+    &:hover,
+    &:focus {
+      background-color: #a8a39f;
+      outline: none;
+    }
+  }
+}
+

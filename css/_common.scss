@@ -93,8 +93,7 @@ a {
   max-width: 300px;
   flex-wrap: wrap;
   gap: 20px;
-  margin-top: 20px;
-
+}
   .prod_name {
     font-family: $mainFont700;
     font-size: clamp(14px,1vw + 14px,25px);
@@ -115,9 +114,9 @@ a {
   .prod_price {
     font-family: $mainFont700;
     font-size: clamp(14px,1vw + 14px,25px);
-    color: $mainFont700;
+    color: $mainColor;
   }
-}
+
 
 // 아이콘 그룹
 .icon_group {
