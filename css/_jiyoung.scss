@@ -1,3 +1,6 @@
+
+
+
 #upcycling {
     // 공통 배경
     .img_bg {
@@ -6,23 +9,32 @@
   
     // 기획전 이미지 영역
     .event {
-      width: 667px;
+      min-width: 375px;
       background-image: url('../img/product/event2_main.jpg');
       background-size: auto 100%;
+
+      @media (min-width:991px) {
+        width: 500px;
+        background-size: auto 100%;
+      }      
+      @media (min-width:1450px) {
+        width: 667px;
+        background-size: auto 100%;
+      }
   
       &_main_title2 {
-        font-size: clamp(40px,1vw+40px,100px);
+        font-size: clamp(40px,2vw + 40px,100px);
         margin-bottom: 20px;
         font-family: $mainFont700;
       }
   
       &_title2 {
-        font-size: clamp(20px,1vw+20px,36px);
+        font-size: clamp(20px,1vw + 20px,36px);
         margin-bottom: 20px;
       }
   
       &_serve_title2 {
-        font-size: clamp(16px,1vw+16px,24px);
+        font-size: clamp(16px,1vw + 16px,24px);
         line-height: 1.5;
       }
     }
@@ -74,13 +86,13 @@
       background-color: #1d220c95;
       border-radius: 30px;
       padding: 5px 20px;
-      font-size: clamp(16px,1vw+16px,25px);
+      font-size: clamp(16px,1vw + 16px,25px);
       line-height: var(--bs-body-line-height);
     }
   
     // 할인 퍼센트
     .percent {
-      font-size: clamp(40px,1vw+40px,100px);
+      font-size: clamp(40px,2vw + 40px,100px);
       font-family: $mainFont700;
     }
   
@@ -107,7 +119,7 @@
       }
   
       strong {
-        font-size: clamp(14px,1vw+14px,24px);
+        font-size: clamp(14px,1vw + 14px,24px);
         line-height: 1.5;        
       }
   

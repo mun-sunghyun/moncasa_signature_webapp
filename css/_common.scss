@@ -84,7 +84,7 @@ a {
   border-radius: 30px;
   padding: 10px 20px;
   color: #fff;
-  font-size: clamp(16px,1vw+16px,25px);
+  font-size: clamp(16px,1vw + 16px,25px);
   display: inline-block;
 }
 
@@ -97,7 +97,7 @@ a {
 
   .prod_name {
     font-family: $mainFont700;
-    font-size: clamp(14px,1vw+14px,25px);
+    font-size: clamp(14px,1vw + 14px,25px);
     margin-top: 19.495px;
   }
 
@@ -107,14 +107,14 @@ a {
 
   .prod_cost {
     font-family: $mainFont500;
-    font-size: clamp(12px,1vw+12px,20px);
+    font-size: clamp(12px,1vw + 12px,20px);
     color: #adadad;
     text-decoration: line-through;
   }
 
   .prod_price {
     font-family: $mainFont700;
-    font-size: clamp(14px,1vw+14px,25px);
+    font-size: clamp(14px,1vw + 14px,25px);
     color: $mainFont700;
   }
 }
@@ -126,7 +126,7 @@ a {
   right: 10px;
   gap: 5px;
   font-family: $mainFont700; 
-  font-size: clamp(10px,1vw+10px,15px);
+  font-size: clamp(10px,1vw + 10px,15px);
 
   strong {
     width: 55px;
@@ -143,8 +143,3 @@ a {
     background-color: $mainColor;
   }
 }
-
-
-
-
-

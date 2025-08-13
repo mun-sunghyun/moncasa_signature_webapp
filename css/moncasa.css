@@ -58,7 +58,7 @@ a {
   border-radius: 30px;
   padding: 10px 20px;
   color: #fff;
-  font-size: 25px;
+  font-size: clamp(16px, 1vw + 16px, 25px);
   display: inline-block;
 }
 
@@ -70,7 +70,7 @@ a {
 }
 .product_card .prod_name {
   font-family: "Pretendard-700";
-  font-size: 25px;
+  font-size: clamp(14px, 1vw + 14px, 25px);
   margin-top: 19.495px;
 }
 .product_card .product_price_set {
@@ -78,13 +78,13 @@ a {
 }
 .product_card .prod_cost {
   font-family: "Pretendard-500";
-  font-size: 20px;
+  font-size: clamp(12px, 1vw + 12px, 20px);
   color: #adadad;
   text-decoration: line-through;
 }
 .product_card .prod_price {
   font-family: "Pretendard-700";
-  font-size: 25px;
+  font-size: clamp(14px, 1vw + 14px, 25px);
   color: "Pretendard-700";
 }
 
@@ -96,7 +96,7 @@ a {
   right: 10px;
   gap: 5px;
   font-family: "Pretendard-700";
-  font-size: 15px;
+  font-size: clamp(10px, 1vw + 10px, 15px);
 }
 .icon_group strong {
   width: 55px;
@@ -244,9 +244,7 @@ a {
 .review_swiper .swiper-button-next,
 .review_swiper .swiper-button-prev {
   color: white !important;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .review1 {
@@ -632,21 +630,33 @@ a {
   background-color: #f5f5f5;
 }
 #upcycling .event {
-  width: 667px;
+  min-width: 375px;
   background-image: url("../img/product/event2_main.jpg");
   background-size: auto 100%;
 }
+@media (min-width: 991px) {
+  #upcycling .event {
+    width: 500px;
+    background-size: auto 100%;
+  }
+}
+@media (min-width: 1450px) {
+  #upcycling .event {
+    width: 667px;
+    background-size: auto 100%;
+  }
+}
 #upcycling .event_main_title2 {
-  font-size: 100px;
+  font-size: clamp(40px, 2vw + 40px, 100px);
   margin-bottom: 20px;
   font-family: "Pretendard-700";
 }
 #upcycling .event_title2 {
-  font-size: 36px;
+  font-size: clamp(20px, 1vw + 20px, 36px);
   margin-bottom: 20px;
 }
 #upcycling .event_serve_title2 {
-  font-size: 24px;
+  font-size: clamp(16px, 1vw + 16px, 24px);
   line-height: 1.5;
 }
 #upcycling .img_title {
@@ -680,11 +690,11 @@ a {
   background-color: rgba(29, 34, 12, 0.5843137255);
   border-radius: 30px;
   padding: 5px 20px;
-  font-size: 25px;
+  font-size: clamp(16px, 1vw + 16px, 25px);
   line-height: var(--bs-body-line-height);
 }
 #upcycling .percent {
-  font-size: 100px;
+  font-size: clamp(40px, 2vw + 40px, 100px);
   font-family: "Pretendard-700";
 }
 #upcycling .ecombt1 {
@@ -697,15 +707,31 @@ a {
 }
 #upcycling .banner_set {
   margin-top: 70px;
-  gap: 10px;
+  gap: 5px;
+}
+@media (min-width: 991px) {
+  #upcycling .banner_set {
+    gap: 7px;
+  }
+}
+@media (min-width: 1450px) {
+  #upcycling .banner_set {
+    gap: 10px;
+  }
 }
 #upcycling .banner_set strong {
-  font-size: 24px;
+  font-size: clamp(14px, 1vw + 14px, 24px);
   line-height: 1.5;
 }
 #upcycling .banner_set span {
   font-size: 15px;
   line-height: 1.5;
+  display: none;
+}
+@media (min-width: 991px) {
+  #upcycling .banner_set span {
+    display: block;
+  }
 }
 #upcycling .banner_eco1,
 #upcycling .banner_eco2 {
@@ -840,7 +866,6 @@ a {
   background: #713131;
   border-radius: 50px;
   font-size: 25px;
-  height: -moz-fit-content;
   height: fit-content;
   padding: 5px 20px;
 }
