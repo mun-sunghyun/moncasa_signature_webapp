@@ -1,0 +1,41 @@
+#yeseul {
+  .img3list {
+    ul {
+      gap: 20px;
+      list-style: none;
+    }
+  }
+
+  .img3title {
+    p {
+      font-size: 17px;
+      color: $basicText;
+      opacity: 50%;
+      font-family: $mainFont500;
+      line-height: 20px;
+    }
+
+    h3 {
+      font-size: 50px;
+      color: $basicText;
+      font-family: $mainFont700;
+    }
+  }
+
+  .content-container {
+    @include flex-column;
+    width: 260px;
+    gap: 50px;
+  }
+
+  button {
+    width: 173px;
+    height: 68px;
+    background-color: $mainColor;
+    font-family: $mainFont600;
+    border-radius: 150px;
+    font-size: 20px;
+    border: 0;
+  }
+}
+

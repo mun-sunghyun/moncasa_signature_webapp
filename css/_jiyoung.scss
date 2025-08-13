@@ -11,18 +11,18 @@
       background-size: auto 100%;
   
       &_main_title2 {
-        font-size: 100px;
+        font-size: clamp(40px,1vw+40px,100px);
         margin-bottom: 20px;
-        font-family: "Pretendard-700";
+        font-family: $mainFont700;
       }
   
       &_title2 {
-        font-size: 36px;
+        font-size: clamp(20px,1vw+20px,36px);
         margin-bottom: 20px;
       }
   
       &_serve_title2 {
-        font-size: 24px;
+        font-size: clamp(16px,1vw+16px,24px);
         line-height: 1.5;
       }
     }
@@ -74,17 +74,17 @@
       background-color: #1d220c95;
       border-radius: 30px;
       padding: 5px 20px;
-      font-size: 25px;
+      font-size: clamp(16px,1vw+16px,25px);
       line-height: var(--bs-body-line-height);
     }
   
     // 할인 퍼센트
     .percent {
-      font-size: 100px;
-      font-family: "Pretendard-700";
+      font-size: clamp(40px,1vw+40px,100px);
+      font-family: $mainFont700;
     }
   
-    // 버튼
+    // 기획전이미지 텍스트세트
     .ecombt1 {
       padding: 30px;
     }
@@ -98,16 +98,26 @@
     // 광고 배너
     .banner_set {
       margin-top: 70px;
-      gap: 10px;
+      gap: 5px;
+      @media (min-width:991px) {
+        gap: 7px;                  
+      }      
+      @media (min-width:1450px) {
+        gap: 10px;          
+      }
   
       strong {
-        font-size: 24px;
-        line-height: 1.5;
+        font-size: clamp(14px,1vw+14px,24px);
+        line-height: 1.5;        
       }
   
       span {
         font-size: 15px;
         line-height: 1.5;
+        display: none;
+        @media (min-width:991px) {
+          display: block;          
+        }
       }
     }  
     .banner_eco1,
