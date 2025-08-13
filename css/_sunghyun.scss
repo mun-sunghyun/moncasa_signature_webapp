@@ -1,3 +1,15 @@
+.header{
+  position: fixed;      /* 화면에 고정 */
+  width: 100%;          /* 전체 너비 */
+  z-index: 1000;        /* 다른 요소 위에 표시 */
+  top: 0;               /* 위쪽에 붙임 */
+  left: 0;
+}
+.body{
+  margin: 0;
+  padding-top: 130px; /* 헤더 높이만큼 위쪽 공간 확보 */
+}
+
 .premium_div, .upcycling_div, .minimal_div {
   background-size: cover;
   background-position: center;
