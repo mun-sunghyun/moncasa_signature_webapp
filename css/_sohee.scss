@@ -18,7 +18,7 @@ ol, ul {
 /* gnb */
 .container_fluid {
   background-color: $mainColor;
-  height: 130px;
+  height: 120px;
   padding: 0 110px;
 
   .gnb {
@@ -63,7 +63,7 @@ ol, ul {
 .scalebanner {
   > * {
     padding: 2vw;
-    height: 1080px;
+    height: 1020px;
     background-size: 100%;
     background-position: center;
     transition: all 0.25s ease;
@@ -87,7 +87,7 @@ ol, ul {
       font-family: $mainFont700;
       font-size: 64px;
       color: $mainColor;
-      letter-spacing: -0.6px;
+      letter-spacing: -3.5px;
     }
 
     span {

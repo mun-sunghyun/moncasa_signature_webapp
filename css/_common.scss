@@ -42,6 +42,10 @@ a {
   color: $basicText;
 }
 
+* {
+  font-family: $mainFont400;
+}
+
 
 // 유틸리티 클래스
 .line-height-1 { line-height: 1; }
@@ -68,13 +72,13 @@ a {
   padding: 3rem 0;
 
   @media (min-width: 1280px) {
-    padding: 50px 0;
+    padding-top: 50px;
   }
   @media (min-width: 1450px) {
-    padding: 50px 0;
+    padding-top: 50px;
   }
   @media (min-width: 1650px) {
-    padding: 100px 0;
+   padding-top: 100px;
   }
 }
 

@@ -3,217 +3,249 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Pretendard-400";
 }
 
-#minimal .ex1_banner {
+@media (max-width: 1200px) {
+    #minimal .container_1450 {
+        flex-direction: column; /* 세로 배치 */
+        gap: 2rem; /* 요소 간격 */
+        padding: 2rem 1rem; /* 좌우 여백 */
+    }
+
+    /* 왼쪽 배너 */
+    #minimal .ex1_banner {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* 제품 리스트 */
+    #minimal .product_set {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2열 그리드 */
+        gap: 1.5rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    #minimal .product_set li {
+        width: 100%;
+    }
+
+     #minimal .banner_set {
+        padding: 1rem;
+    }
+
+    #minimal .bottom-banner {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+#minimal {
+  .ex1_banner {
     width: 670px;
     flex-shrink: 0;
 
-.img-wrapper {
-      position:fixed;
+    .img-wrapper {
+      position: fixed;
       width: 100%;
       height: auto;
     }
   }
 
-#minimal .event_main_title1 {
-  color: $mainColor;
-  font-size: 100px;
-  font-family: $mainFont700;
-  line-height: 150%;
-  letter-spacing: -1.1px;
-  margin-left: 64px;
-}
-
-#minimal .event_serve_title1 {
-  color: $mainColor;
-  font-size: 24px;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.10);
-  font-family: $mainFont700;
-  line-height: 30px;
-  letter-spacing: -0.264px;
-  margin-left: 55px;
-}
-
-#minimal .event_title1 {
-  font-size: 64px;
-  font-family: $mainFont700;
- 
-  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
-  line-height: normal;
-  margin-bottom: 100px;
-}
-
-#minimal .percent {
-  margin-left: auto;
- 
-  font-size: 100px;
-  font-family: $mainFont700;
-}
-
-// 상품 리스트
-#minimal .badge {
-  background: $mainColor;
- 
-  font-size: 15px;
-  width: 55px;
-  height: 55px;
-  z-index: 10;
-}
-
-#minimal .product_set {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-}
-
-#minimal .product-text {
-  width: 300px;
-  height: 56px;
-  gap: 20px;
-  flex-shrink: 0;
-}
-
-#minimal .product_price_set {
-  width: 340px;
-  height: 18px;
-
-.prod_cost {
-  align-self: stretch;
-  line-height: normal;
+  .event_main_title1 {
+    color: $mainColor;
+    font-size: 100px;
+    font-family: $mainFont700;
+    line-height: 150%;
+    letter-spacing: -1.1px;
+    margin-left: 64px;
   }
 
-.prod_price {
-  line-height: normal;
+  .event_serve_title1 {
+    color: $mainColor;
+    font-size: 24px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    font-family: $mainFont700;
+    line-height: 30px;
+    letter-spacing: -0.264px;
+    margin-left: 55px;
   }
-}
 
-#minimal .bottom-banner {
-  margin-top: 80px;
-  background-image: url(../img/product/mi_bottom_bg_img.jpg);
-  background-size: cover;
-  background-position: center 46%;
-  background-repeat: no-repeat;
-  padding: 36px 100px;
-  font-size: 35px;
- 
-  font-family: "Pretendard-600";
-}
+  .event_title1 {
+    font-size: 64px;
+    font-family: $mainFont700;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+    line-height: normal;
+    margin-bottom: 100px;
+    
+    letter-spacing: -2.0px;
+  }
 
-#minimal .tag {
-  background: $mainColor;
-  height: fit-content;
-}
+  .percent {
+    margin-left: auto;
+    font-size: 100px;
+    font-family: $mainFont700;
+  }
 
-#minimal .bg-img {
-  width: 670px;
-  height: 800px;
-  background: url('../img/product/event1_main.jpg') no-repeat center center;
-  background-size: cover;
-  padding: 40px;
+  // 상품 리스트
+  .badge {
+    background: $mainColor;
+    font-size: 15px;
+    width: 55px;
+    height: 55px;
+    z-index: 10;
+    @include flex-center;
+  }
+
+  .product_set {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+
+  .product-text {
+    width: 300px;
+    height: 56px;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+
+  .product_price_set {
+    width: 340px;
+    height: 18px;
+
+    .prod_cost {
+      align-self: stretch;
+      line-height: normal;
+    }
+
+    .prod_price {
+      line-height: normal;
+    }
+  }
+
+  .bottom-banner {
+    margin-top: 80px;
+    background-image: url(../img/product/mi_bottom_bg_img.jpg);
+    background-size: cover;
+    background-position: center 46%;
+    background-repeat: no-repeat;
+    padding: 40px 100px;
+    font-size: 30px;
+    font-family: $mainFont600;
+  }
+
+  .tag {
+    background: $mainColor;
+    height: fit-content;
+  }
+
+  .bg-img {
+    background: url("../img/product/event1_main.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 40px;
+  }
 }
 
 // 스와이퍼
 
 #taste {
-.slide-title {
+  .slide-title {
     font-size: 38px;
     font-family: $mainFont700;
-}
+  }
 
-.slide_mid_title {
+  .slide_mid_title {
     font-size: 16px;
     color: #999;
     margin-left: 110px;
-}
+  }
 
-.slide-question {
+  .slide-question {
     font-family: $mainFont700;
     font-size: 30px;
     line-height: normal;
-}
+  }
 
-.swiper-scrollbar {
+  .swiper-scrollbar {
     width: 500px;
     height: 2px;
     background: #ddd;
-}
+  }
 
-.swiper-pagination {
+  .swiper-pagination {
     font-size: 14px;
     color: #333;
     min-width: 40px;
     white-space: nowrap;
-}
+  }
 
-.options {
+  .options {
     gap: 35px;
     padding-top: 140px;
-}
+  }
 
-.option-btn {
+  .option-btn {
     border: 2px solid #909090;
     padding: 20px 90px;
     transition: all 0.3s;
-    font-family: "pretendard-600";
-}
+    font-family: $mainFont600;
 
-.option-btn:hover {
-    background-color: #eee;
-}
+    &:hover {
+      background-color: #eee !important;
+    }
+  }
 
-.swiper-button-next,
-.swiper-button-prev {
+  .swiper-button-next,
+  .swiper-button-prev {
     color: black;
     top: calc(50% + 3.5rem);
     z-index: 10;
-}
+  }
 
-.swiper-button-prev {
+  .swiper-button-prev {
     left: 20px;
-}
+  }
 
-.swiper-button-next {
+  .swiper-button-next {
     right: 20px;
-}
+  }
 
-.top_fixed_box {
+  .top_fixed_box {
     z-index: 10;
-}
+  }
 
-.progress-fixed-wrapper {
+  .progress-fixed-wrapper {
     gap: 10px;
     width: 400px;
     top: calc(50% + 2.5rem);
     left: 108px;
-}
+  }
 
-.taste_icon {
-    width:68.333px;
-    height:50px;
-    
-}
+  .taste_icon {
+    width: 68.333px;
+    height: 50px;
+  }
 
-.q_num {
-  color: $mainColor;
-  font-family: $mainFont700;
-}
+  .q_num {
+    color: $mainColor;
+    font-family: $mainFont700;
+  }
 
-.icon_text {
-  font-size: 18px;
-  font-family: $mainFont500;
-  line-height: normal;
-}
+  .icon_text {
+    font-size: 18px;
+    font-family: $mainFont500;
+    line-height: normal;
+  }
 
-.position-unset{
+  .position-unset {
     position: unset !important;
-}
+  }
 }
 
 // 퀵메뉴
 
-// 퀵메뉴
 #quick {
   top: calc(55% + 3rem);
   right: 10px;
