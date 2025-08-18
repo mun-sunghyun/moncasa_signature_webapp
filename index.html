@@ -137,23 +137,36 @@
         <main>
             <!-- 기획전 -->
             <section id="event" class="">
-                <div class="scalebanner d-flex min-vh-100 text-decoration-none ">
-                    <a href="#minimal" class="scalechild1 d-flex col-4 flex-column">
-                        <h3 class="order-3 mt-auto text-center">Minimal</h3>
-                        <p>가을 감성,<br/>우리 사이 만큼</p>
-                        <span class="mt-1">1인가구, 신혼부부를<br/>위한 작지만 깊은 가을 감성</span>
-                    </a>
-                    <a href="#upcycling" class="scalechild2 d-flex col-4 flex-column position-relative">
-                        <h3 class="text-white position-absolute overflow-hidden">Upcycling</h3>
-                        <p class="mt-auto text-white mb-3">숨겨진 보석을 찾아라</p>
-                        <span class="text-white lh-sm">지구를 살리는<br/>가장 아름다운 선택</span>
-                    </a>
-                    <a href="#premium" class="scalechild3 d-flex col-4 flex-column">
-                        <h3 class="mb-auto text-white text-start">Premium</h3>
-                        <p class="text-white text-end lh-sm">시간이 흘러도 변치<br/>않는 가치</p>
-                        <span class="text-white text-end mt-4 mb-5 lh-sm">인생 후반전, 나를 위한 품격 있는<br/>공간을 만들어보세요</span>
-                    </a>
-                </div>
+                <!-- Swiper -->
+                <div class="swiper event_Swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="scalebanner d-flex min-vh-100 text-decoration-none ">
+                            <a href="#minimal" class="scalechild1 w-100 d-flex flex-column">
+                                <h3 class="order-3 mt-auto text-center">Minimal</h3>
+                                <p>가을 감성,<br/>우리 사이 만큼</p>
+                                <span class="mt-1">1인가구, 신혼부부를<br/>위한 작지만 깊은 가을 감성</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="scalebanner d-flex min-vh-100 text-decoration-none">
+                            <a href="#upcycling" class="scalechild2 w-100 d-flex flex-column position-relative">
+                                <h3 class="text-white position-absolute overflow-hidden">Upcycling</h3>
+                                <p class="mt-auto text-white mb-3">숨겨진 보석을 찾아라</p>
+                                <span class="text-white lh-sm">지구를 살리는<br/>가장 아름다운 선택</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="scalebanner d-flex min-vh-100 text-decoration-none">
+                            <a href="#premium" class="scalechild3 w-100 d-flex flex-column">
+                                <h3 class="mb-auto text-white text-start">Premium</h3>
+                                <p class="text-white text-end lh-sm">시간이 흘러도 변치<br/>않는 가치</p>
+                                <span class="text-white text-end mt-4 mb-5 lh-sm">인생 후반전, 나를 위한 품격 있는<br/>공간을 만들어보세요</span>
+                            </a>
+                        </div>
+                    </div>
             </section>
             <!-- 미니멀 -->
             <section id="minimal" class="section_p pt-5 mt-5">
@@ -1071,7 +1084,32 @@
                     </div>       
         </section>
         <script src="./vendor/bt.js"></script>
-        
+        <!-- event_swiper -->
+        <script>
+            var event_swiper = new Swiper(".event_Swiper", {
+                slidesPerView: 3,
+                spaceBetween: 0,
+                loop:true,
+                pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                },
+                breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                },
+                991: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 0,
+                },
+                1450: {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                },
+                },
+            });
+        </script>
         <!-- swiper script -->
         <script>
             const swiper = new Swiper(".premium_mySwiper", {
