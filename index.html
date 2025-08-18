@@ -943,10 +943,10 @@
                                         <span>최*원 님 | 무민 3.5인 천연면피 소가죽 소파</span>
                                     </div>
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
                                 <div class="swiper-pagination"></div>
                             </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>                            
                         </div>
                     </div>
                     <div class="wrapper_btn">
@@ -1141,6 +1141,20 @@
                     nextEl: ".review_swiper .swiper-button-next",
                     prevEl: ".review_swiper .swiper-button-prev",
                 },
+                breakpoints: {
+                320: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 30,
+                },
+                991: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1450: {
+                    slidesPerView: 4.5,
+                    spaceBetween: 30,
+                },
+                },                
             });
         </script>
 

@@ -21,7 +21,8 @@
 }
 
 .review_swiper {
-    width: 1500px;
+    width:100%;
+    max-width: 1500px;
     height: 600px;
     margin-bottom: 50px;
 }
@@ -35,12 +36,16 @@
     align-items: center;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+
+    /* 내부 콘텐츠의 최소 너비 확보 */
+    min-width: 300px;
 }
 
 .review_swiper .swiper-button-next,
 .review_swiper .swiper-button-prev {
     color: white !important;
     user-select: none;
+    position: absolute;
 }  
 
 .review1{
@@ -195,7 +200,32 @@
     margin-bottom: 10px;
     height:150px;
 }
+/* 작은 화면 (모바일) - 버튼 안쪽으로 더 넣기 */
+@media (max-width: 1420px){
+    .review_swiper {
+        position: relative; /* 기준 컨테이너 */
+        overflow: hidden;
+    }
 
+    .review-swiper .swiper-button-prev ,   
+    .review-swiper .swiper-button-next {
+      left:20%;  
+      right:20%;
+    }
+}
+/* 작은 화면 (모바일) - 버튼 안쪽으로 더 넣기 */
+@media (max-width: 320px) {
+    .review_swiper {
+        position: relative; /* 기준 컨테이너 */
+        overflow: hidden;
+    }
+
+    .review-swiper .swiper-button-prev ,   
+    .review-swiper .swiper-button-next {
+      left:20%;  
+      right:20%;
+    }
+}
 .wrapper_btn{
     text-align: right;
     margin-bottom: 20px;
