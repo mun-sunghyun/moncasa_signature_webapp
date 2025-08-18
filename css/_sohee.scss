@@ -17,9 +17,8 @@ ol, ul {
 
 /* gnb */
 .container_fluid {
-  background-color: $mainColor;
-  height: 130px;
-  padding: 0 110px;
+ 
+ 
 
   .gnb {
     gap: 55px;
@@ -41,7 +40,7 @@ ol, ul {
   background-color: transparent;
   border-radius: 50px;
   border: white solid 1.5px;
-  margin-left: 25px;
+
 
   svg.global_icon {
     transition: fill 0.2s ease;
