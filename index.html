@@ -286,7 +286,7 @@
                         
                         <!-- 상품들 + 기획전이미지 -->
                         <div class=" d-flex flex-column gap-xl-5  flex-xl-row justify-content-xl-between plan_project_special overflow-hidden">
-                
+                         
                          <div class="swiper col-xl-6 order-2 order-xl-1 mt-5 mt-xl-0 mx-5 mx-xl-0  overflow-visible">
                                 <!-- 상품 컴포넌트 세트 -->
                                 <div class=" product_set swiper-wrapper">
@@ -367,13 +367,22 @@
                                         </a>
                                     </div>
                                 </div>
-                         </div> 
+                                 
+                         <div class="swiper-scrollbar mt-5 d-xl-none"></div>
+                         </div>
                          <script>
                             
                             const upcycling = new Swiper("#upcycling .swiper", {
                                 loop: false,
                                 slidesPerView: 2,
-                                spaceBetween: 10, // 슬라이드 간격                                
+                                spaceBetween: 10, // 슬라이드 간격 
+                                
+                                scrollbar: {
+                                el: ".swiper-scrollbar",
+                                draggable: true, // 사용자가 드래그 가능
+                                hide: false,     // 항상 보이도록 설정
+                                },
+
                                 breakpoints: {
                                     1200: { // 1200px 이상 → 2줄 2열
                                         slidesPerView: 2,
@@ -403,8 +412,7 @@
                                     }
 
                                 });
-                         </script>  
-                         
+                         </script> 
                 
                           <!-- 기획전 이미지 -->
                           <div class="text-white d-flex col-xl-6 event order-1 order-xl-2">
@@ -432,13 +440,9 @@
                                  </div>
                             </div>
                           </div>
+                          </div>                                                  
+                        </div>                        
 
-                          </div>
-                        
-                        </div>
-
-                        
-                
                         <!-- 광고 배너 -->
                         <ul class="justify-content-between d-flex text-white text-end banner_set">
 

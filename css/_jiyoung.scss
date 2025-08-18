@@ -129,10 +129,28 @@
       height: 300px !important;
     }
     .swiper{
+      padding-bottom: 24px; /* 바 공간 확보 (원하는 만큼) */
       // @media (max-width:1199px) {
       //   width:100%;
         
       // }
+    }
+
+    /* 바 전체 (옅은 회색) */
+    .swiper-scrollbar {
+      background: #e0e0e0;   /* 회색 라인 */
+      height: 4px;           /* 높이 */
+      border-radius: 2px;
+      position: relative;   /* 절대 위치 → 상대 위치 */
+      bottom: auto;         /* 기본 absolute 해제 */
+      margin-top: 8px;      /* 슬라이드와 간격 */
+    }
+    
+
+    /* 안쪽에 움직이는 부분 (진한색) */
+    .swiper-scrollbar-drag {
+      background: #777;       /* 원하는 색 (예: 검정, 브랜드 컬러) */
+      border-radius: 2px;
     }
   }
   
