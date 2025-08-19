@@ -907,6 +907,11 @@ ol, ul {
 }
 
 /* gnb */
+.container_fluid {
+  background-color: #713131;
+  height: 120px;
+  padding: 0 110px;
+}
 .container_fluid .gnb {
   gap: 55px;
 }
