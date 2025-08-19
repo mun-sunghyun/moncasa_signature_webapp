@@ -63,17 +63,18 @@
                             </li>`;
             });
             mon_navi.innerHTML = navidata;
+            document.getElementById("m_mon_navi").innerHTML = navidata;
         });
     </script>
     </head>
     <body>
         <!-- 상단 헤더 -->
-        <header id="hd" class="mainColor-bg" >
+        <header id="hd">
                 <div class="container_fluid d-flex justify-content-between align-items-center">
                     <h1><a href=""><img src="img/logo/logo_w.svg" alt="" class="logo"></a></h1>
                     <div class="gnb_container d-flex align-items-center justify-content-between">
                         <nav>
-                            <ul class="gnb d-flex" id="mon_navi">
+                            <ul class="gnb d-xl-flex d-none" id="mon_navi">
                                 
                             </ul>
                         </nav>
@@ -87,6 +88,9 @@
                         </button>
                     </div>
                 </div>
+                <ul class="gnb d-flex d-xl-none gap-3 py-2 justify-content-center" id="m_mon_navi">
+                                
+                </ul>
         </header>
         <!-- 상단 헤더 스크립트 -->
         <script>
@@ -1020,7 +1024,7 @@
                         </div>
                     </div>
             </section>
-            <section id="lineup" class="section_p container_1920">
+            <section id="lineup" class="section_p container_1920 mb-0 pb-0">
                 <div class="d-flex flex-row">
                         <!-- 첫 번째 박스 -->
                         <div class="lineup_picture1_wrapper">
@@ -1063,7 +1067,7 @@
             </section>
         </main>
         <section id="footer" class="main_point_bg px-4 pb-5 d-flex flex-column justify-content-between">
-                    <div class="footer_wrapper d-flex justify-content-between">
+                    <div class="footer_wrapper d-flex justify-content-between align-items-center">
                         <div>
                             <svg width="289" height="44" viewBox="0 0 289 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_269_779)">

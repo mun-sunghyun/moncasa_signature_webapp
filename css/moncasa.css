@@ -127,11 +127,11 @@ a {
   background-color: #713131;
 }
 
-.body {
-  margin: 0;
-  padding-top: 130px; /* 헤더 높이만큼 위쪽 공간 확보 */
+@media (max-width: 1199px) {
+  #event {
+    margin-top: 160px; /* 또는 padding-top: 130px; */
+  }
 }
-
 .premium_div, .upcycling_div, .minimal_div {
   background-size: cover;
   background-position: center;
@@ -1102,6 +1102,14 @@ ol, ul {
   position: absolute;
   left: 0;
   right: 0;
+}
+@media (max-width: 1199px) {
+  #hd {
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 1000;
+    background-color: #713131;
+  }
 }
 #hd.fixed-top {
   position: fixed !important;

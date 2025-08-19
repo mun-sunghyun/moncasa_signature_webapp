@@ -1,7 +1,7 @@
-
-.body{
-  margin: 0;
-  padding-top: 130px; /* 헤더 높이만큼 위쪽 공간 확보 */
+@media (max-width: 1199px) {
+  #event {
+    margin-top: 160px; /* 또는 padding-top: 130px; */
+  }
 }
 
 .premium_div, .upcycling_div, .minimal_div {
