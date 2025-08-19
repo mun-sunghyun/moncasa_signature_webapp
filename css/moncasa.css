@@ -23,6 +23,14 @@ a {
   line-height: 1;
 }
 
+.mainColor-bg {
+  background-color: #713131 !important;
+}
+
+.mainColor-text {
+  color: #713131 !important;
+}
+
 .container_1280 {
   max-width: 1280px;
   margin: 0 auto;
@@ -36,6 +44,10 @@ a {
 .container_1650 {
   max-width: 1650px;
   margin: 0 auto;
+}
+
+.fs-25 {
+  font-size: 25px;
 }
 
 .section_p {
@@ -69,29 +81,24 @@ a {
 .product_card {
   max-width: 300px;
   flex-wrap: wrap;
-  gap: 20px;
 }
 
 .prod_name {
   font-family: "Pretendard-700";
-  font-size: clamp(14px, 1vw + 14px, 25px);
-  margin-top: 19.495px;
-}
-
-.product_price_set {
-  margin-top: 20px;
+  font-size: clamp(14px, 1vw + 13px, 25px);
+  text-wrap: nowrap;
 }
 
 .prod_cost {
   font-family: "Pretendard-500";
-  font-size: clamp(12px, 1vw + 12px, 20px);
+  font-size: clamp(12px, 1vw + 11px, 20px);
   color: #adadad;
   text-decoration: line-through;
 }
 
 .prod_price {
   font-family: "Pretendard-700";
-  font-size: clamp(14px, 1vw + 14px, 25px);
+  font-size: clamp(14px, 1vw + 13px, 25px);
   color: #713131;
 }
 
@@ -99,15 +106,15 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 10px;
-  right: 10px;
-  gap: 5px;
+  bottom: 5px;
+  right: 5px;
+  gap: 3px;
   font-family: "Pretendard-700";
-  font-size: clamp(10px, 1vw + 10px, 15px);
+  font-size: clamp(9px, 1vw + 8px, 15px);
 }
 .icon_group strong {
-  width: 55px;
-  height: 55px;
+  width: clamp(30px, 1vw + 28px, 55px);
+  height: clamp(30px, 1vw + 28px, 55px);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -555,53 +562,42 @@ a {
   color: white;
 }
 
+#upcycling {
+  /* 바 전체 (옅은 회색) */
+  /* 안쪽에 움직이는 부분 (진한색) */
+}
 #upcycling .img_bg {
   background-color: #f5f5f5;
 }
 #upcycling .event {
   min-width: 375px;
   background-image: url("../img/product/event2_main.jpg");
-  background-size: auto 100%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 77vw;
 }
-@media (min-width: 991px) {
+@media (min-width: 1200px) {
   #upcycling .event {
-    width: 500px;
-    background-size: auto 100%;
-  }
-}
-@media (min-width: 1450px) {
-  #upcycling .event {
-    width: 667px;
-    background-size: auto 100%;
+    height: auto;
+    background-position: center top;
+    background-size: 100%;
   }
 }
 #upcycling .event_main_title2 {
-  font-size: clamp(40px, 2vw + 40px, 100px);
+  font-size: clamp(40px, 2vw + 38px, 100px);
   margin-bottom: 20px;
   font-family: "Pretendard-700";
 }
 #upcycling .event_title2 {
-  font-size: clamp(20px, 1vw + 20px, 36px);
-  margin-bottom: 20px;
+  font-size: clamp(16px, 1vw + 20px, 36px);
 }
 #upcycling .event_serve_title2 {
-  font-size: clamp(16px, 1vw + 16px, 24px);
+  font-size: clamp(14px, 1vw + 14px, 24px);
   line-height: 1.5;
 }
-#upcycling .img_title {
-  padding-left: 50px;
-}
-#upcycling .product_set {
-  max-width: 650px;
-}
-#upcycling .product_set img {
-  width: 300px;
-  height: 300px;
-}
 #upcycling .product_card {
-  max-width: 301px;
-  max-height: 374px;
-  margin-bottom: 50px;
+  max-width: none;
 }
 #upcycling .product_card1 img, #upcycling .product_card2 img, #upcycling .product_card4 img {
   transform: translateY(-20px);
@@ -609,44 +605,19 @@ a {
 #upcycling .product_card3 img {
   transform: translateY(-40px);
 }
-#upcycling .product_price_set {
-  margin-top: 20px;
-}
-#upcycling .textbadge {
-  gap: 13px;
-}
 #upcycling .tag2 {
   background-color: rgba(29, 34, 12, 0.5843137255);
-  border-radius: 30px;
-  padding: 5px 20px;
-  font-size: clamp(16px, 1vw + 16px, 25px);
+  border-radius: 50px;
+  font-size: clamp(13px, 1vw + 12px, 25px);
   line-height: var(--bs-body-line-height);
 }
 #upcycling .percent {
-  font-size: clamp(40px, 2vw + 40px, 100px);
+  font-size: clamp(40px, 2vw + 38px, 100px);
   font-family: "Pretendard-700";
 }
-#upcycling .ecombt1 {
-  padding: 30px;
-}
-#upcycling .ecombt2 {
-  padding: 30px;
-  max-width: 667px;
-  max-height: 140px;
-}
 #upcycling .banner_set {
-  margin-top: 70px;
-  gap: 5px;
-}
-@media (min-width: 991px) {
-  #upcycling .banner_set {
-    gap: 7px;
-  }
-}
-@media (min-width: 1450px) {
-  #upcycling .banner_set {
-    gap: 10px;
-  }
+  margin-top: clamp(2rem, 1vw + 1.5rem, 70px);
+  gap: clamp(5px, 1vw + 4px, 10px);
 }
 #upcycling .banner_set strong {
   font-size: clamp(14px, 1vw + 14px, 24px);
@@ -664,8 +635,9 @@ a {
 }
 #upcycling .banner_eco1,
 #upcycling .banner_eco2 {
-  padding: 23px 20px;
   background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 #upcycling .banner_eco1 {
   background-image: url(../img/eco_banner2.jpg);
@@ -675,6 +647,21 @@ a {
 }
 #upcycling .h300 {
   height: 300px !important;
+}
+#upcycling .swiper {
+  padding-bottom: 24px; /* 바 공간 확보 (원하는 만큼) */
+}
+#upcycling .swiper-scrollbar {
+  background: #e0e0e0; /* 회색 라인 */
+  height: 4px; /* 높이 */
+  border-radius: 2px;
+  position: relative; /* 절대 위치 → 상대 위치 */
+  bottom: auto; /* 기본 absolute 해제 */
+  margin-top: 8px; /* 슬라이드와 간격 */
+}
+#upcycling .swiper-scrollbar-drag {
+  background: #777; /* 원하는 색 (예: 검정, 브랜드 컬러) */
+  border-radius: 2px;
 }
 
 * {
@@ -920,11 +907,6 @@ ol, ul {
 }
 
 /* gnb */
-.container_fluid {
-  background-color: #713131;
-  height: 120px;
-  padding: 0 110px;
-}
 .container_fluid .gnb {
   gap: 55px;
 }
@@ -942,7 +924,6 @@ ol, ul {
   background-color: transparent;
   border-radius: 50px;
   border: white solid 1.5px;
-  margin-left: 25px;
 }
 .global_bt svg.global_icon {
   transition: fill 0.2s ease;

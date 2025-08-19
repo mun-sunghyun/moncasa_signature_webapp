@@ -50,6 +50,12 @@ a {
 // 유틸리티 클래스
 .line-height-1 { line-height: 1; }
 
+.mainColor-bg {
+  background-color: $mainColor !important;
+}
+.mainColor-text{
+  color: $mainColor !important;
+}
 
 // 컨테이너
 .container_1280 {
@@ -66,6 +72,11 @@ a {
   max-width: $bigMaxwidth;
   margin: 0 auto;
 }
+
+.fs-25{
+  font-size: 25px;
+}
+
 
 // 섹션 공통 패딩
 .section_p {
@@ -96,28 +107,23 @@ a {
 .product_card {
   max-width: 300px;
   flex-wrap: wrap;
-  gap: 20px;
 }
   .prod_name {
     font-family: $mainFont700;
-    font-size: clamp(14px,1vw + 14px,25px);
-    margin-top: 19.495px;
-  }
-
-  .product_price_set {
-    margin-top: 20px;
+    font-size: clamp(14px,1vw + 13px,25px);
+    text-wrap: nowrap; 
   }
 
   .prod_cost {
     font-family: $mainFont500;
-    font-size: clamp(12px,1vw + 12px,20px);
+    font-size: clamp(12px,1vw + 11px,20px);
     color: #adadad;
     text-decoration: line-through;
   }
 
   .prod_price {
     font-family: $mainFont700;
-    font-size: clamp(14px,1vw + 14px,25px);
+    font-size: clamp(14px,1vw + 13px,25px);
     color: $mainColor;
   }
 
@@ -125,15 +131,15 @@ a {
 // 아이콘 그룹
 .icon_group {
   @include flex-center;
-  bottom: 10px;
-  right: 10px;
-  gap: 5px;
+  bottom: clamp(2px, 5px, 10px);
+  right: clamp(2px, 5px, 10px);
+  gap: clamp(2px, 3px, 5px);
   font-family: $mainFont700; 
-  font-size: clamp(10px,1vw + 10px,15px);
+  font-size: clamp(9px, 1vw + 8px, 15px);
 
   strong {
-    width: 55px;
-    height: 55px;
+    width: clamp(30px, 1vw + 28px, 55px);
+    height: clamp(30px, 1vw + 28px, 55px);
     border-radius: 50%;
     @include flex-center;
   }
