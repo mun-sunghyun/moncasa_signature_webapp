@@ -438,7 +438,7 @@
                                 프리미엄 가구 기획전 특별 혜택</h2>
                                 <strong class="event_title3 text-white mb-6">지금 구매하시면 다양한 혜택이 함께합니다!</strong>
                             </div>
-                            <div class="premium_tags w-50">
+                            <div class="premium_tags">
                                 <p class="tag">건강쿠션 증정</p>
                                 <p class="tag">무료 설치 홈서비스</p>
                                 <p class="tag">지인 추천시, 최대 50% 할인 혜택</p>
@@ -454,8 +454,8 @@
                                             <div class="position-relative">
                                                 <img class="img" src="img/premium_product1.png" alt="">
                                                 <div class="icon_group position-absolute">
-                                                    <strong class="eco">ECO</strong>
-                                                    <strong class="sale">20%</strong>
+                                                    <strong class="eco text-white">ECO</strong>
+                                                    <strong class="sale text-white">20%</strong>
                                                 </div>
                                             </div>
                                             <strong class="prod_name d-flex justify-content-between">
@@ -476,8 +476,8 @@
                                             <div class="position-relative">
                                                 <img class="img" src="img/premium_product2.png" alt="">
                                                 <div class="icon_group position-absolute">
-                                                    <!-- <strong class="eco">ECO</strong> -->
-                                                    <strong class="sale">20%</strong>
+                                                    <!-- <strong class="eco text-white">ECO</strong> -->
+                                                    <strong class="sale text-white">20%</strong>
                                                 </div>
                                             </div>
                                             <strong class="prod_name d-flex justify-content-between">
@@ -498,8 +498,8 @@
                                             <div class="position-relative">
                                                 <img class="img" src="img/premium_product3.png" alt="">
                                                 <div class="icon_group position-absolute">
-                                                    <!-- <strong class="eco">ECO</strong> -->
-                                                    <strong class="sale">20%</strong>
+                                                    <!-- <strong class="eco text-white">ECO</strong> -->
+                                                    <strong class="sale text-white">20%</strong>
                                                 </div>
                                             </div>
                                             <strong class="prod_name d-flex justify-content-between">
@@ -520,8 +520,8 @@
                                             <div class="position-relative">
                                                 <img class="img" src="img/premium_product4.png" alt="">
                                                 <div class="icon_group position-absolute">
-                                                    <!-- <strong class="eco">ECO</strong> -->
-                                                    <strong class="sale">20%</strong>
+                                                    <!-- <strong class="ecotext-white">ECO</strong> -->
+                                                    <strong class="sale text-white">20%</strong>
                                                 </div>
                                             </div>
                                             <strong class="prod_name d-flex justify-content-between">
@@ -542,8 +542,8 @@
                                             <div class="position-relative">
                                                 <img class="img" src="img/premium_product5.png" alt="">
                                                 <div class="icon_group position-absolute">
-                                                    <strong class="eco">ECO</strong>
-                                                    <strong class="sale">20%</strong>
+                                                    <strong class="eco text-white">ECO</strong>
+                                                    <strong class="sale text-white">20%</strong>
                                                 </div>
                                             </div>
                                             <strong class="prod_name d-flex justify-content-between">
@@ -564,8 +564,8 @@
                                             <div class="position-relative">
                                                 <img class="img" src="img/premium_product6.png" alt="">
                                                 <div class="icon_group position-absolute">
-                                                    <!-- <strong class="eco">ECO</strong> -->
-                                                    <strong class="sale">20%</strong>
+                                                    <!-- <strong class="eco text-white">ECO</strong> -->
+                                                    <strong class="sale text-white">20%</strong>
                                                 </div>
                                             </div>
                                             <strong class="prod_name d-flex justify-content-between">
@@ -586,8 +586,8 @@
                                             <div class="position-relative">
                                                 <img class="img" src="img/premium_product7.png" alt="">
                                                 <div class="icon_group position-absolute">
-                                                    <strong class="eco">ECO</strong>
-                                                    <strong class="sale">20%</strong>
+                                                    <strong class="eco text-white">ECO</strong>
+                                                    <strong class="sale text-white">20%</strong>
                                                 </div>
                                             </div>
                                             <strong class="prod_name d-flex justify-content-between">
@@ -601,7 +601,10 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>     
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-scrollbar d-xl-none"></div>
                     </div>
             </section>
             <section id="taste" class=" d-flex position-relative 
@@ -1048,16 +1051,20 @@
         <script>
             const swiper = new Swiper(".premium_mySwiper", {
                 slidesPerView: "auto",
-                spaceBetween: 50,
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
-                //autoplay: {
-                //delay: 2500,
-                //disableOnInteraction: false,
-                //},
+                scrollbar: {
+                    el: ".swiper-scrollbar",
+                    hide: false,
+                },
                 loop: true,
+                breakpoints: {
+                    0: {spaceBetween: 20},
+                    426: {spaceBetween: 35},
+                    769: {spaceBetween: 50}
+                    }
             });
         </script>
 
