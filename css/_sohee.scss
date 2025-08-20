@@ -59,6 +59,106 @@ ol, ul {
 }
 
 
+// quick menu
+
+.quick_menu {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+
+  li:nth-child(2) {
+    margin: 0.3rem 0;
+  }
+
+  a {
+    .icon {
+      @include flex-center;
+      width: 95px;
+      height: 95px;
+      border-radius: 50px;
+      background: $mainColor;
+      position: relative;
+      z-index: 999;
+    }
+
+    .label {
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      position: absolute;
+      right: 0;
+      font-family: $mainFont500;
+      font-size: 18px;
+      background-color: #ADADAD;
+      color: $basicText;
+      width: 95px;
+      height: 95px;
+      border-radius: 50px;
+    }
+    
+    &:hover {
+
+      .label {
+        width: 220%;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .quick_menu {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+
+   &:hover {
+    width: 50px;
+    height: 265px;
+    overflow: unset;
+    
+    ul {
+      li:nth-child(5){
+        display: none;
+      }
+    }
+  }
+
+    li:nth-child(3) {
+    margin: 0.3rem 0;
+  }
+
+    a {
+      display: block;
+      width: 50px;
+      height: 50px;
+
+      .icon {
+        width: 50px;
+        height: 50px;
+
+        .img_s {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      .label{
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 10px;    
+      }
+    }
+  }
+}
+
+
+
 // main banner
 .scalebanner {
   > * {
