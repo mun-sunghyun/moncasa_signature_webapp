@@ -278,7 +278,7 @@
                         </li>
                     </ul>
             </section>
-            <section id="upcycling" class="section_p line-height-1">             
+            <section id="upcycling" class="section_p line-height-1 d-none">             
                     <!-- 1920 -->
                     <div class="1920 ">
                       <!-- 1450 -->
@@ -989,51 +989,58 @@
                         </div>
                     </div>
             </section>
-            <section id="lineup" class="section_p container_1920 d-none">
+            <section id="lineup" class="section_p container_1920 mb-0 pb-0">
                 <div class="d-flex flex-row">
                         <!-- 첫 번째 박스 -->
-                        <div class="lineup_picture1_wrapper">
-                        <div class="lineup_picture1">
-                        </div>
-                        <div class="lineup_picture1_content"> 
-                                <p>몬까사의 다양한<br>
+                        <div class="lineup_picture1_wrapper col">
+                        <div class="lineup_picture1 bg-no-repeat bg-cover py-3 py-xl-10 h-100">
+                        
+                        <div class="lineup_picture1_content h-100 text-center d-flex align-items-center justify-content-center position-relative"> 
+                                <p class="m-0">몬까사의 다양한<br>
                                 <strong>제품 라인업</strong>
                                 </p>
                                 <a href=""><img src="./img/lineup_picture1_arrow.png"></a>
                         
                         </div>
                         </div>
-                        <div>
-                            <!-- 두 번째 박스 -->
-                            <div class="lineup_picture2_wrapper"> 
-                                <div class="lineup_picture2">
-                                    <div class="dark-overlay"></div>
+                        </div>
+                        <!-- 두 번째 박스 -->
+                        <div class="col d-flex flex-column">                            
+                            <div class="lineup_picture2_wrapper "> 
+                                <div class="lineup_picture2 bg-no-repeat bg-cover py-1 py-xl-5 ">
+                                    <!-- before -->
+                                    <div class="lineup_picture2_content py-3 py-xl-5 text-center d-flex  
+                                    align-items-center justify-content-center position-relative ">
+                                        <p class="mb-0">
+                                            정성을 다하는<br>
+                                            <strong>소파케어 받으러가기</strong>
+                                        </p>
+                                        <a href=""><img src="./img/lineup_picture2_arrow.png"></a>
+                                    </div>
+                                    <!-- after자리 -->
                                 </div>
-                                <div class="lineup_picture2_content">
-                                <p>
-                                    정성을 다하는<br>
-                                    <strong>소파케어 받으러가기</strong>
-                                </p>
-                                <a href=""><img src="./img/lineup_picture2_arrow.png"></a>
-                                </div>
+                                
                             </div>
-                            <div class="lineup_picture3_wrapper">
-                                <div class="lineup_picture3"></div>
-                                <div class="lineup_picture3_content">
-                                <p>
-                                    내 가구에 어울리는<br>
-                                    <strong>인테리어 보러가기</strong>
-                                </p>     
-                                <a href=""><img src="./img/lineup_picture2_arrow.png"></a>
+                            <div class="lineup_picture3_wrapper text-white">
+                                <div class="lineup_picture3 bg-no-repeat bg-cover py-1 py-xl-5 ">
+
+                                    <div class="lineup_picture2_content py-3 py-xl-5 text-center d-flex 
+                                    align-items-center justify-content-center position-relative ">
+                                        <p class="mb-0">
+                                            내 가구에 어울리는<br>
+                                            <strong>인테리어 보러가기</strong>
+                                        </p>     
+                                        <a href=""><img src="./img/lineup_picture2_arrow.png"></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                      </div>  
             </section>
         </main>
-        <section id="footer" class="main_point_bg px-4 pb-5 d-flex flex-column justify-content-between d-none">
-                    <div class="footer_wrapper d-flex justify-content-between">
-                        <div>
+        <section id="footer" class="mainColor-bg d-flex flex-column justify-content-between text-white">
+                    <div class="footer_wrapper px-5 py-5 d-flex flex-column flex-xl-row justify-content-xl-between align-items-xl-center">
+                        <div class="lineup_logo pe-5 pb-5 pe-xl-none pb-xl-none d-none d-xl-block">
                             <svg width="289" height="44" viewBox="0 0 289 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_269_779)">
                                 <path d="M241.886 5.53137L257 41.6889H251.946L248.933 34.4962H229.25L226.237 41.6403H223.175L238.289 5.53137H241.886ZM229.882 32.9897H248.301L239.067 11.023L229.882 32.9897Z" fill="white"/>
@@ -1061,26 +1068,29 @@
                                 <rect width="23" height="24" fill="white" transform="translate(266)"/>
                                 </clipPath>
                                 </defs>
-                                </svg>
+                            </svg>
                         </div>
-                        <div class="footer_d-flex-custom">    
-                            <div class="px-2">
-                                <p class="footer_customer_center">고객센터 1588-0000</p>
-                                <p class="footer">평일 09:00 ~ 17:30 (주말 및 공휴일 휴무)</p>
-                                <P class="footer">점심 12:00 ~ 13:00</P>
+                        <div class="footer_d-flex-custom gap-3 gap-xl-5 d-flex justify-content-start flex-wrap flex-xl-nowrap flex-xl-row justify-content-xl-between">    
+                            <div class="d-xl-flex w-100 justify-content-xl-end gap-xl-5">
+                                <div class="">
+                                    <strong>고객센터 1588-0000</strong>
+                                    <p>평일 09:00 ~ 17:30 (주말 및 공휴일 휴무)</p>
+                                    <P>점심 12:00 ~ 13:00</P>
+                                </div>
+                                <div class="d-flex flex-column pt-3 pt-xl-0">
+                                    <a href="" class="text-white">브랜드소개</a>
+                                    <a href="" class="text-white">이용약관 | 이용안내</a>
+                                    <a href="" class="text-white">개인정보처리방침</a>
+                                </div>
                             </div>
-                            <div class="px-2">
-                                <P class="footer">브랜드소개</P>
-                                <p class="footer">이용약관|이용안내</p>
-                                <p class="footer">개인정보처리방침</p>
-                            </div>
-                            <div class="px-2">
-                                <p class="footer">(주)MONCASA|대표:아무개|서울 구로구 새말로97|사업자등록번호:123-45-67980 사업자정보확인</p>
-                                <p class="footer">통신판매업신고번호:2025-그린아트-0725|이메일:moncasa@gmail.com</p>
+                            <div class="">
+                                <p class="pb-2">(주)MONCASA </p>
+                                <p>| 대표: 아무개 | 서울 구로구 새말로97 | 사업자등록번호: 123-45-67980 사업자정보확인</p>
+                                <p>통신판매업신고번호: 2025-그린아트-0725 | 이메일:moncasa@gmail.com</p>
                             </div>
                         </div>
                     </div>
-                    <div class="text-center footer">
+                    <div class="text-center pb-5">
                         <p>Copyright 2025.MONCASA All Rights Reserved.</p>
                     </div>       
         </section>
