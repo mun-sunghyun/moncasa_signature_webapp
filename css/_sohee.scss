@@ -110,25 +110,22 @@ ol, ul {
   .quick_menu {
     width: 50px;
     height: 50px;
-    overflow: hidden;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: end;
+    overflow: hidden;
+    gap: 4px;
+    align-items: center;
 
-   &:hover {
-    width: 50px;
-    height: 265px;
-    overflow: unset;
-    
     ul {
-      li:nth-child(5){
-        display: none;
-      }
+      display: flex;
+      flex-direction: column;
     }
-  }
-
-    li:nth-child(3) {
-    margin: 0.3rem 0;
-  }
+    
+    &.active {
+      height: auto;
+      overflow: unset;
+    }
 
     a {
       display: block;
@@ -149,10 +146,19 @@ ol, ul {
         display: flex;
         align-items: center;
         padding-left: 15px;
-        width: 50px;
+        width: 220%;
         height: 50px;
-        font-size: 10px;    
+        font-family: $mainFont400;
+        font-size: 12px;    
       }
+    }
+    
+    #mobile_quick {
+      width: 50px;
+      height: 50px;
+      background-color: $mainColor;
+      border-radius: 50px;
+      border: none;
     }
   }
 }

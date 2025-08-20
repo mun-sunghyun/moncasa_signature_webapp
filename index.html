@@ -110,19 +110,26 @@
                     <span class="label">고객센터</span>
                     <span class="icon cs"><img src="./img/quick_icon_3.png" alt="" class="img_s"></span>    
                 </a>
-                </li>
-                <li>
-                <a href="">
-                    <span class="icon close d-lg-none"><img src="./img/quick_icon_4.png" alt="" class="img_s"></span>    
-                </a>
-                </li>
-                <li>
-                <a href="">
-                    <span class="icon open d-lg-none"><img src="./img/quick_icon_5.png" alt="" class="img_s"></span>    
-                </a>
-                </li>
+            </li>
             </ul>
+            <button id="mobile_quick" class="d-lg-none">
+                <span class="icon open">
+                    <img src="./img/quick_icon_4.png" alt="" class="img_s d-none close">
+                    <img src="./img/quick_icon_5.png" alt="" class="img_s open">
+                </span>    
+            </button>
         </nav>
+        <script>
+            const mobile_quick = document.getElementById("mobile_quick");
+            const quick_menu = document.querySelector(".quick_menu");
+            const icon_open = mobile_quick.querySelector("img.open");
+            const icon_close = mobile_quick.querySelector("img.close");
+            mobile_quick.addEventListener("click", function(){
+                quick_menu.classList.toggle("active");
+                icon_open.classList.toggle("d-none");
+                icon_close.classList.toggle("d-none");
+            })
+        </script>
         <main>
             <section id="event" class="">
                 <div class="scalebanner d-flex min-vh-100 text-decoration-none ">
