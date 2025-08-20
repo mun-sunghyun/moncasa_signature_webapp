@@ -277,7 +277,9 @@
 }
 .lineup_picture1_wrapper{
     position: relative;
-    width: 960px;
+    //width: 960px;
+    width:100%;
+    max-width:960px;
     height: 700px;
     overflow: hidden;
 }
@@ -318,9 +320,14 @@
 .lineup_picture1_arrow{
     background-image: url(../img/lineup_picture1_arrow.png);
 }
+.lineup_right_column {
+  width: 100%;
+  max-width: 960px;
+}
 .lineup_picture2_wrapper{
     position: relative;
-    width: 960px;
+    //width: 960px;
+    width:100%;
     height: 350px;
     overflow: hidden;    
 }
@@ -360,7 +367,8 @@
 }
 .lineup_picture3_wrapper{
     position: relative;
-    width: 960px;
+    //width: 960px;
+    width:100%;
     height: 350px;
     overflow: hidden;    
 }
