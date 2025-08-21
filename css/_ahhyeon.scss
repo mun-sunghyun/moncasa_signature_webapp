@@ -111,7 +111,6 @@
 @media (max-width: 1199px){
   #taste {
     background-color: white !important; 
-  }
   
   .icon,
   .progress-fixed-wrapper {
@@ -122,6 +121,7 @@
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     width: auto !important;
+    }
   }
 }
 
@@ -144,7 +144,7 @@
     
   }
     @media (max-width:450px) {
-    padding: 22px 40px !important;
+    padding: 14px 20px !important;
     
   }
 }
@@ -176,7 +176,7 @@
 
   .option-btn {
     border: 2px solid #909090;
-    font-size: clamp(22px, 1vw + 22px, 20px);
+    font-size: clamp(18px, 1vw + 18px, 23px);
     font-family: $mainFont500;
     @include flex-center;
     width: 100%;
@@ -193,7 +193,7 @@
     z-index: 10;
 
     @media (max-width:450px) {
-      display: none !important;
+      
     }
   }
 
@@ -203,6 +203,7 @@
 
   .swiper-button-next {
     right: 20px;
+    pointer-events: none;
   }
 
   .top_fixed_box {

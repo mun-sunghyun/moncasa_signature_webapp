@@ -1317,41 +1317,59 @@
 
         <!-- taste swiper -->
         <script>
-            const swiper222 = new Swiper("#taste .mySwiper", {
-                slidesPerView: 1,
-                // centeredSlides: false,
-                spaceBetween: 0,
-                navigation: {
-                    nextEl: "#taste .swiper-button-next",
-                    prevEl: "#taste .swiper-button-prev"
-                },
-                scrollbar: {
-                    el: "#taste .swiper-scrollbar",
-                    hide: false
-                },
-                pagination: {
-                    el: "#taste .swiper-pagination",
-                    type: "fraction"
-                },
-                allowTouchMove: false,
-            });
+        /* 1) 스와이퍼 초기화 (그대로) */
+        const swiper222 = new Swiper("#taste .mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            navigation: {
+            nextEl: "#taste .swiper-button-next",
+            prevEl: "#taste .swiper-button-prev"
+            },
+            scrollbar: {
+            el: "#taste .swiper-scrollbar",
+            hide: false
+            },
+            pagination: {
+            el: "#taste .swiper-pagination",
+            type: "fraction"
+            },
+            allowTouchMove: false, // 기본은 PC에서 드래그 금지
+        });
 
-            // #taste .mySwiper 내부의 버튼 클릭만 위임 처리 (슬라이드가 바뀌어도 계속 동작)
-            (() => {
+        (() => {
             const container = document.querySelector('#taste .mySwiper');
             if (!container) return;
 
             const wrapper = container.querySelector('.swiper-wrapper');
-            if (!wrapper) return;
+            const nextBtn = document.querySelector('#taste .swiper-button-next');
+            const swiper = container.swiper || window.swiper222;
 
+            // Next 버튼 비활성화 함수
+            const disableNext = () => {
+                nextBtn.classList.add('disabled');
+                nextBtn.setAttribute('disabled', 'true');
+            };
+
+            // Next 버튼 활성화 함수 (사실 바로 넘어가니까 표시만 살짝 켰다 꺼져도 됨)
+            const enableNext = () => {
+                nextBtn.classList.remove('disabled');
+                nextBtn.removeAttribute('disabled');
+            };
+
+            // 처음엔 비활성화
+            disableNext();
+
+            // 슬라이드 바뀔 때마다 next 버튼 다시 비활성화
+            swiper.on('slideChange', () => {
+                disableNext();
+            });
+
+            // 옵션 버튼 클릭 이벤트
             wrapper.addEventListener('click', (e) => {
                 const btn = e.target.closest('.option-btn');
                 if (!btn || !container.contains(btn)) return;
-
-                // 폼 안에서 button 기본 submit 방지 (혹시 모를 경우)
                 e.preventDefault();
 
-                // 현재 클릭한 버튼이 속한 슬라이드 범위에서만 단일 선택 처리
                 const slideEl = btn.closest('.swiper-slide');
                 if (slideEl) {
                 slideEl.querySelectorAll('.option-btn').forEach(b => {
@@ -1362,20 +1380,16 @@
                 btn.setAttribute('aria-pressed', 'true');
                 }
 
-                // Swiper 인스턴스 가져오기: DOM에 붙은 .swiper 또는 전역 변수 둘 다 대응
-                const swiper = container.swiper || window.swiper222;
-
-                // 다음 슬라이드로 이동 (애니메이션 중복 방지)
-                if (swiper && !swiper.animating) {
+                // Next 버튼 잠깐 활성화 → 자동 이동
+                enableNext();
+                if (!swiper.animating) {
                 swiper.slideNext();
-                } else {
-                // 혹시 인스턴스 접근이 안 될 때 네비게이션 버튼 클릭으로 폴백
-                const nextBtn = document.querySelector('#taste .swiper-button-next');
-                nextBtn && nextBtn.click();
                 }
             });
-            })();
+        })();
 
         </script>
+
+
     </body>
 </html>
