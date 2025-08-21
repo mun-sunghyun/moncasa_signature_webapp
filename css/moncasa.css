@@ -3,7 +3,6 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  word-break: keep-all;
 }
 
 h1, h2, h3, h4, h5, ul, li, dl, dt, dd, p {
@@ -371,6 +370,12 @@ a {
   text-align: right;
   margin-bottom: 20px;
   max-width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 0 auto 20px auto;
+  max-width: 90%;
 }
 
 .review_btn {
@@ -425,6 +430,66 @@ a {
   font-size: 20px;
 }
 
+@media (max-width: 768px) {
+  .review_swiper {
+    height: auto; /* 고정 높이 제거 */
+    padding: 0 10px;
+  }
+  .review_swiper .swiper-slide {
+    min-width: auto;
+    height: auto;
+    font-size: 14px;
+    padding: 15px;
+  }
+  .review1,
+  .review2,
+  .review3,
+  .review4,
+  .review5 {
+    height: 180px; /* 모바일에서 적절한 높이로 조정 */
+  }
+  .review1_title,
+  .review2_title,
+  .review3_title,
+  .review4_title,
+  .review5_title {
+    font-size: 18px;
+  }
+  .review1_content,
+  .review2_content,
+  .review3_content,
+  .review4_content,
+  .review5_content {
+    font-size: 16px;
+    height: auto;
+  }
+  .review1_star {
+    width: 30px;
+    height: 30px;
+  }
+  .review_footer {
+    font-size: 12px;
+  }
+  .wrapper_btn {
+    flex-direction: column;
+    align-items: center;
+  }
+  .review_btn,
+  .review_instar_btn {
+    width: 100%;
+    max-width: 300px;
+    font-size: 14px;
+  }
+  .review_word {
+    font-size: 16px;
+    height: auto;
+    padding: 15px 10px;
+    text-align: center;
+  }
+  .review_bold {
+    font-size: inherit;
+  }
+}
 .lineup_picture1 {
   background-image: url(../img/lineup_picture1.jpg);
   background-size: auto 100%;
@@ -455,25 +520,24 @@ a {
 
 .lineup_picture2 {
   background-image: url(../img/lineup_picture2.jpg);
-  background-size: auto 100%;
-}
-@media (min-width: 500px) {
-  .lineup_picture2 {
-    background-size: 100%;
-  }
-}
-@media (min-width: 1200px) {
-  .lineup_picture2 {
-    background-position: center;
-    background-size: 100% auto;
-  }
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  z-index: 0;
+  background-size: cover;
+  position: absolute;
 }
 
-.lineup_picture1_content {
-  color: #713131;
-  font-size: clamp(12px, 1vw + 11px, 30px);
-  gap: clamp(10px, 1vw + 9px, 70px);
-  flex-wrap: nowrap; /* 줄바꿈 방지 */
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* 어두운 반투명 레이어 */
+  z-index: 1;
+  pointer-events: none; /* 클릭 이벤트 무시 */
 }
 
 .lineup_picture2_content {
