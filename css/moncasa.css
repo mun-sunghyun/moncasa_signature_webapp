@@ -1349,38 +1349,79 @@ ol, ul {
     height: 26px;
   }
 }
-#yeseul .img3list ul {
-  gap: 20px;
-  list-style: none;
-}
 #yeseul .img3title p {
-  font-size: 17px;
-  color: #000;
-  opacity: 50%;
+  font-size: calc(12px + 5 * (100vw - 375px) / 1545);
   font-family: "Pretendard-500";
   line-height: 20px;
 }
 #yeseul .img3title h3 {
-  font-size: 50px;
-  color: #000;
+  font-size: calc(16px + 34 * (100vw - 375px) / 1545);
   font-family: "Pretendard-700";
 }
-#yeseul .content-container {
-  display: flex;
-  flex-direction: column;
-  width: 260px;
-  gap: 50px;
+#yeseul .img3title .span {
+  font-size: calc(16px + 34 * (100vw - 375px) / 1545);
+  font-family: "Pretendard-700";
 }
 #yeseul button {
-  width: 173px;
-  height: 68px;
-  background-color: #713131;
   font-family: "Pretendard-600";
-  border-radius: 150px;
-  font-size: 20px;
-  border: 0;
+  font-size: calc(16px + 4 * (100vw - 1199px) / 721);
+  border: 1px solid white;
+  padding: calc(14px + 13 * (100vw - 375px) / 1545) calc(16px + 16 * (100vw - 375px) / 1545);
+}
+@media (max-width: 1199px) {
+  #yeseul button {
+    font-size: 16px;
+    padding: 14px 16px;
+  }
 }
 
+@media (max-width: 375px) {
+  .content-container {
+    display: flex; /* gap이 적용되려면 flex나 grid여야 해요 */
+    flex-direction: column; /* 세로 정렬 */
+    gap: 20px; /* h3와 button 사이 간격 */
+  }
+}
+@media (max-width: 375px) {
+  .d-flex.flex-column.gap-20 p {
+    padding-bottom: 8px;
+  }
+}
+@media (max-width: 1199px) {
+  .img3title {
+    background-color: #713131;
+  }
+  .img3title p {
+    font-size: calc(12px + 5 * (100vw - 375px) / 1545);
+    color: #ffffff;
+    opacity: 50%;
+    font-family: "Pretendard-500";
+    line-height: normal;
+  }
+  .img3title h3 {
+    font-size: calc(16px + 34 * (100vw - 375px) / 1545);
+    color: #ffffff;
+    font-family: "Pretendard-700";
+  }
+  .img3title .span {
+    font-size: calc(16px + 34 * (100vw - 375px) / 1545);
+    color: #ffffff;
+    font-family: "Pretendard-700";
+  }
+  .custom-padding {
+    padding: calc(0.25rem + 0.25rem * (100vw - 375px) / 1545);
+  }
+}
+@media (max-width: 1199px) and (max-width: 1199px) {
+  .custom-padding {
+    padding: 0.25rem !important;
+  }
+}
+@media (max-width: 1199px) and (min-width: 1920px) {
+  .custom-padding {
+    padding: 0.5rem !important;
+  }
+}
 #hd {
   position: absolute;
   left: 0;
@@ -1391,7 +1432,6 @@ ol, ul {
     position: fixed !important;
     top: 0 !important;
     z-index: 1000;
-    background-color: #713131;
   }
 }
 #hd.fixed-top {

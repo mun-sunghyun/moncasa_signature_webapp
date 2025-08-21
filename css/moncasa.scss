@@ -6,6 +6,7 @@
 @import './sohee';
 @import './yeseul';
 
+
 #hd{
 
     position: absolute;
@@ -14,8 +15,7 @@
     @media (max-width:1199px) {
         position:fixed !important;
         top:0 !important;
-        z-index: 1000;
-        background-color: #713131;
+        z-index: 1000;       
 
     }
     &.fixed-top{
