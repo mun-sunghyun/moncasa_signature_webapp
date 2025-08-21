@@ -343,7 +343,7 @@
                                 fill: 'row',
                                 },
                             }
-                            }
+                            },
 
                         });
                     </script>
@@ -801,7 +801,7 @@
                         </div>
 
                         <!-- Slide 2 -->
-                        <div class="swiper-slide mt-5">
+                        <div class="swiper-slide mt-5 pt-xl-5">
                             <div class="ms-xl-3">
                                 <p class="slide_mid_title text-start mt-1 ms-5 ps-3 ps-md-5">
                                 고객님의 취향의 가구를 추천해드릴게요.
@@ -843,7 +843,7 @@
                         </div>
 
                         <!-- Slide 3 -->
-                        <div class="swiper-slide mt-5">
+                        <div class="swiper-slide mt-5 pt-xl-5">
                             <div class="ms-xl-3">
                                 <p class="slide_mid_title text-start mt-1 ms-5 ps-3 ps-md-5">
                                 고객님의 취향의 가구를 추천해드릴게요.
@@ -884,7 +884,7 @@
                         </div>
 
                         <!-- Slide 4 -->
-                        <div class="swiper-slide mt-5">
+                        <div class="swiper-slide mt-5 pt-xl-5">
                             <div class="ms-xl-3">
                                 <p class="slide_mid_title text-start mt-1 ms-5 ps-3 ps-md-5">
                                 고객님의 취향의 가구를 추천해드릴게요.
@@ -925,7 +925,7 @@
                         </div>
 
                         <!-- Slide 5 -->
-                        <div class="swiper-slide mt-5">
+                        <div class="swiper-slide mt-5 pt-xl-5">
                             <div class="ms-xl-3">
                                 <p class="slide_mid_title text-start mt-1 ms-5 ps-3 ps-md-5">
                                 고객님의 취향의 가구를 추천해드릴게요.
@@ -1283,7 +1283,49 @@
                     el: "#taste .swiper-pagination",
                     type: "fraction"
                 },
+                allowTouchMove: false,
             });
+
+            // #taste .mySwiper 내부의 버튼 클릭만 위임 처리 (슬라이드가 바뀌어도 계속 동작)
+            (() => {
+            const container = document.querySelector('#taste .mySwiper');
+            if (!container) return;
+
+            const wrapper = container.querySelector('.swiper-wrapper');
+            if (!wrapper) return;
+
+            wrapper.addEventListener('click', (e) => {
+                const btn = e.target.closest('.option-btn');
+                if (!btn || !container.contains(btn)) return;
+
+                // 폼 안에서 button 기본 submit 방지 (혹시 모를 경우)
+                e.preventDefault();
+
+                // 현재 클릭한 버튼이 속한 슬라이드 범위에서만 단일 선택 처리
+                const slideEl = btn.closest('.swiper-slide');
+                if (slideEl) {
+                slideEl.querySelectorAll('.option-btn').forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-pressed', 'false');
+                });
+                btn.classList.add('active');
+                btn.setAttribute('aria-pressed', 'true');
+                }
+
+                // Swiper 인스턴스 가져오기: DOM에 붙은 .swiper 또는 전역 변수 둘 다 대응
+                const swiper = container.swiper || window.swiper222;
+
+                // 다음 슬라이드로 이동 (애니메이션 중복 방지)
+                if (swiper && !swiper.animating) {
+                swiper.slideNext();
+                } else {
+                // 혹시 인스턴스 접근이 안 될 때 네비게이션 버튼 클릭으로 폴백
+                const nextBtn = document.querySelector('#taste .swiper-button-next');
+                nextBtn && nextBtn.click();
+                }
+            });
+            })();
+
         </script>
     </body>
 </html>
