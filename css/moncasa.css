@@ -3,6 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  word-break: keep-all;
 }
 
 h1, h2, h3, h4, h5, ul, li, dl, dt, dd, p {
@@ -454,6 +455,7 @@ a {
   .review4_title,
   .review5_title {
     font-size: 18px;
+    word-break: keep-all;
   }
   .review1_content,
   .review2_content,
@@ -462,6 +464,7 @@ a {
   .review5_content {
     font-size: 16px;
     height: auto;
+    word-break: keep-all;
   }
   .review1_star {
     width: 30px;
@@ -488,6 +491,11 @@ a {
   }
   .review_bold {
     font-size: inherit;
+  }
+  .review_title h4,
+  .review_footer {
+    word-break: keep-all;
+    white-space: normal;
   }
 }
 .lineup_picture1 {

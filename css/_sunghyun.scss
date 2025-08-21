@@ -308,6 +308,7 @@
     .review4_title,
     .review5_title {
         font-size: 18px;
+        word-break: keep-all;
     }
 
     .review1_content,
@@ -317,6 +318,7 @@
     .review5_content {
         font-size: 16px;
         height: auto;
+        word-break: keep-all;
     }
 
     .review1_star {
@@ -349,6 +351,11 @@
 
     .review_bold {
         font-size: inherit;
+    }
+    .review_title h4,
+    .review_footer {
+        word-break: keep-all;
+        white-space: normal;
     }
 }
 // .lineup_picture1_wrapper{
