@@ -6,22 +6,19 @@
 @import './sohee';
 @import './yeseul';
 
+#hd{   
 
-#hd{
-
-    
     position: absolute;
     left:0;
     right:0;
     @media (max-width:1199px) {
         position:fixed !important;
         top:0 !important;
-        z-index: 1000;       
-
+        z-index: 1000; 
     }
     &.fixed-top{
         position:  fixed !important;
         
     }
-
 }
+
