@@ -690,9 +690,6 @@ a {
   .product_price_set {
     flex-direction: column;
   }
-  .event_serve_title1 {
-    line-height: -0.5rem;
-  }
 }
 #minimal .prod_name {
   font-size: clamp(10px, 1vw + 10px, 25px);
@@ -762,11 +759,11 @@ a {
   #taste {
     background-color: white !important;
   }
-  .icon,
-  .progress-fixed-wrapper {
+  #taste .icon,
+  #taste .progress-fixed-wrapper {
     display: none !important;
   }
-  .options {
+  #taste .options {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     width: auto !important;
@@ -794,7 +791,7 @@ a {
 }
 @media (max-width: 450px) {
   .option-btn {
-    padding: 22px 40px !important;
+    padding: 14px 20px !important;
   }
 }
 
@@ -820,7 +817,7 @@ a {
 }
 #taste .option-btn {
   border: 2px solid #909090;
-  font-size: clamp(22px, 1vw + 22px, 20px);
+  font-size: clamp(18px, 1vw + 18px, 23px);
   font-family: "Pretendard-500";
   display: flex;
   justify-content: center;
@@ -836,17 +833,12 @@ a {
   top: calc(50% + 6.5rem);
   z-index: 10;
 }
-@media (max-width: 450px) {
-  #taste .swiper-button-next,
-  #taste .swiper-button-prev {
-    display: none !important;
-  }
-}
 #taste .swiper-button-prev {
   left: 20px;
 }
 #taste .swiper-button-next {
   right: 20px;
+  pointer-events: none;
 }
 #taste .top_fixed_box {
   z-index: 10;
