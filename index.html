@@ -118,26 +118,45 @@
             });
             });
         </script>
-        <!-- 퀵메뉴 -->
-        <nav id="quick" class="quick-menu position-fixed d-flex flex-column" aria-label="퀵 메뉴">
-            <ul class="m-0 p-0">
-                <li class="pb-3">
-                    <a href="" class="quick-btn flex-column text-white text-center rounded-circle">
-                        더 많은<span>제품보기</span>
-                    </a>
+        <nav class="quick_menu">
+            <ul>
+                <li>
+                <a href="">
+                    <span class="label">더 많은<br>제품보기</span>
+                    <span class="icon prod"><img src="./img/quick_icon_1.png" alt="" class="img_s"></span>
+                </a>
                 </li>
-                <li class="pb-3">
-                    <a href="" class="quick-btn text-white rounded-circle">
-                        매장찾기
-                    </a>
+                <li>
+                <a href="">
+                    <span class="label">매장찾기</span>
+                    <span class="icon store"><img src="./img/quick_icon_2.png" alt="" class="img_s"></span>    
+                </a>
                 </li>
-                <li class="pb-3">
-                    <a href="" class="quick-btn text-white rounded-circle">
-                        고객센터
-                    </a>
-                </li>
+                <li>
+                <a href="">
+                    <span class="label">고객센터</span>
+                    <span class="icon cs"><img src="./img/quick_icon_3.png" alt="" class="img_s"></span>    
+                </a>
+            </li>
             </ul>
+            <button id="mobile_quick" class="d-lg-none">
+                <span class="icon open">
+                    <img src="./img/quick_icon_4.png" alt="" class="img_s d-none close">
+                    <img src="./img/quick_icon_5.png" alt="" class="img_s open">
+                </span>    
+            </button>
         </nav>
+        <script>
+            const mobile_quick = document.getElementById("mobile_quick");
+            const quick_menu = document.querySelector(".quick_menu");
+            const icon_open = mobile_quick.querySelector("img.open");
+            const icon_close = mobile_quick.querySelector("img.close");
+            mobile_quick.addEventListener("click", function(){
+                quick_menu.classList.toggle("active");
+                icon_open.classList.toggle("d-none");
+                icon_close.classList.toggle("d-none");
+            })
+        </script>
         <main>
             <!-- 기획전 -->
             <section id="event" class="">
@@ -514,7 +533,7 @@
                                 프리미엄 가구 기획전 특별 혜택</h2>
                                 <strong class="event_title3 text-white mb-6">지금 구매하시면 다양한 혜택이 함께합니다!</strong>
                             </div>
-                            <div class="premium_tags w-50">
+                            <div class="premium_tags">
                                 <p class="tag">건강쿠션 증정</p>
                                 <p class="tag">무료 설치 홈서비스</p>
                                 <p class="tag">지인 추천시, 최대 50% 할인 혜택</p>
@@ -553,7 +572,7 @@
                                                 <img class="img" src="img/premium_product2.png" alt="">
                                                 <div class="icon_group position-absolute">
                                                     <!-- <strong class="eco">ECO</strong> -->
-                                                    <strong class="sale text-white">20%</strong>
+                                                    <strong class="sale">20%</strong>
                                                 </div>
                                             </div>
                                             <strong class="prod_name d-flex justify-content-between">
@@ -574,7 +593,7 @@
                                             <div class="position-relative">
                                                 <img class="img" src="img/premium_product3.png" alt="">
                                                 <div class="icon_group position-absolute">
-                                                    <!-- <strong class="eco">ECO</strong> -->
+                                                    <!-- <strong class="eco text-white">ECO</strong> -->
                                                     <strong class="sale text-white">20%</strong>
                                                 </div>
                                             </div>
@@ -596,7 +615,7 @@
                                             <div class="position-relative">
                                                 <img class="img" src="img/premium_product4.png" alt="">
                                                 <div class="icon_group position-absolute">
-                                                    <!-- <strong class="eco">ECO</strong> -->
+                                                    <!-- <strong class="ecotext-white">ECO</strong> -->
                                                     <strong class="sale text-white">20%</strong>
                                                 </div>
                                             </div>
@@ -641,7 +660,7 @@
                                                 <img class="img" src="img/premium_product6.png" alt="">
                                                 <div class="icon_group position-absolute">
                                                     <!-- <strong class="eco">ECO</strong> -->
-                                                    <strong class="sale text-white">20%</strong>
+                                                    <strong class="sale">20%</strong>
                                                 </div>
                                             </div>
                                             <strong class="prod_name d-flex justify-content-between">
@@ -677,7 +696,10 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>     
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-scrollbar d-xl-none"></div>
                     </div>
             </section>
             <!-- 취향찾기 -->
@@ -1150,16 +1172,20 @@
         <script>
             const swiper = new Swiper(".premium_mySwiper", {
                 slidesPerView: "auto",
-                spaceBetween: 50,
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
-                //autoplay: {
-                //delay: 2500,
-                //disableOnInteraction: false,
-                //},
+                scrollbar: {
+                    el: ".swiper-scrollbar",
+                    hide: false,
+                },
                 loop: true,
+                breakpoints: {
+                    0: {spaceBetween: 20},
+                    426: {spaceBetween: 35},
+                    769: {spaceBetween: 50}
+                    }
             });
         </script>
 
