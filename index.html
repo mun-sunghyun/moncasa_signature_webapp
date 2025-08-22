@@ -69,14 +69,12 @@
     </head>
     <body>
         <!-- 상단 헤더 -->
-        <header id="hd" class="mainColor-bg">
-                <div class="container_fluid d-flex justify-content-between align-items-center">
+        <header id="hd">
+                <div class="d-flex justify-content-between align-items-center mainColor-bg px-4 px-sm-5 py-3 py-sm-4">
                     <h1><a href=""><img src="img/logo/logo_w.svg" alt="" class="logo"></a></h1>
                     <div class="gnb_container d-flex align-items-center justify-content-between">
                         <nav>
-                            <ul class="gnb d-xl-flex d-none" id="mon_navi">
-                                
-                            </ul>
+                            <ul class="gnb d-xl-flex d-none px-5 gap-5" id="mon_navi"></ul>
                         </nav>
                         <button class="global_bt d-flex align-items-center justify-content-between text-white fw-500">
                             <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,9 +86,7 @@
                         </button>
                     </div>
                 </div>
-                <ul class="gnb d-flex d-xl-none gap-3 py-2 justify-content-center" id="m_mon_navi">
-                                
-                </ul>
+                <ul class="gnb d-flex d-xl-none gap-3 py-3 px-3 justify-content-start justify-content-md-center mainColor-bg" id="m_mon_navi"></ul>
         </header>
         <!-- 상단 헤더 스크립트 -->
         <script>
@@ -164,7 +160,7 @@
                 <div class="swiper event_Swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="scalebanner d-flex min-vh-100 text-decoration-none ">
+                        <div class="scalebanner d-flex text-decoration-none ">
                             <a href="#minimal" class="scalechild1 w-100 d-flex flex-column">
                                 <h3 class="order-3 mt-auto text-center">Minimal</h3>
                                 <p>가을 감성,<br/>우리 사이 만큼</p>
@@ -173,7 +169,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="scalebanner d-flex min-vh-100 text-decoration-none">
+                        <div class="scalebanner d-flex text-decoration-none">
                             <a href="#upcycling" class="scalechild2 w-100 d-flex flex-column position-relative">
                                 <h3 class="text-white position-absolute overflow-hidden">Upcycling</h3>
                                 <p class="mt-auto text-white mb-3">숨겨진 보석을 찾아라</p>
@@ -182,14 +178,16 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="scalebanner d-flex min-vh-100 text-decoration-none">
+                        <div class="scalebanner d-flex text-decoration-none">
                             <a href="#premium" class="scalechild3 w-100 d-flex flex-column">
                                 <h3 class="mb-auto text-white text-start">Premium</h3>
-                                <p class="text-white text-end lh-sm">시간이 흘러도 변치<br/>않는 가치</p>
+                                <p class="text-white text-end lh-sm">시간이 흘러도<br/>변치않는 가치</p>
                                 <span class="text-white text-end mt-4 mb-5 lh-sm">인생 후반전, 나를 위한 품격 있는<br/>공간을 만들어보세요</span>
                             </a>
                         </div>
                     </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
             </section>
             <!-- 미니멀 -->
             <section id="minimal" class="section_p pt-xl-5 mt-xl-5 pt-0">
@@ -1282,14 +1280,13 @@
                 320: {
                     slidesPerView: 1,
                     spaceBetween: 0,
+                    pagination: {
+                        el: ".event_Swiper .swiper-pagination",
+                    },
                 },
-                991: {
-                    slidesPerView: 1.5,
-                    spaceBetween: 0,
-                },
-                1450: {
+                769: {
                     slidesPerView: 3,
-                    spaceBetween: 0,
+                    spaceBetween: 0,             
                 },
                 },
             });
