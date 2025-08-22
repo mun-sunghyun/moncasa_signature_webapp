@@ -32,9 +32,6 @@
 }
 
 #minimal {
-  .prod_name {
-    font-size: clamp(10px, 1vw + 10px, 25px);
-  }
 
   .event_main_title1 {
     font-size: clamp(60px, 3vw + 60px, 120px);
@@ -77,9 +74,9 @@
     flex-shrink: 0;
   }
 
-  .prod_price {
-    line-height: normal;
-  }
+  // .prod_price {
+  //   line-height: normal;
+  // }
   
   .bottom-banner {
     background-image: url(../img/product/mi_bottom_bg_img.jpg);
