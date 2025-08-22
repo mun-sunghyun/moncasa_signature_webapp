@@ -1368,8 +1368,18 @@
             pagination: {
             el: "#taste .swiper-pagination",
             type: "fraction"
-            },
+            }
             
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+            const swiperEl = document.querySelector("#taste .mySwiper").swiper;
+
+            // 모든 버튼에 클릭 이벤트 연결
+            document.querySelectorAll("#taste .option-btn").forEach((btn) => {
+                btn.addEventListener("click", () => {
+                swiperEl.slideNext(); // 버튼 클릭 시 다음 슬라이드로 이동
+                });
+            });
         });
 
         </script>
