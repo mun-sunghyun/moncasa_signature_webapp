@@ -5,6 +5,7 @@
   padding: 0;
 }
 
+// 기획전1
 @media (max-width: 1199px) {
   #minimal {
     .container_1450 {
@@ -105,51 +106,97 @@
 
 // 취향찾기
 
-@media (max-width: 1199px){
+@media (max-width: 1199px) {
   #taste {
-    background-color: white !important; 
+    // background-color: white !important; 
   
-  .icon,
-  .progress-fixed-wrapper {
-    display: none !important;
-  }
+    .icon {
+      display: none !important;
+    }
 
-  .options {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    width: auto !important;
+    .options {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      width: auto !important;
+    }
+
+    .progress-fixed-wrapper {
+      width: 400px !important;
+      top: calc(50% + -1.3rem) !important;
+      left: 6.5rem !important;
+    }
+
+    .swiper-scrollbar {
+      height: 3px !important;
     }
   }
 }
 
-.slide_mid_title {
-  font-size: clamp(16px, 1vw + 16px, 25px);
-  color: #999;
-  letter-spacing: -0.03rem;
+@media (max-width:780px) {
+  #taste {
+    .swiper-button-prev:after,
+    .swiper-button-next:after { 
+      font-size: 18px;
+    }
 
-  @media (max-width:450px) {
-    padding-left: 10px !important;
-    margin-left: 10px !important;
+  .progress-fixed-wrapper {
+      width: 350px !important;
+      top: calc(50% + -1.3rem) !important;
+      left: 4rem !important;
+    }
   }
 }
 
-.option-btn {
-  padding: 22px 90px !important;
+@media (max-width:450px) {
+  #taste {
+    .options {
+      margin-top: 3rem !important;
+    }
 
-  @media (max-width:1199px) {
-    padding: 22px min( 11vw, 70px ) !important;
-    
-  }
-    @media (max-width:450px) {
-    padding: 14px 20px !important;
-    
+    .progress-fixed-wrapper {
+      width: 300px !important;
+      top: calc(50% + -1.3rem) !important;
+      left: 3rem !important;
+    }
+
+    .slide_mid_title {
+      padding-left: 3rem !important;
+      margin-left: 0 !important;
+      font-size: clamp(16px, 1vw + 16px, 18px) !important;
+    }
+
+    .slide-question {
+      font-size: clamp(18px, 1vw + 18px, 20px) !important;
+    }
+
   }
 }
 
 #taste {
+
   .slide-title {
     font-size: clamp(16px, 2vw + 16px, 38px);
     font-family: $mainFont700;
+  }
+
+  .slide_mid_title {
+  font-size: clamp(16px, 1vw + 16px, 25px);
+  color: #999;
+  letter-spacing: -0.03rem;
+}
+
+  .option-btn {
+    padding: 22px 90px !important;
+
+    @media (max-width:1199px) {
+      padding: 20px min( 11vw, 70px ) !important;
+      
+    }
+      @media (max-width:450px) {
+      padding: 16px 40px !important;
+      font-size: clamp(14px, 1vw + 14px, 16px) !important;
+      
+    }
   }
 
   .slide-question {
@@ -172,7 +219,7 @@
   }
 
   .option-btn {
-    border: 2px solid #909090;
+    border: 1px solid #909090;
     font-size: clamp(18px, 1vw + 18px, 23px);
     font-family: $mainFont500;
     @include flex-center;
@@ -188,10 +235,6 @@
     color: black;
     top: calc(50% + 6.5rem);
     z-index: 10;
-
-    @media (max-width:450px) {
-      
-    }
   }
 
   .swiper-button-prev {
