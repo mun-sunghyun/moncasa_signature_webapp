@@ -8,12 +8,13 @@
   background-size: cover;
   background-position: center;
 }
+#review{
 
 .review_title{
     font-size:30px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
+    //font-family: $mainFont600;
+   
+   
 }
 .review_title h4{
     font-size:30px;
@@ -21,24 +22,28 @@
 }
 
 .review_swiper {
-    width:100%;
-    max-width: 1500px;
-    height: 600px;
-    margin-bottom: 50px;
+    .thumbimg{
+        height: 260px;
+        background-size: 100%;
+    }
+  
 }
 
 .review_swiper .swiper-slide {
-    text-align: center;
+   
     font-size: 18px;
     background: #EDDFDF;
-    /*display: flex;*/ /*가로 또는 세로 방향으로 자동 정렬되고 배치됩니다.*/
-    justify-content: center;
-    align-items: center;
+
+    
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 
     /* 내부 콘텐츠의 최소 너비 확보 */
-    min-width: 300px;
+    width: 350px;
+    @media (max-width:991px) {
+         width: 350px;
+        
+    }
 }
 
 .review_swiper .swiper-button-next,
@@ -48,158 +53,66 @@
     position: absolute;
 }  
 
+
 .review1{
     background-image: url(../img/review1.jpg);
-    width: 100%;
-    height: 50%;
-    /*background-size: contain;*/
-    background-size: cover;
-    background-repeat: no-repeat;  /* 배경 이미지 반복 안함 */
-    margin-bottom: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+  
 }
-.review1_title{
-    font-family: 'Pretendard';
-    font-size: 23px;
-    font-weight: 500; /* medium에 해당 */
-    margin-bottom: 20px;
+.review_title{
+    font-size: 22px;
+    font-family: $mainFont700;
+   
 }
-.review1_content{
-    font-family: 'Pretendard';
-    font-size: 20px;
-    font-weight: 500; /* medium에 해당 */
-    text-align: left;
-    margin-bottom: 10px;
+.review_content{
+   
     height:150px;
+    font-size: 18px;
+    @media (max-width:991px) {
+        font-size: 17px;
+        
+    }
 }
 .review1_star_display{
-    /*width: 70%;*/
-    /*height :10%;*/
-    /*height: 50%;*/
-    /*display: flex; */           /* 가로 정렬 시작 */
-    /*gap: 0px; */               /* 박스 사이 간격 (선택) */
-    margin-bottom: 10px;
+   
 }
-.review1_star{
+.review_star{
+ 
     background-image: url(../img/star.png);
-    /*width: 100%;*/
-    /*height: 100%;*/
-    width:30px;
-    height:31px;
+    width: 25px;
+    height: 26px;
+    background-size: 100%;
+    &.start-half{
+        width:12.5px;
+    }
+    
     /*background-size: cover;*/
     /*background-repeat: no-repeat;*/  /* 배경 이미지 반복 안함 */
 }
 .review_footer{
     font-family: 'Pretendard';
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500; /* medium에 해당 */
     color:#8D8989;
+    @media (min-width:1200px) {
+         font-size: 15px;
+    }
 }
-
-
 
 .review2{
     background-image: url(../img/review2.jpg);
-    width: 100%;
-    height: 50%;
-    /*background-size: contain;*/
-    background-size: cover;
-    background-repeat: no-repeat;  /* 배경 이미지 반복 안함 */
-    margin-bottom: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-.review2_title{
-    font-family: 'Pretendard';
-    font-size: 23px;
-    font-weight: 500; /* medium에 해당 */
-    margin-bottom: 20px;
-}
-.review2_content{
-    font-family: 'Pretendard';
-    font-size: 20px;
-    font-weight: 500; /* medium에 해당 */
-    text-align: left;
-    margin-bottom: 10px;
-    height:150px;
 }
 
 .review3{
     background-image: url(../img/review3.jpg);
-    width: 100%;
-    height: 50%;
-    /*background-size: contain;*/
-    background-size: cover;
-    background-repeat: no-repeat;  /* 배경 이미지 반복 안함 */
-    margin-bottom: 20px;    
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
 }
-.review3_title{
-    font-family: 'Pretendard';
-    font-size: 23px;
-    font-weight: 500; /* medium에 해당 */
-    margin-bottom: 20px;
-}
-.review3_content{
-    font-family: 'Pretendard';
-    font-size: 20px;
-    font-weight: 500; /* medium에 해당 */
-    text-align: left;
-    margin-bottom: 10px;
-    height:150px;
-}
+
 .review4{
     background-image: url(../img/review4.jpg);
-    width: 100%;
-    height: 50%;
-    /*background-size: contain;*/
-    background-size: cover;
-    background-repeat: no-repeat;  /* 배경 이미지 반복 안함 */
-    margin-bottom: 20px;    
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-.review4_title{
-    font-family: 'Pretendard';
-    font-size: 23px;
-    font-weight: 500; /* medium에 해당 */
-    margin-bottom: 20px;
-}
-.review4_content{
-    font-family: 'Pretendard';
-    font-size: 20px;
-    font-weight: 500; /* medium에 해당 */
-    text-align: left;
-    margin-bottom: 10px;
-    height:150px;
 }
 .review5{
     background-image: url(../img/review5.jpg);
-    width: 100%;
-    height: 50%;
-    /*background-size: contain;*/
-    background-size: cover;
-    background-repeat: no-repeat;  /* 배경 이미지 반복 안함 */
-    margin-bottom: 20px;    
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
 }
-.review5_title{
-    font-family: 'Pretendard';
-    font-size: 23px;
-    font-weight: 500; /* medium에 해당 */
-    margin-bottom: 20px;
-}
-.review5_content{
-    font-family: 'Pretendard';
-    font-size: 20px;
-    font-weight: 500; /* medium에 해당 */
-    text-align: left;
-    margin-bottom: 10px;
-    height:150px;
-}
+
 /* 작은 화면 (모바일) - 버튼 안쪽으로 더 넣기 */
 @media (max-width: 1420px){
     .review_swiper {
@@ -227,26 +140,14 @@
     }
 }
 .wrapper_btn{
-    text-align: right;
-    margin-bottom: 20px;
-    max-width: 90%;
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: flex-end;
-    gap: 10px;
-    margin: 0 auto 20px auto;
-    max-width: 90%;    
+  
 }
 .review_btn{
-    background-color: #713131;
-    color: white;
-    width: 200px;
-    height: 50px;
-    border-radius: 30px;
+    
 }
 .review_btn:hover{
-    background-color: white;
-    color: #713131;
+    background-color: white !important;
+    color: #713131 !important;;
 }
 .review_btn svg{
     fill: white;
@@ -256,15 +157,11 @@
 }
 
 .review_instar_btn{
-    background-color: #713131;
-    color: white;
-    width:280px; 
-    height: 50px;   
-    border-radius: 30px;
+   
 }
 .review_instar_btn:hover{
-    background-color: white;
-    color: #713131;
+    background-color: white !important;
+    color: #713131 !important;
 }
 .review_instar_btn:hover svg path{
     fill: #713131;
@@ -273,12 +170,7 @@
   font-weight: bold;  /* 또는 숫자로: 600, 700 등 */
 }
 .review_word{
-    display: flex;
-    background-color: #F6F1EB;
-    color:#713131;
-    justify-content: center;    /* 가로 중앙 정렬 */
-    height:100px;
-    align-items: center;
+    background-color:#F6F1EB;
     font-size:20px;
 }
 @media (max-width: 768px) {
@@ -291,62 +183,25 @@
         min-width: auto;
         height: auto;
         font-size: 14px;
-        padding: 15px;
-    }
-
-    .review1,
-    .review2,
-    .review3,
-    .review4,
-    .review5 {
-        height: 180px; /* 모바일에서 적절한 높이로 조정 */
-    }
-
-    .review1_title,
-    .review2_title,
-    .review3_title,
-    .review4_title,
-    .review5_title {
-        font-size: 18px;
-        word-break: keep-all;
-    }
-
-    .review1_content,
-    .review2_content,
-    .review3_content,
-    .review4_content,
-    .review5_content {
-        font-size: 16px;
-        height: auto;
-        word-break: keep-all;
-    }
-
-    .review1_star {
-        width: 30px;
-        height: 30px;
-    }
+      
+    } 
 
     .review_footer {
         font-size: 12px;
     }
 
     .wrapper_btn {
-        flex-direction: column;
-        align-items: center;
+      
     }
 
     .review_btn,
     .review_instar_btn {
-        width: 100%;
-        max-width: 300px;
+       
         font-size: 14px;
     }
 
     .review_word {
         font-size: 16px;
-        height: auto;
-        padding: 15px 10px;
-        text-align: center;
     }
 
     .review_bold {
@@ -357,6 +212,8 @@
         word-break: keep-all;
         white-space: normal;
     }
+}
+
 }
 // .lineup_picture1_wrapper{
 //     // position: relative;
