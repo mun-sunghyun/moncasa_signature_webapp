@@ -13,7 +13,7 @@
     @media (max-width:1199px) {
         position:fixed !important;
         top:0 !important;
-        z-index: 1000; 
+        z-index: 1000;
     }
     &.fixed-top{
         position:  fixed !important;
@@ -22,35 +22,40 @@
 }
 
 body{
-
-    .product_card .prod_name, 
-    .product_card .prod_price,  
-     #minimal  .prod_name{
-        font-size: clamp(15px,1vw + 11px,25px);
-        line-height: 1;
-        }   
-    .product_card .product_card{
-        margin-top: 10px;        
-    }        
-    .product_card .prod_cost{
-        font-size: clamp(14px,1vw + 10px,20px);        
-    }
-    .swiper-scrollbar {
-        background: #e0e0e0 !important;
-        height: 2px !important;
-        width: calc(70% - 2 * var(--swiper-scrollbar-sides-offset, 1%)) !important;
-    }
+    // .product_card .prod_name, 
+    // .product_card .prod_price,  
+    //  #minimal  .prod_name{
+    //     font-size: clamp(15px,1vw + 11px,25px);
+    //     line-height: 1;
+    //     }
+    // .product_card .product_card{
+    //     margin-top: 10px;        
+    // }        
+    // .product_card .prod_cost{
+    //     font-size: clamp(14px,1vw + 10px,20px);        
+    // }
+    // .swiper-scrollbar {
+    //     background: #e0e0e0 !important;
+    //     height: 2px !important;
+    //     width: calc(70% - 2 * var(--swiper-scrollbar-sides-offset, 1%)) !important;
+    // }
     
-    .swiper-scrollbar-drag {
-        background: #777255;
-    }
-    .icon_group strong{
-        @media (max-width: 425px) {
-            font-size: clamp(10px, 12px, 15px);            
-            width: 29px;
-            height: 29px;
-        }
-    }
+    // .swiper-scrollbar-drag {
+    //     background: #777255;
+    // }
+    // .icon_group strong{
+    //     @media (max-width: 425px) {
+    //         font-size: clamp(10px, 12px, 15px);            
+    //         width: 29px;
+    //         height: 29px;
+    //     }
+    // }
+
+    // .tag2 {
+    //   border-radius: 50px;      
+    //   font-size: clamp(13px,1vw + 12px,25px);
+    //   line-height: var(--bs-body-line-height);
+    // }
 
 }
 

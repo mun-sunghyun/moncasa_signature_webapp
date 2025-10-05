@@ -1,118 +1,242 @@
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+// 기획전 1,2,3 텍스트
+.event_main_title {
+  font-family: $mainFont700;
+  letter-spacing: -1px;
+  font-size: var(--fs-event-main);
 }
 
-// 기획전1
-@media (max-width: 1199px) {
-  #minimal {
-    .container_1450 {
-      gap: 2rem;
-    }
+.event_sub_txt {
+  font-family: $mainFont700;
+  letter-spacing: -1px;
+  line-height: 150%;
+  font-size: var(--fs-event-sub);
 
-    .product_set li {
-      width: 100%;
-    }
-
-    .bottom-banner {
-      width: 100%;
-      background-image: none !important;
-      background-color: #713131cc;
-    }
-  }
-
-  .product_text {
-    @include flex-center;
-  }
-
-  .product_price_set {
-    flex-direction: column;
-  }
-}
-
-#minimal {
-
-  .event_main_title1 {
-    font-size: clamp(60px, 3vw + 60px, 120px);
-    font-family: $mainFont700;
-    letter-spacing: -1.1px;
-  }
-
-  .event_serve_title1 {
-    font-size: clamp(14px, 1vw + 14px, 28px);
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-    font-family: $mainFont700;
-    line-height: 30px;
-    letter-spacing: -0.264px;
-  }
-
-  .event_title1 {
-    font-size: clamp(30px, 2vw + 30px, 64px);
-    font-family: $mainFont700;
+  &.txt_shadow {
     text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
-    line-height: normal;
-    letter-spacing: -2.0px;
   }
 
-  .percent {
-    margin-left: auto;
-    margin-top: auto;
-    font-size: clamp(50px, 2vw + 50px, 100px);;
-    font-family: $mainFont700;
-  }
-
-  .badge {
-    font-size: clamp(8px, 1vw + 8px, 15px);
-    width: clamp(25px, 1vw + 25px, 60px);
-    height: clamp(25px, 1vw + 25px, 60px);
-    z-index: 10;
-    @include flex-center;
-  }
-
-  .product-text {
-    flex-shrink: 0;
-  }
-
-  // .prod_price {
-  //   line-height: normal;
-  // }
-  
-  .bottom-banner {
-    background-image: url(../img/product/mi_bottom_bg_img.jpg);
-    background-size: cover;
-    background-position: center 46%;
-    background-repeat: no-repeat;
-    font-size: clamp(15px, 1vw + 15px, 30px);
-    font-family: $mainFont600;
-  }
-
-  .tag {
-    background-color: #713131cc;
-   }
-
-  .bg-img {
-    background: url("../img/product/event1_main.jpg") no-repeat center center;
-    background-size: cover;
-  }
-
-  .swiper-scrollbar {
-    background: #e0e0e0;
-    height: 3px;
-    width: calc(70% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
+  @media (min-width: 1200px) {
+    line-height: 70px;
   }
 }
+
+.event_mid_txt {
+  letter-spacing: -0.5px;
+  line-height: 150%;
+  font-size: var(--fs-event-mid);
+}
+
+// 기획전 이미지
+.event_img {
+  @media(max-width:780px){
+    padding: 1rem;
+  }
+}
+.event_img1 {
+  background: url('../img/event/event1_main.jpg') no-repeat center center / cover;
+}
+.event_img2 {
+  background: url('../img/event/event2_main.jpg') no-repeat center center / cover;
+}
+.event_img3 {
+  background: url('../img/event/event3_main.jpg') no-repeat center center / cover;
+  padding: min(2vw, 50px);
+}
+
+//기획전 상품
+.prod_name {
+  font-family: $mainFont700;
+  font-size: var(--fs-body-md);
+  text-wrap: nowrap;
+  line-height: 1;
+}
+
+.prod_cost {
+  font-family: $mainFont500;
+  font-size: var(--fs-body-sm);
+  color: #adadad;
+  line-height: 1;
+  text-decoration: line-through;
+}
+
+.prod_price {
+  font-family: $mainFont700;
+  font-size: var(--fs-body-md);
+  color: $mainColor;
+  line-height: 1;
+  margin-top: 0.5rem;
+}
+
+.prod_price_set {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .prod_text {
+    @include flex-column;
+    @include flex-center;
+  }
+  .prod_price_set {
+    @include flex-column;
+  }
+}
+
+//뱃지
+.badge-group {
+  position: absolute;
+  right: clamp(5px, 1vw, 10px);
+  bottom: clamp(5px, 1vw, 10px);
+  display: flex;
+  gap: clamp(2px, 0.5vw, 4px);
+}
+
+.badges{
+  @include flex-center;
+  font-family: $mainFont700;
+ 
+  strong {
+    @include flex-center;
+    width: 3em;
+    height: 3em;
+    font-size: var(--fs-body-sm);
+    border-radius: 50%;
+
+    @media (max-width: 420px) {
+      strong {
+        width: 1.5em;
+        height: 1.5em;
+      }
+    }
+  }
+  .eco {
+    background-color: $subColor;
+    color: white;
+  }
+  .sale {
+    background-color: $mainColor;
+    color: white;
+  }
+}
+
+//태그
+.tag {
+  background-color: #1d220c95;
+  border-radius: 50px;
+  font-size: var(--fs-body-md);
+  line-height: var(--bs-body-line-height);
+
+  &.bg-color {
+    background-color: #713131cc;
+  }
+}
+
+//배너
+.banner_set {
+  margin-top: clamp(2rem, 1vw + 1.5rem, 70px);
+
+  .banner_img1 {
+    background-color: #713131cc;
+    @media (max-width: 1199px) {
+      width: 100%;
+    }
+}
+  .banner_eco1 {
+    background: url(../img/event/eco_banner2.jpg) no-repeat center center / cover;
+  }
+
+  .banner_eco2 {
+    background: url(../img/event/eco_banner1.jpg) no-repeat center center / cover;
+  }
+
+  &.banner_gap {
+    gap: clamp(5px, 1vw + 4px, 10px);
+  }
+
+  strong {
+    font-size: var(--fs-body-md);
+    line-height: 1.5;        
+  }
+
+  span {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+.percent {
+  font-family: $mainFont700;
+  @include flex-center;
+  @media(max-width:420px){
+    font-size: 35px;
+  }
+
+  @media(min-width:420px){
+  font-size: clamp(40px, 2vw + 38px, 90px);
+  }
+}
+
+
+
+
+.section_title {
+  font-family: $mainFont700;
+  font-size: var(--fs-title-lg);
+}
+
+.section_subtitle {
+  font-size: var(--fs-title-md);
+
+  &.text_gray {
+    color: #999;
+  }
+  &.subtxt_gap {
+    gap: clamp(15px, 1vw + 14px, 35px);
+  }
+}
+
+.text_md {
+  font-size: var(--fs-body-md);
+
+  &.line_h {
+    line-height: 1.8rem;
+  }
+  &.text_gray {
+    color: #999;
+  }
+}
+
+.text_sm {
+  font-size: var(--fs-body-sm);
+  &.text_gray {
+    color: #999;
+  }
+}
+
+.percent {
+  font-family: $mainFont700;
+  @include flex-center;
+  @media(max-width:420px){
+    font-size: 35px;
+  }
+
+  @media(min-width:420px){
+  font-size: clamp(40px, 2vw + 38px, 90px);
+  }
+}
+
+.swiper-scrollbar {
+  background: #e0e0e0 !important;
+  height: 2px !important;
+  width: calc(70% - 2 * var(--swiper-scrollbar-sides-offset, 1%)) !important;
+}
+
 
 // 취향찾기
 
 @media (max-width: 1199px) {
   #taste {
-    // background-color: white !important; 
-  
-    .icon {
-      display: none !important;
-    }
 
     .options {
       display: grid !important;
@@ -154,56 +278,12 @@
     }
 
     .progress-fixed-wrapper {
-      width: 300px !important;
+      width: 260px !important;
       top: calc(50% + -1.3rem) !important;
-      left: 3rem !important;
+      left: 2.5rem !important;
     }
-
-    .slide_mid_title {
-      padding-left: 3rem !important;
-      margin-left: 0 !important;
-      font-size: clamp(16px, 1vw + 16px, 18px) !important;
-    }
-
-    .slide-question {
-      font-size: clamp(18px, 1vw + 18px, 20px) !important;
-    }
-
-  }
 }
-
-#taste {
-
-  .slide-title {
-    font-size: clamp(16px, 2vw + 16px, 38px);
-    font-family: $mainFont700;
-  }
-
-  .slide_mid_title {
-  font-size: clamp(16px, 1vw + 16px, 25px);
-  color: #999;
-  letter-spacing: -0.03rem;
 }
-
-  .option-btn {
-    padding: 22px 90px !important;
-
-    @media (max-width:1199px) {
-      padding: 20px min( 11vw, 70px ) !important;
-      
-    }
-      @media (max-width:450px) {
-      padding: 16px 40px !important;
-      font-size: clamp(14px, 1vw + 14px, 16px) !important;
-      
-    }
-  }
-
-  .slide-question {
-    font-family: $mainFont700;
-    font-size: clamp(18px, 1vw + 18px, 30px);
-    line-height: normal;
-  }
 
   .swiper-scrollbar {
     width: 500px;
@@ -214,35 +294,63 @@
   .swiper-pagination {
     font-size: 14px;
     color: #333;
-    min-width: 40px;
-    white-space: nowrap;
+    min-width: 25px;
+    
+    @media(max-width:420px){
+      font-size: 12px;
+    }
   }
 
   .option-btn {
     border: 1px solid #909090;
-    font-size: clamp(18px, 1vw + 18px, 23px);
+    font-size: var(--fs-body-md);
     font-family: $mainFont500;
+    gap: 0.5rem;
+    border-radius: 3rem;
     @include flex-center;
-    width: 100%;
+
+    &.border_none{
+     border: none;
+    }
+
+    &.border_white{
+      border: 1px solid white;
+    }
+
+    &.min_w{
+      min-width: 200px;
+      @media (max-width:1200px){
+        min-width: 160px;
+      }
+      @media (max-width:768px){
+        min-width: 120px;
+      } 
+    }
+
+    &.min_h{
+      min-height: 70px;
+      @media (max-width:1200px){
+        min-height: 60px;
+      }
+       @media (max-width:768px){
+        min-height: 50px;
+      }
+    }
 
     &:hover {
-      background-color: #eee !important;
+      background-color: $mainColor !important;
+      color : white;
     }
   }
 
   .swiper-button-next,
   .swiper-button-prev {
-    color: black;
+    color: #ADADAD;
     top: calc(50% + 6.5rem);
     z-index: 10;
   }
 
-  .swiper-button-prev {
-    left: 20px;
-  }
-
   .swiper-button-next {
-    right: 20px;
     pointer-events: none;
   }
 
@@ -266,42 +374,13 @@
     font-family: $mainFont700;
   }
 
-  .icon_text {
-    font-size: 18px;
-    font-family: $mainFont500;
-    line-height: normal;
-  }
-
   .position-unset {
     position: unset !important;
   }
-}
 
-// 퀵메뉴
-
-#quick {
-  top: calc(55% + 3rem);
-  right: 10px;
-  z-index: 1000;
-
-  ul {
-    list-style: none;
-  }
-
-  a.quick-btn {
-    font-family: $mainFont500;
-    width: 93px;
-    height: 93px;
-    font-size: 17px;
-    transition: background-color 0.3s ease;
-
-    @include flex-center;
-
-    &:hover,
-    &:focus {
-      background-color: #a8a39f;
-      outline: none;
-    }
+.interior_box{
+  @media(max-width:1199px){
+    background-color: $mainColor;
+    color: white;
   }
 }
-
