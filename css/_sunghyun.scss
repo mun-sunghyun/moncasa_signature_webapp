@@ -70,12 +70,22 @@
 #review {
   .swiper-slide {
     width: 350px;
+    height: 575px;
 
     @media(max-width:1199px){
       width: 300px;
+      height: 470px;
     }
     @media(max-width:420px){
       width: 260px;
+      height: 380px;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    @media(max-width:1200px){
+      display: none;
     }
   }
 }
@@ -94,7 +104,7 @@
 
   @media(max-width:420px){
     width: 260px;
-    height: 410px;
+    height: 380px;
   }
 }
 

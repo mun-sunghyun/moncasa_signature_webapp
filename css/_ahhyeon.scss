@@ -41,7 +41,10 @@
 .event_img3 {
   background: url('../img/event/event3_main.jpg') no-repeat center center / cover;
   padding: min(2vw, 50px);
-}
+  // @media(max-width:420px){
+  //   padding: ;
+  }
+
 
 //기획전 상품
 .prod_name {
@@ -204,6 +207,9 @@
   }
   &.text_gray {
     color: #999;
+  }
+  &.mdtxt_gap {
+    gap: clamp(15px, 1vw + 14px, 35px);
   }
 }
 

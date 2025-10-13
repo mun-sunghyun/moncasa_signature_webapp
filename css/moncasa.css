@@ -177,15 +177,24 @@ body {
 
 #review .swiper-slide {
   width: 350px;
+  height: 575px;
 }
 @media (max-width: 1199px) {
   #review .swiper-slide {
     width: 300px;
+    height: 470px;
   }
 }
 @media (max-width: 420px) {
   #review .swiper-slide {
     width: 260px;
+    height: 380px;
+  }
+}
+@media (max-width: 1200px) {
+  #review .swiper-button-next,
+  #review .swiper-button-prev {
+    display: none;
   }
 }
 
@@ -205,7 +214,7 @@ body {
 @media (max-width: 420px) {
   .review_card {
     width: 260px;
-    height: 410px;
+    height: 380px;
   }
 }
 
@@ -490,6 +499,9 @@ body {
 }
 .text_md.text_gray {
   color: #999;
+}
+.text_md.mdtxt_gap {
+  gap: clamp(15px, 1vw + 14px, 35px);
 }
 
 .text_sm {
