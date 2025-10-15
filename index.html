@@ -73,7 +73,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
 
         <!-- 연필 아이콘 -->
-        <symbol id="icon-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        <symbol id="icon-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 stroke-width="" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
             <path d="m15 5 4 4"/>
@@ -141,7 +141,7 @@
         <!-- 상단 헤더 -->
         <header id="hd">
                 <div class="d-flex justify-content-between align-items-center mainColor-bg px-4 px-sm-5 py-3 py-sm-4">
-                    <h1><a href=""><img src="img/logo/logo_w.svg" alt="" class="logo"></a></h1>
+                    <h1><a href=""><img src="/img/logo_white.svg" alt="" class="logo"></a></h1>
                     <div class="gnb_container d-flex align-items-center justify-content-between">
                         <nav>
                             <ul class="gnb d-xl-flex d-none px-5 gap-5" id="mon_navi"></ul>
@@ -185,34 +185,34 @@
             });
         </script>
         <nav class="quick_menu">
-            <ul>
-                <li>
-                <a href="" class="text-white">
-                    <span class="label text-white">더 많은<br>제품보기</span>
-                    <span class="icon prod"><svg class="icons"><use href="#icon-sofa"></use></svg>
-                        <!-- <img src="./img/quick_icon_1.png" alt="" class="img_s"> -->
-                    </span>
-                </a>
+            <ul class="">
+                <li class="quick_btn">
+                    <a href="" class="text-white">
+                        <span class="label text-white">더 많은<br>제품보기</span>
+                        <span class="icon">
+                            <svg class="icons"><use href="#icon-sofa"></use></svg>
+                        </span>
+                    </a>
                 </li>
-                <li>
-                <a href="" class="text-white">
-                    <span class="label text-white">매장찾기</span>
-                    <span class="icon store"><svg class="icons"><use href="#icon-find"></use></svg>
-                    </span>    
-                </a>
+                <li class="quick_btn">
+                    <a href="" class="text-white">
+                        <span class="label text-white">매장찾기</span>
+                        <span class="icon"><svg class="icons"><use href="#icon-find"></use></svg>
+                        </span>    
+                    </a>
                 </li>
-                <li>
+                <li class="quick_btn">
                 <a href="" class="text-white">
                     <span class="label text-white">고객센터</span>
-                    <span class="icon cs"><svg class="icons"><use href="#icon-service"></use></svg>
+                    <span class="icon"><svg class="icons"><use href="#icon-service"></use></svg>
                     </span>    
                 </a>
-            </li>
+                </li>
             </ul>
             <button id="mobile_quick" class="d-lg-none">
                 <span class="icon open text-white">
                     <svg class="icons d-none close"><use href="#icon-arrow-down"></use></svg>
-                    <svg class="icons open"><use href="#icon-plus"></use></svg>
+                    <svg class="icons"><use href="#icon-plus"></use></svg>
                 </span>    
             </button>
         </nav>
@@ -229,51 +229,60 @@
         </script>
         <main>
             <!-- 기획전 -->
-            <section id="event" class="">
+            <section id="event" class="main_banner">
                 <!-- Swiper -->
                 <div class="swiper event_Swiper">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper d-flex">
                     <div class="swiper-slide">
-                        <div class="scalebanner d-flex text-decoration-none ">
-                            <a href="#minimal" class="scalechild1 w-100 d-flex flex-column">
-                                <h3 class="order-3 mt-auto text-center">Minimal</h3>
-                                <p class="main_title">가을 감성,<br/>우리 사이 만큼</p>
-                                <span class="mt-1">1인가구, 신혼부부를<br/>위한 작지만 깊은 가을 감성</span>
+                        <div class="main_img">
+                            <a href="#minimal" class="main_mi_img h-100 d-flex flex-column justify-content-between">
+                                <h3 class="order-3 pb-5 text-center main_banner_title mainColor-text">Minimal</h3>
+                                <div class="d-flex flex-column ps-4 ps-md-5 ps-xl-4 pt-5">
+                                    <p class="main_banner_sub mainColor-text pb-3">가을 감성,<br/>우리 사이 만큼</p>
+                                    <span class="main_banner_mid mainColor-text">1인가구, 신혼부부를 위한 <br/> 작지만 깊은 가을 감성</span>
+                                </div>
                             </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="scalebanner d-flex text-decoration-none">
-                            <a href="#upcycling" class="scalechild2 w-100 d-flex flex-column position-relative">
-                                <h3 class="text-white position-absolute overflow-hidden">Upcycling</h3>
-                                <p class="mt-auto text-white mb-3">숨겨진 보석을 찾아라</p>
-                                <span class="text-white lh-sm">지구를 살리는<br/>가장 아름다운 선택</span>
+                        <div class="main_img">
+                            <a href="#upcycling" class="main_up_img h-100 d-flex flex-column justify-content-end position-relative">
+                                <h3 class="text-white main_banner_title vartical_text">Upcycling</h3>
+                                <div class="d-flex flex-column align-items-start justify-content-start ps-4 ps-md-5 ps-xl-4 gap-3 pb-5">
+                                    <p class="main_banner_sub text-white">숨겨진 보석을 찾아라</p>
+                                    <span class="main_banner_mid text-white">지구를 살리는<br/>가장 아름다운 선택</span>
+                                </div>
+                                
                             </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="scalebanner d-flex text-decoration-none">
-                            <a href="#premium" class="scalechild3 w-100 d-flex flex-column">
-                                <h3 class="mb-auto text-white text-start">Premium</h3>
-                                <p class="text-white text-end lh-sm">시간이 흘러도<br/>변치않는 가치</p>
-                                <span class="text-white text-end mt-4 mb-5 lh-sm">인생 후반전, 나를 위한 품격 있는<br/>공간을 만들어보세요</span>
+                        <div class="main_img">
+                            <a href="#premium" class="main_pre_img h-100 d-flex flex-column justify-content-between">
+                                <h3 class="text-white text-start  main_banner_title pt-3 ps-2 ps-md-5 ps-xl-3">Premium</h3>
+                                <div class=" d-flex flex-column align-items-end pe-xl-4 pe-md-5 pe-4 pb-5 text-end gap-3">
+                                    <p class="text-white main_banner_sub">시간이 흘러도<br/>변치않는 가치</p>
+                                    <span class="text-white main_banner_mid">인생 후반전, <br/>나를 위한 품격 있는 공간</span>
+                                </div>
+                                
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-scrollbar mx-auto start-0 end-0 mt-4 d-xl-none position-absolute"></div>
+                
             </section>
             <!-- 미니멀 -->
-            <section id="minimal" class=" container_1450 pt-xl-5 mt-xl-5 pt-0">
+            <section id="minimal" class=" container_1450 pt-xl-5 mt-xl-5 mt-4 pt-0">
                 <div class="gap-0 gap-xxl-5 gap-xl-5 d-flex flex-column flex-xl-row justify-content-between py-xl-5 mt-xl-5">
                 <!-- 미니멀 이미지 -->
                     <div class="d-xl-flex col mt-4">
                         <div class="event_img event_img1 w-100 d-flex flex-column justify-content-between position-relative">
-                            <div class="d-flex flex-column m-xl-0 p-2 ps-xl-5 pt-xl-5 gap-2">
+                            <div class="d-flex flex-column m-xl-0 ps-xl-5 pt-xl-5 gap-2">
                                 <h3 class="event_main_title mainColor-text d-flex">
                                     Minimal
                                 </h3>
-                                <strong class="event_sub_txt txt_shadow text-end text-white pt-xl-5 pe-xl-5 order-3">
+                                <strong class="event_sub_txt shadow_text text-end text-white pt-xl-5 pe-xl-5 order-3">
                                     가을 감성,<br/>
                                     우리 사이 만큼
                                 </strong>
@@ -407,11 +416,11 @@
             </section>
             <!-- 업사이클링 -->
             <section id="upcycling" class=" container_1450">
-                <div class="gap-0 gap-xxl-5 gap-xl-5 d-flex flex-column flex-xl-row justify-content-between py-xl-5 mt-xl-5">
+                <div class="gap-0 gap-xxl-5 gap-xl-5 d-flex flex-column flex-xl-row justify-content-between py-xl-5 mt-4 mt-xl-5">
                 <!-- 기획전 이미지 -->
                     <div class="d-xl-flex col mt-4 order-2">
                         <div class="event_img event_img2 w-100 d-flex flex-column justify-content-between position-relative">
-                            <div class="d-flex flex-column m-xl-0 p-2 ps-xl-5 pt-xl-5 gap-2">
+                            <div class="d-flex flex-column m-xl-0 ps-xl-5 pt-xl-5 gap-2">
                                 <h3 class="event_main_title text-white d-flex">
                                     <i><img src="./img/EcoVector.svg" alt=""></i>
                                     Upcycling
@@ -574,8 +583,8 @@
                 </ul>
             </section>
             <!-- 프리미엄 -->
-            <section id="premium" class="py-xl-5 mt-xl-5">
-                <div class="event_img3 w-100 mt-4">
+            <section id="premium" class="py-xl-5 mt-5">
+                <div class="event_img event_img3 w-100">
                     <div class="container_1450 d-flex flex-column flex-xl-row justify-content-between w-100 position-relative">
                         <div class="d-flex align-items-xl-end align-items-center order-xl-3 gap-xl-2 text-start gap-1">
                             <h3 class="event_main_title text-white">Premium</h3>
@@ -751,7 +760,7 @@
                 </div>
             </section>
             <!-- 취향찾기 완료 -->
-            <section id="taste" class=" d-flex position-relative justify-content-center align-items-center pt-3 pb-5 mt-5 mb-4 mb-xl-0 bg-light">
+            <section id="taste" class=" d-flex position-relative justify-content-center align-items-center pt-5 pb-5 mt-5 mb-4 mb-xl-0 bg-light">
                 <div class="container_1650 position-absolute top-50 mx-xl-auto mx-2 start-0 end-0">
                     <div class="swiper-button-prev position-absolute start-0 ps-md-4 d-block"></div>
                     <div class="swiper-button-next position-absolute end-0 pe-md-4 d-block"></div>
@@ -785,7 +794,7 @@
                         <!-- Slide 1 -->
                         <div class="swiper-slide mt-5 pt-xl-5">
                             <div class="ms-xl-3">
-                                <p class="text_md text_gray text-start mt-1 ps-4 ms-md-5 ps-md-5">
+                                <p class="text_md gray_text text-start mt-1 ps-4 ms-md-5 ps-md-5">
                                 고객님의 취향의 가구를 인기순으로 추천해드릴게요.
                                 </p>
                             </div>
@@ -826,7 +835,7 @@
                         <!-- Slide 2 -->
                         <div class="swiper-slide mt-5 pt-xl-5">
                             <div class="ms-xl-3">
-                                <p class="text_md text_gray text-start mt-1 ps-4 ms-md-5 ps-md-5">
+                                <p class="text_md gray_text text-start mt-1 ps-4 ms-md-5 ps-md-5">
                                 고객님의 취향의 가구를 인기순으로 추천해드릴게요.
                                 </p>
                             </div>
@@ -868,7 +877,7 @@
                         <!-- Slide 3 -->
                         <div class="swiper-slide mt-5 pt-xl-5">
                             <div class="ms-xl-3">
-                                <p class="text_md text_gray text-start mt-1 ps-4 ms-md-5 ps-md-5">
+                                <p class="text_md gray_text text-start mt-1 ps-4 ms-md-5 ps-md-5">
                                 고객님의 취향의 가구를 인기순으로 추천해드릴게요.
                                 </p>
                             </div>
@@ -909,7 +918,7 @@
                         <!-- Slide 4 -->
                         <div class="swiper-slide mt-5 pt-xl-5">
                             <div class="ms-xl-3">
-                                <p class="text_md text_gray text-start mt-1 ps-4 ms-md-5 ps-md-5">
+                                <p class="text_md gray_text text-start mt-1 ps-4 ms-md-5 ps-md-5">
                                 고객님의 취향의 가구를 인기순으로 추천해드릴게요.
                                 </p>
                             </div>
@@ -950,7 +959,7 @@
                         <!-- Slide 5 -->
                         <div class="swiper-slide mt-5 pt-xl-5">
                             <div class="ms-xl-3">
-                                <p class="text_md text_gray text-start mt-1 ps-4 ms-md-5 ps-md-5">
+                                <p class="text_md gray_text text-start mt-1 ps-4 ms-md-5 ps-md-5">
                                 고객님의 취향의 가구를 인기순으로 추천해드릴게요.
                                 </p>
                             </div>                     
@@ -1014,7 +1023,7 @@
                                             </div>
                                             <div class="review_bt">
                                                 <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm text_gray">김*재 님 | 오르덴 2700 일반형</span>
+                                                <span class="text_sm gray_text">김*재 님 | 오르덴 2700 일반형</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1023,7 +1032,7 @@
                                 <div class="swiper-slide">
                                     <div class="review_card">
                                         <div class="w-100">
-                                            <img src="img/review/review2.jpg" alt="리뷰2" class="review_img img-fluid">
+                                            <img src="./img/review/review2.jpg" alt="리뷰2" class="review_img img-fluid">
                                         </div>
                                         <div class="review_text">
                                             <div class="d-flex flex-column gap-3">
@@ -1031,8 +1040,8 @@
                                                 <p class="text_sm">아기와 개가 모두 있는 집이라 털이 잘 떨어지고 오염에 강하면서도 소재가 좋은 소파를 찾다보니 몬까사를 사게 됐습니다. 색깔도 고급스럽고 디자인도 예쁩니다.</p>
                                             </div>
                                             <div class="review_bt">
-                                                <img src="img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm text_gray">이*은 님 | 오르덴 2700 일반형</span>
+                                                <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
+                                                <span class="text_sm gray_text">이*은 님 | 오르덴 2700 일반형</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1040,7 +1049,7 @@
                                 <div class="swiper-slide">
                                     <div class="review_card">
                                         <div class="w-100">
-                                            <img src="img/review/review3.jpg" alt="리뷰3" class="review_img img-fluid">
+                                            <img src="./img/review/review3.jpg" alt="리뷰3" class="review_img img-fluid">
                                         </div>
                                         <div class="review_text">
                                             <div class="d-flex flex-column gap-3">
@@ -1048,8 +1057,8 @@
                                                 <p class="text_sm">구매 후 한 달 후에 받을 수 있었어요 2년 전부터 봐두었다가 구매했는데 역시나 너무 예쁘네요.</p>
                                             </div>
                                             <div class="review_bt">
-                                                <img src="img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm text_gray">김*희 님 | 오르덴 2700 일반형</span>
+                                                <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
+                                                <span class="text_sm gray_text">김*희 님 | 오르덴 2700 일반형</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1057,7 +1066,7 @@
                                 <div class="swiper-slide">
                                     <div class="review_card">
                                         <div class="w-100">
-                                            <img src="img/review/review4.jpg" alt="리뷰4" class="review_img img-fluid">
+                                            <img src="./img/review/review4.jpg" alt="리뷰4" class="review_img img-fluid">
                                         </div>
                                         <div class="review_text">
                                             <div class="d-flex flex-column gap-3">
@@ -1066,8 +1075,8 @@
                                             </div>
                                            
                                             <div class="review_bt">
-                                                 <img src="img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm text_gray">김*희 님 | 오르덴 2700 일반형</span>
+                                                 <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
+                                                <span class="text_sm gray_text">김*희 님 | 오르덴 2700 일반형</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1075,7 +1084,7 @@
                                 <div class="swiper-slide">
                                     <div class="review_card">
                                         <div class="w-100">
-                                            <img src="img/review/review5.jpg" alt="리뷰5" class="review_img img-fluid">
+                                            <img src="./img/review/review5.jpg" alt="리뷰5" class="review_img img-fluid">
                                         </div>
                                         <div class="review_text">
                                             <div class="d-flex flex-column gap-3">
@@ -1084,8 +1093,8 @@
                                             </div>
                                            
                                             <div class="review_bt">
-                                                 <img src="img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm text_gray">최*원 님 | 오르덴 2700 일반형</span>
+                                                 <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
+                                                <span class="text_sm gray_text">최*원 님 | 오르덴 2700 일반형</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1093,7 +1102,7 @@
                                 <div class="swiper-slide">
                                     <div class="review_card">
                                         <div class="w-100">
-                                            <img src="img/review/review5.jpg" alt="리뷰5" class="review_img img-fluid">
+                                            <img src="./img/review/review5.jpg" alt="리뷰6" class="review_img img-fluid">
                                         </div>
                                         <div class="review_text">
                                             <div class="d-flex flex-column gap-3">
@@ -1102,8 +1111,8 @@
                                             </div>
                                            
                                             <div class="review_bt">
-                                                 <img src="img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm text_gray">김*원 님 | 오르덴 2700 일반형</span>
+                                                 <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
+                                                <span class="text_sm gray_text">김*원 님 | 오르덴 2700 일반형</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1111,7 +1120,7 @@
                                 <div class="swiper-slide">
                                     <div class="review_card">
                                         <div class="w-100">
-                                            <img src="img/review/review5.jpg" alt="리뷰5" class="review_img img-fluid">
+                                            <img src="./img/review/review5.jpg" alt="리뷰7" class="review_img img-fluid">
                                         </div>
                                         <div class="review_text">
                                             <div class="d-flex flex-column gap-3">
@@ -1120,8 +1129,8 @@
                                             </div>
                                            
                                             <div class="review_bt">
-                                                 <img src="img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm text_gray">조*현 님 | 오르덴 2700 일반형</span>
+                                                 <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
+                                                <span class="text_sm gray_text">조*현 님 | 오르덴 2700 일반형</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1129,7 +1138,24 @@
                                 <div class="swiper-slide">
                                     <div class="review_card">
                                         <div class="w-100">
-                                            <img src="img/review/review5.jpg" alt="리뷰5" class="review_img img-fluid">
+                                            <img src="./img/review/review5.jpg" alt="리뷰8" class="review_img img-fluid">
+                                        </div>
+                                        <div class="review_text">
+                                            <div class="d-flex flex-column gap-3">
+                                                <h4 class="text_md text-center">고민과 기다린 보람 있는 소파</h4>
+                                                <p class="text_sm">소파 주문하고 한 달이 걸렸습니다. 하지만 기다린만큼 후회없는 소파인 것 같아요. 너무 이쁩니다!</p>
+                                            </div>
+                                            <div class="review_bt">
+                                                 <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
+                                                <span class="text_sm gray_text">이*수 님 | 오르덴 2700 일반형</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="review_card">
+                                        <div class="w-100">
+                                            <img src="./img/review/review5.jpg" alt="리뷰9" class="review_img img-fluid">
                                         </div>
                                         <div class="review_text">
                                             <div class="d-flex flex-column gap-3">
@@ -1138,26 +1164,8 @@
                                             </div>
                                            
                                             <div class="review_bt">
-                                                 <img src="img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm text_gray">이*수 님 | 오르덴 2700 일반형</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="review_card">
-                                        <div class="w-100">
-                                            <img src="img/review/review5.jpg" alt="리뷰5" class="review_img img-fluid">
-                                        </div>
-                                        <div class="review_text">
-                                            <div class="d-flex flex-column gap-3">
-                                                <h4 class="text_md text-center">고민과 기다린 보람 있는 소파</h4>
-                                                <p class="text_sm">소파 주문하고 한 달이 걸렸습니다. 하지만 기다린만큼 후회없는 소파인 것 같아요. 너무 이쁩니다!</p>
-                                            </div>
-                                           
-                                            <div class="review_bt">
-                                                 <img src="img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm text_gray">박*은 님 | 오르덴 2700 일반형</span>
+                                                 <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
+                                                <span class="text_sm gray_text">박*은 님 | 오르덴 2700 일반형</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1168,15 +1176,14 @@
                             <div class="swiper-button-prev"></div>                            
                         </div>
                     </div>
-
-                   <div class="wrapper_btn container_1450 d-flex justify-content-center justify-content-xl-end mt-4 mb-4 gap-3">
+                    <div class="container_1450 d-flex justify-content-center justify-content-xl-end mt-4 mb-4 gap-3">
                         <button class="option-btn bg-white min_h min_w">
                                 <svg class="icons"><use href="#icon-pencil"></use></svg>
-                                후기 작성 하기
+                                <a href="">후기 작성 하기</a>
                         </button>
                          <button class="option-btn bg-white min_h min_w">
                             <svg class="icons"><use href="#icon-instagram"></use></svg>
-                            후기 보러 가기
+                                <a href="">후기 보러 가기</a>
                         </button>
                     </div>
                     <div class="bg-light w-100 mainColor-text text-center py-xl-4 py-3">
@@ -1194,20 +1201,20 @@
                         <li class="col-xl col-6 d-flex p-1"><img src="./img/interior2.jpg" class="img-fluid w-100" alt=""></li>
                         <li class="col-xl col-6 d-flex p-1"><img src="./img/interior3.jpg" class="img-fluid w-100" alt=""></li>
                         <li class="col-xl col-6 d-flex p-1">
-                        <div class="interior_box d-flex flex-column w-100 ps-xl-4 text-center text-xl-start justify-content-center align-items-center align-items-xl-start">
-                            <div class="d-flex flex-column gap-1">
-                                <p class="section_subtitle justify-content-center">다양한 고객님들의</p>
-                                <div class="d-flex flex-column justify-content-center align-items-xl-start">
-                                    <h3 class="section_title">
-                                        <span class="d-xl-block ">
-                                            집들이
-                                        </span>
-                                        구경해보세요
-                                    </h3>
+                            <div class="interior_box d-flex flex-column w-100 ps-xl-4 text-center text-xl-start justify-content-center align-items-center align-items-xl-start">
+                                <div class="d-flex flex-column gap-1">
+                                    <p class="section_subtitle justify-content-center soft_text">다양한 고객님들의</p>
+                                    <div class="d-flex flex-column justify-content-center align-items-xl-start">
+                                        <h3 class="section_title">
+                                            <span class="d-xl-block">
+                                                집들이
+                                            </span>
+                                            구경해보세요
+                                        </h3>
+                                    </div>
                                 </div>
+                                <a><button class="option-btn border_white mt-3 min_h min_w mainColor-bg text-white">구경하러 가기</button></a>
                             </div>
-                            <button class="option-btn border_white mt-3 min_h min_w mainColor-bg text-white">구경하러 가기</button>
-                        </div> 
                         </li>
                     </ul>
                 </div>
@@ -1314,29 +1321,28 @@
         <script src="./vendor/bt.js"></script>
         <!-- event_swiper -->
         <script>
-            var event_swiper = new Swiper(".event_Swiper", {
-                slidesPerView: 3,
-                spaceBetween: 0,
-                loop:true,
-                pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-                },
-                breakpoints: {
-                320: {
+        var event_swiper = new Swiper(".event_Swiper", {
+            slidesPerView: 3,
+            spaceBetween: 0,
+            loop: true,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                draggable: true,
+                hide: false,
+            },
+            breakpoints: {
+                0: {
                     slidesPerView: 1,
                     spaceBetween: 0,
-                    pagination: {
-                        el: ".event_Swiper .swiper-pagination",
-                    },
                 },
-                769: {
+                1200: {
                     slidesPerView: 3,
-                    spaceBetween: 0,             
+                    spaceBetween: 0,
                 },
-                },
-            });
+            },
+        });
         </script>
+
         <!-- 기획전 스와이퍼 -->
        <script>
         function createSwiper(selector, options = {}) {

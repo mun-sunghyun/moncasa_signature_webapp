@@ -84,9 +84,8 @@
 
   .swiper-button-next,
   .swiper-button-prev {
-    @media(max-width:1200px){
       display: none;
-    }
+   
   }
 }
 
@@ -386,9 +385,9 @@
 
 #footer{
   p, a {
-    font-size: clamp(12px, 1vw + 10px ,15px);
+    font-size: var(--fs-body-sm);
   }
   strong {
-    font-size: clamp(14px, 1vw + 12px ,20px);
+    font-size: var(--fs-body-sm);
   }
 }
