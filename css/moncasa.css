@@ -611,13 +611,14 @@ ol, ul {
 .banner_set {
   margin-top: clamp(2rem, 1vw + 1.5rem, 70px);
 }
-.banner_set .banner_img1 {
-  background: url(../img/event/mi_banner.jpg) no-repeat center 42%/cover;
+@media (min-width: 1200px) {
+  .banner_set .banner_img1 {
+    background: url(../img/event/mi_banner.jpg) no-repeat center 42%/cover;
+  }
 }
 @media (max-width: 1199px) {
   .banner_set .banner_img1 {
-    background: d-none;
-    background-color: rgba(113, 49, 49, 0.8);
+    background-color: rgba(113, 49, 49, 0.8) !important;
     width: 100%;
   }
 }
