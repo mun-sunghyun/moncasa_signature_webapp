@@ -65,7 +65,7 @@
             mon_navi.innerHTML = navidata;
             document.getElementById("m_mon_navi").innerHTML = navidata;
         });
-    </script>
+        </script>
     </head>
     <body>
         <!-- svg -->
@@ -160,29 +160,47 @@
         </header>
         <!-- 상단 헤더 스크립트 -->
         <script>
-          document.addEventListener("DOMContentLoaded", () => {
-            const hd = document.querySelector("#hd");
-            const eventBanner = document.querySelector("#event");
+        document.addEventListener("DOMContentLoaded", () => {
+        const hd = document.querySelector("#hd");
+        const eventBanner = document.querySelector("#event");
 
-            if (!eventBanner || !hd) return;
+        if (!eventBanner || !hd) return;
 
-            // 처음 로드 시 #hd 위치 조정
+        // 처음 로드 시 #hd 위치 조정
+        hd.style.top = eventBanner.offsetHeight + "px";
+
+        // hd가 원래 있던 위치(문서 상단에서의 거리) 저장
+        const hdTopPosition = hd.offsetTop;
+        let lastScroll = 0; // 스크롤 방향 감지용
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.scrollY;
+
+            // 1️⃣ fixed 상태 처리
+            if (currentScroll >= hdTopPosition) {
+            hd.classList.add("fixed-top");
+            hd.style.top = "0";
+            } else {
+            hd.classList.remove("fixed-top");
             hd.style.top = eventBanner.offsetHeight + "px";
+            }
 
-            // hd가 원래 있던 위치(문서 상단에서의 거리) 저장
-            const hdTopPosition = hd.offsetTop;
+            // 2️⃣ 스크롤 방향에 따라 fade-in / fade-out
+            if (currentScroll < lastScroll && currentScroll > hdTopPosition + 50) {
+            // 스크롤 올림 → 헤더 숨기기
+            hd.style.transform = "translateY(-100%)";
+            hd.style.opacity = "0";
+            } else {
+            // 스크롤 내림 → 헤더 나타내기
+            hd.style.transform = "translateY(0)";
+            hd.style.opacity = "1";
+            }
 
-            // 스크롤 이벤트 감지
-            window.addEventListener("scroll", () => {
-                if (window.scrollY >= hdTopPosition) {
-                hd.classList.add("fixed-top");
-                hd.style.top = "0"; // fixed 상태일 땐 top 0
-                } else {
-                hd.classList.remove("fixed-top");
-                hd.style.top = eventBanner.offsetHeight + "px"; // 원위치
-                }
-            });
-            });
+            lastScroll = currentScroll;
+        });
+        });
+        </script>
+
         </script>
         <nav class="quick_menu">
             <ul class="">
@@ -216,17 +234,34 @@
                 </span>    
             </button>
         </nav>
-        <script>
-            const mobile_quick = document.getElementById("mobile_quick");
-            const quick_menu = document.querySelector(".quick_menu");
-            const icon_open = mobile_quick.querySelector("img.open");
-            const icon_close = mobile_quick.querySelector("img.close");
-            mobile_quick.addEventListener("click", function(){
-                quick_menu.classList.toggle("active");
-                icon_open.classList.toggle("d-none");
-                icon_close.classList.toggle("d-none");
-            })
+       <script>
+        const mobile_quick = document.getElementById("mobile_quick");
+        const quick_menu = document.querySelector(".quick_menu");
+        const icon_open = mobile_quick.querySelector("img.open");
+        const icon_close = mobile_quick.querySelector("img.close");
+
+        mobile_quick.addEventListener("click", function() {
+            quick_menu.classList.toggle("active");
+            icon_open.classList.toggle("d-none");
+            icon_close.classList.toggle("d-none");
+        });
+
+        window.addEventListener("scroll", function() {
+            const scrollY = window.scrollY;
+            const windowH = window.innerHeight;
+            const quickHeight = quick_menu.offsetHeight;
+            const footerTop = footer.getBoundingClientRect().top + scrollY;
+
+            if (scrollY + windowH > footerTop) {
+                // 퀵메뉴와 푸터 겹치지 않도록 bottom 값을 올림
+                quick_menu.style.bottom = `${scrollY + windowH - footerTop + 40}px`; 
+            } else {
+                // 원래 위치
+                quick_menu.style.bottom = "40px";
+            }
+        });
         </script>
+
         <main>
             <!-- 기획전 -->
             <section id="event" class="main_banner">
@@ -279,13 +314,13 @@
                     <div class="d-xl-flex col mt-4">
                         <div class="event_img event_img1 w-100 d-flex flex-column justify-content-between position-relative">
                             <div class="d-flex flex-column m-xl-0 ps-xl-5 pt-xl-5 gap-2">
-                                <h3 class="event_main_title mainColor-text d-flex">
+                                <h2 class="event_main_title mainColor-text d-flex">
                                     Minimal
-                                </h3>
-                                <strong class="event_sub_txt shadow_text text-end text-white pt-xl-5 pe-xl-5 order-3">
+                                </h2>
+                                <p class="event_sub_txt shadow_text text-end text-white pt-xl-5 pe-xl-5 order-3">
                                     가을 감성,<br/>
                                     우리 사이 만큼
-                                </strong>
+                                </p>
                                 <p class="event_mid_txt mainColor-text text-start order-2">
                                     1인가구, 신혼 부부를<br>
                                     위한 작지만 깊은 가을 감성
@@ -407,7 +442,7 @@
                 <ul class="banner_set">
                     <li class="">
                         <a href="" class="">
-                            <strong class="banner_img1 text-center d-block text-white mt-xl-5 px-5 py-4 py-xl-5">
+                            <strong class="banner_img1 fw-700 text-center d-block text-white mt-xl-5 px-5 py-4 py-xl-5">
                                 세트 상품 할인전 바로가기
                             </strong>
                         </a>
@@ -564,7 +599,7 @@
                     <li class="col d-flex py-3 px-3 flex-column justify-content-center banner_eco1">
                     <a href="" class="text-white">
                         <p class="d-flex flex-column align-items-end">
-                            <strong class="d-flex flex-column flex-xl-row">몬까사의 <strong class="ms-2"> 환경 캠페인</strong></strong>
+                            <strong class="d-flex flex-column fw-700 flex-xl-row">몬까사의 <strong class="ms-2"> 환경 캠페인</strong></strong>
                             <span class="mt-xl-1 d-none d-lg-block">자연을 사랑하는 몬까사의 다양한 활동</span>
                         </p>                        
                     </a>
@@ -574,7 +609,7 @@
                     <li class="px-3 py-3 col d-flex flex-column justify-content-center banner_eco2">
                     <a href="" class="text-white">
                         <p class="d-flex flex-column align-items-end">
-                            <strong class="d-flex flex-column flex-xl-row">친환경 상품 <strong class="ms-2">더 보러가기</strong></strong>
+                            <strong class="d-flex flex-column fw-700 flex-xl-row">친환경 상품 <strong class="ms-2">더 보러가기</strong></strong>
                             <span class="mt-xl-1 d-none d-xl-block">환경과 편리함을 모두 잡은<br>나만의 보석을 발견하세요</span>
                         </p>
                     
@@ -798,7 +833,7 @@
                                 고객님의 취향의 가구를 인기순으로 추천해드릴게요.
                                 </p>
                             </div>
-                            <strong class="section_subtitle text-start ps-1 ps-md-5">
+                            <strong class="section_subtitle text-start ps-1 ps-md-5 fw-700">
                                 <span class="q_num me-2 me-mb-3 mainColor-text">Q1</span>
                                 가구를 사용하는 인원수를 골라주세요!
                             </strong>
@@ -840,7 +875,7 @@
                                 </p>
                             </div>
                             
-                            <strong class="section_subtitle text-start ps-1 ps-md-5">
+                            <strong class="section_subtitle text-start ps-1 ps-md-5 fw-700">
                                 <span class="q_num me-2 me-mb-3 mainColor-text">Q2</span>
                                 소재를 선택해주세요!
                             </strong>
@@ -881,7 +916,7 @@
                                 고객님의 취향의 가구를 인기순으로 추천해드릴게요.
                                 </p>
                             </div>
-                            <strong class="section_subtitle text-start ps-1 ps-md-5">
+                            <strong class="section_subtitle text-start ps-1 ps-md-5 fw-700">
                                 <span class="q_num me-2 me-mb-3 mainColor-text">Q3</span>
                                 컬러를 선택해주세요!
                             </strong>
@@ -922,7 +957,7 @@
                                 고객님의 취향의 가구를 인기순으로 추천해드릴게요.
                                 </p>
                             </div>
-                            <strong class="section_subtitle text-start ps-1 ps-md-5">
+                            <strong class="section_subtitle text-start ps-1 ps-md-5 fw-700">
                                 <span class="q_num me-2 me-mb-3 mainColor-text">Q4</span>
                                 형태를 선택해주세요!
                             </strong>
@@ -964,7 +999,7 @@
                                 </p>
                             </div>                     
                             
-                            <strong class="section_subtitle text-start ps-1 ps-md-5">
+                            <strong class="section_subtitle text-start ps-1 ps-md-5 fw-700">
                                 <span class="q_num me-2 me-mb-3 mainColor-text">Q5</span>
                                 가격대를 선택해주세요!
                             </strong>
@@ -1003,195 +1038,157 @@
                     
             </section>
             <!-- 후기 -->
-            <section id="review" class="section_p overflow-hidden">
-                    <div class="d-flex align-items-center justify-content-center py-5">
-                        <h2 class="section_title">고객님들의 공간이 담긴 솔직 후기</h2>
-                    </div>
-                    <div class="">
-                        <!-- Swiper -->
-                        <div class="swiper review_swiper overflow-visible">
-                            <div class="swiper-wrapper d-flex justify-content-center align-items-center">
-                                <div class="swiper-slide">
-                                    <div class="review_card">
-                                        <div class="w-100">
-                                            <img src="./img/review/review1.jpg" alt="리뷰1" class="review_img img-fluid">
-                                        </div>
-                                        <div class="review_text ">
-                                            <div class="d-flex flex-column gap-3">
-                                                <h4 class="text_md text-center">다들 이쁘다고 감탄해요</h4>
-                                                <p class="text_sm">몬까사 제품이 너무 많아서 실제로 매장가서 보고 구매했습니당 저희집 크기와 구조에 카우치형은 적합하지 않아서 기본형 구매했는데 너무 좋아요.</p>
-                                            </div>
-                                            <div class="review_bt">
-                                                <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm gray_text">김*재 님 | 오르덴 2700 일반형</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                        
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="review_card">
-                                        <div class="w-100">
-                                            <img src="./img/review/review2.jpg" alt="리뷰2" class="review_img img-fluid">
-                                        </div>
-                                        <div class="review_text">
-                                            <div class="d-flex flex-column gap-3">
-                                                <h4 class="text_md text-center">아기와 개가 있는집 관리가 수월...</h4>
-                                                <p class="text_sm">아기와 개가 모두 있는 집이라 털이 잘 떨어지고 오염에 강하면서도 소재가 좋은 소파를 찾다보니 몬까사를 사게 됐습니다. 색깔도 고급스럽고 디자인도 예쁩니다.</p>
-                                            </div>
-                                            <div class="review_bt">
-                                                <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm gray_text">이*은 님 | 오르덴 2700 일반형</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="review_card">
-                                        <div class="w-100">
-                                            <img src="./img/review/review3.jpg" alt="리뷰3" class="review_img img-fluid">
-                                        </div>
-                                        <div class="review_text">
-                                            <div class="d-flex flex-column gap-3">
-                                                <h4 class="text_md text-center">디자인&기능 다 만족스러워요</h4>
-                                                <p class="text_sm">구매 후 한 달 후에 받을 수 있었어요 2년 전부터 봐두었다가 구매했는데 역시나 너무 예쁘네요.</p>
-                                            </div>
-                                            <div class="review_bt">
-                                                <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm gray_text">김*희 님 | 오르덴 2700 일반형</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="review_card">
-                                        <div class="w-100">
-                                            <img src="./img/review/review4.jpg" alt="리뷰4" class="review_img img-fluid">
-                                        </div>
-                                        <div class="review_text">
-                                            <div class="d-flex flex-column gap-3">
-                                                <h4 class="text_md text-center">가족 모두 만족하는 소파를...</h4>
-                                                <p class="text_sm">한달만에 이사 날짜잡고 제일 빨리 구매한 상품이였는데 인기가 많아서 인지 이사후 2주뒤에 받았습니다. 소파 없는 거실이 휑하긴 했지만 기다린 보람이 있네요.</p>
-                                            </div>
-                                           
-                                            <div class="review_bt">
-                                                 <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm gray_text">김*희 님 | 오르덴 2700 일반형</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="review_card">
-                                        <div class="w-100">
-                                            <img src="./img/review/review5.jpg" alt="리뷰5" class="review_img img-fluid">
-                                        </div>
-                                        <div class="review_text">
-                                            <div class="d-flex flex-column gap-3">
-                                                <h4 class="text_md text-center">고민과 기다린 보람 있는 소파</h4>
-                                                <p class="text_sm">소파 주문하고 한 달이 걸렸습니다. 하지만 기다린만큼 후회없는 소파인 것 같아요. 너무 이쁩니다!</p>
-                                            </div>
-                                           
-                                            <div class="review_bt">
-                                                 <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm gray_text">최*원 님 | 오르덴 2700 일반형</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="review_card">
-                                        <div class="w-100">
-                                            <img src="./img/review/review5.jpg" alt="리뷰6" class="review_img img-fluid">
-                                        </div>
-                                        <div class="review_text">
-                                            <div class="d-flex flex-column gap-3">
-                                                <h4 class="text_md text-center">고민과 기다린 보람 있는 소파</h4>
-                                                <p class="text_sm">소파 주문하고 한 달이 걸렸습니다. 하지만 기다린만큼 후회없는 소파인 것 같아요. 너무 이쁩니다!</p>
-                                            </div>
-                                           
-                                            <div class="review_bt">
-                                                 <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm gray_text">김*원 님 | 오르덴 2700 일반형</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="review_card">
-                                        <div class="w-100">
-                                            <img src="./img/review/review5.jpg" alt="리뷰7" class="review_img img-fluid">
-                                        </div>
-                                        <div class="review_text">
-                                            <div class="d-flex flex-column gap-3">
-                                                <h4 class="text_md text-center">고민과 기다린 보람 있는 소파</h4>
-                                                <p class="text_sm">소파 주문하고 한 달이 걸렸습니다. 하지만 기다린만큼 후회없는 소파인 것 같아요. 너무 이쁩니다!</p>
-                                            </div>
-                                           
-                                            <div class="review_bt">
-                                                 <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm gray_text">조*현 님 | 오르덴 2700 일반형</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="review_card">
-                                        <div class="w-100">
-                                            <img src="./img/review/review5.jpg" alt="리뷰8" class="review_img img-fluid">
-                                        </div>
-                                        <div class="review_text">
-                                            <div class="d-flex flex-column gap-3">
-                                                <h4 class="text_md text-center">고민과 기다린 보람 있는 소파</h4>
-                                                <p class="text_sm">소파 주문하고 한 달이 걸렸습니다. 하지만 기다린만큼 후회없는 소파인 것 같아요. 너무 이쁩니다!</p>
-                                            </div>
-                                            <div class="review_bt">
-                                                 <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm gray_text">이*수 님 | 오르덴 2700 일반형</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="review_card">
-                                        <div class="w-100">
-                                            <img src="./img/review/review5.jpg" alt="리뷰9" class="review_img img-fluid">
-                                        </div>
-                                        <div class="review_text">
-                                            <div class="d-flex flex-column gap-3">
-                                                <h4 class="text_md text-center">고민과 기다린 보람 있는 소파</h4>
-                                                <p class="text_sm">소파 주문하고 한 달이 걸렸습니다. 하지만 기다린만큼 후회없는 소파인 것 같아요. 너무 이쁩니다!</p>
-                                            </div>
-                                           
-                                            <div class="review_bt">
-                                                 <img src="./img/review/star_5.png" alt="별점5개" class="stars img-fluid">
-                                                <span class="text_sm gray_text">박*은 님 | 오르덴 2700 일반형</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                               
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>                            
-                        </div>
-                    </div>
-                    <div class="container_1450 d-flex justify-content-center justify-content-xl-end mt-4 mb-4 gap-3">
-                        <button class="option-btn bg-white min_h min_w">
+            <section id="review" class="section_p overflow-hidden pt-5 mt-5">
+                <div class="container_1650 d-flex align-items-center justify-content-between pb-5">
+                    <h2 class="section_title">고객님들의 공간이 담긴 솔직 후기</h2>
+                        <div class="d-flex justify-content-center justify-content-xl-end mt-4 mb-4 gap-3">
+                            <button class="option-btn bg-white min_h min_w py-3 px-4">
                                 <svg class="icons"><use href="#icon-pencil"></use></svg>
                                 <a href="">후기 작성 하기</a>
-                        </button>
-                         <button class="option-btn bg-white min_h min_w">
-                            <svg class="icons"><use href="#icon-instagram"></use></svg>
+                            </button>
+                            <button class="option-btn bg-white min_h min_w py-3 px-4">
+                                <svg class="icons"><use href="#icon-instagram"></use></svg>
                                 <a href="">후기 보러 가기</a>
-                        </button>
-                    </div>
-                    <div class="bg-light w-100 mainColor-text text-center py-xl-4 py-3">
+                            </button>
+                        </div>
+                </div>
+                <div class="d-flex flex-column gap-4">
+                    <div class="review_event w-100 mainColor-text text-center py-xl-4 py-3">
                         <span class="text_md d-block d-md-inline me-md-3">
-                            <strong>포토 리뷰 이벤트 </strong>
-                            사은품 증정 기회 놓치지 마세요!
+                            포토 리뷰 이벤트로
+                            <strong class="fw-700">사은품 증정</strong> 기회 놓치지 마세요!
                         </span>
                     </div>
+                    <div class="container_1650">
+                        <!-- Swiper -->
+                        <div class="swiper review_swiper overflow-visible">
+                            <div class="swiper-wrapper  pb-5 overflow-visible">
+                                <div class="swiper-slide">
+                                    <div class="review_card position-relative">
+                                        <img src="./img/review/review4.jpg" class="review_img img-fluid">
+                                        <ul class="review_text">
+                                            <li><img src="./img/review/star_5.png" class="stars"></li>
+                                            <li class="text_md review_title">친환경이라서 바로 구매했어요!!....</li>
+                                            <li class="text_sm text_multi">패브릭 소재의 소파를 좋아하는데 피부가 예민해서 가족만 쓰다가 친환경이라고 해서 구매해봤는데 가려움도 없고 너무 좋네요...
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="review_card">
+                                        <img src="./img/review/review2.jpg" class="review_img img-fluid">
+                                        <ul class="review_text">
+                                            <li><img src="./img/review/star_5.png" class="stars"></li>
+                                            <li class="text_md review_title">혼자 편하게 책 읽기 정말 편하....</li>
+                                            <li class="text_sm text_multi">너무 푹신하고 다리 올릴 수 있게 조절도 되면서 소리도 조용해서 좋네요 편히 쉴 수 있으니 다들 추천이용~~
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="review_card">
+                                        <img src="./img/review/review3.jpg" class="review_img img-fluid">
+                                        <ul class="review_text">
+                                            <li><img src="./img/review/star_5.png" class="stars"></li>
+                                            <li class="text_md review_title">색감이 예뻐서 인테리어 좋아요....</li>
+                                            <li class="text_sm text_multi">디자인 좋고 튼튼합니다 우리집 세컨의자로 딱 좋아요 자취하다보니 퇴근 후에 혼맥하기도 좋네요ㅎㅎ
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="review_card">  
+                                        <img src="./img/review/review1.jpg" class="review_img img-fluid">
+                                        <ul class="review_text">
+                                            <li><img src="./img/review/star_5.png" class="stars"></li>
+                                            <li class="text_md review_title">큰평수로 이사와서 소파도 큰거.... </li>
+                                            <li class="text_sm text_multi">아기들이 너무 좋아해요ㅎㅎㅎ 집 들어오자마자 소파 직행해욬ㅋ큐ㅜ 식구가 많아서 큰거 샀는데 다들 좋아해서 넘 다행이네요!
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="review_card">
+                                        <img src="./img/review/review5.jpg" class="review_img img-fluid">
+                                        <ul class="review_text">
+                                            <li><img src="./img/review/star_5.png" class="stars"></li>
+                                            <li class="text_md review_title">몬카사 소파 정말 최고인것같아요...</li>
+                                            <li class="text_sm text_multi">혼자 사는 집에 두기 너무 좋아요 색감도 이쁘구요! 진짜 편해서 소파에서 누워있다가 잔적도 많아요ㅋㅋㅋ 추천드립니다
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="review_card position-relative">
+                                        <img src="./img/review/review6.jpg" class="review_img img-fluid">
+                                        <ul class="review_text">
+                                            <li><img src="./img/review/star_5.png" class="stars"></li>
+                                            <li class="text_md review_title">친환경이라서 바로 구매했어요!!....</li>
+                                            <li class="text_sm text_multi">패브릭 소재의 소파를 좋아하는데 피부가 예민해서 가족만 쓰다가 친환경이라고 해서 구매해봤는데 가려움도 없고 너무 좋네요...
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="review_card">
+                                        <img src="./img/review/review2.jpg" class="review_img img-fluid">
+                                        <ul class="review_text">
+                                            <li><img src="./img/review/star_5.png" class="stars"></li>
+                                            <li class="text_md review_title">혼자 편하게 책 읽기 정말 편하....</li>
+                                            <li class="text_sm text_multi">너무 푹신하고 다리 올릴 수 있게 조절도 되면서 소리도 조용해서 좋네요 편히 쉴 수 있으니 다들 추천이용~~
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="review_card">
+                                        <img src="./img/review/review3.jpg" class="review_img img-fluid">
+                                        <ul class="review_text">
+                                            <li><img src="./img/review/star_5.png" class="stars"></li>
+                                            <li class="text_md review_title">색감이 예뻐서 인테리어 좋아요....</li>
+                                            <li class="text_sm text_multi">디자인 좋고 튼튼합니다 우리집 세컨의자로 딱 좋아요 자취하다보니 퇴근 후에 혼맥하기도 좋네요ㅎㅎ
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="review_card">  
+                                        <img src="./img/review/review1.jpg" class="review_img img-fluid">
+                                        <ul class="review_text">
+                                            <li><img src="./img/review/star_5.png" class="stars"></li>
+                                            <li class="text_md review_title">큰평수로 이사와서 소파도 큰거.... </li>
+                                            <li class="text_sm text_multi">아기들이 너무 좋아해요ㅎㅎㅎ 집 들어오자마자 소파 직행해욬ㅋ큐ㅜ 식구가 많아서 큰거 샀는데 다들 좋아해서 넘 다행이네요!
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="review_card">
+                                        <img src="./img/review/review5.jpg" class="review_img img-fluid">
+                                        <ul class="review_text">
+                                            <li><img src="./img/review/star_5.png" class="stars"></li>
+                                            <li class="text_md review_title">몬카사 소파 정말 최고인것같아요...</li>
+                                            <li class="text_sm text_multi">혼자 사는 집에 두기 너무 좋아요 색감도 이쁘구요! 진짜 편해서 소파에서 누워있다가 잔적도 많아요ㅋㅋㅋ 추천드립니다
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>     
+                            
+                            <div class="swiper-scrollbar mx-auto start-0 end-0 mt-4 position-relative"></div>                
+                        </div>
+                    </div>
+                    
+                </div>
             </section>
             <!-- 인테리어 완료 -->
             <section id="interior" class="section_p">
@@ -1227,7 +1224,7 @@
                                 <div class="text_md mainColor-text mdtxt_gap d-flex align-items-center text-center position-relative">
                                     <a  href="" class="m-0 mainColor-text">
                                         몬까사의 다양한<br>
-                                        <strong>제품 라인업</strong>
+                                        <strong class="fw-700">제품 라인업</strong>
                                     </a>
                                     <svg id="arrow" class="arrow_icon" viewBox="0 0 91 52"  fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M65.1786 0.5L60.9227 4.78596L78.9786 22.9695H0.5V29.0311H78.9781L60.9227 47.2141L65.1786 51.5L90.5 26L65.1786 0.5Z" fill="currentColor"/>
@@ -1241,7 +1238,7 @@
                                 d-flex align-items-center justify-content-center position-relative">
                                     <a  href="" class="m-0 text-white">
                                         정성을 다하는<br>
-                                        <strong>소파케어 받으러가기</strong>
+                                        <strong class="fw-700">소파케어 받으러가기</strong>
                                     </a>
                                     <svg class="arrow_icon arrow_white"><use href="#arrow"></use>
                                     </svg>
@@ -1251,7 +1248,7 @@
                                 <div class="text_md mdtxt_gap my-md-5 py-md-5 text-center d-flex align-items-center justify-content-center position-relative">
                                     <a  href="" class="m-0">
                                         내 가구에 어울리는<br>
-                                        <strong>인테리어 보러가기</strong>
+                                        <strong class="fw-700">인테리어 보러가기</strong>
                                         </a>
                                          <svg class="arrow_icon arrow_black"><use href="#arrow"></use>
                                     </svg>
@@ -1418,19 +1415,14 @@
         <!-- review swiper -->
         <script>
             var review_swiper = new Swiper(".review_swiper", {
-                // slidesPerView: '3.5',
-                spaceBetween: 30,
+                spaceBetween: 10,
                 slidesPerView: 'auto',
                 loop:true,
-                pagination: {
-                    el: ".review_swiper .swiper-pagination",
-                    clickable: true,
+                scrollbar: {
+                    el: ".swiper-scrollbar",
+                    draggable: true,
+                    hide: false,
                 },
-                navigation: {
-                    nextEl: ".review_swiper .swiper-button-next",
-                    prevEl: ".review_swiper .swiper-button-prev",
-                },
-                
             });
         </script>
 

@@ -1,3 +1,14 @@
+.logo {
+  @media(max-width:1200px){
+    width: 200px;
+    height: auto;
+  }
+  @media(max-width:420px){
+    width: 150px;
+    height: auto;
+  }
+}
+
 #event {
   .swiper-scrollbar {
     top: calc(50% + 38rem);
@@ -243,11 +254,14 @@
   margin-top: clamp(2rem, 1vw + 1.5rem, 70px);
 
   .banner_img1 {
-    background-color: #713131cc;
+     background: url(../img/event/mi_banner.jpg) no-repeat center 42% / cover;
+    
     @media (max-width: 1199px) {
+      background: d-none;
+      background-color: #713131cc;
       width: 100%;
     }
-}
+  }
   .banner_eco1 {
     background: url(../img/event/eco_banner2.jpg) no-repeat center center / cover;
   }

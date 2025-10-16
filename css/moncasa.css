@@ -116,6 +116,41 @@ ol, ul {
   }
 }
 
+.fw-100 {
+  font-family: "Pretendard-100";
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-family: "Pretendard-200";
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-family: "Pretendard-300";
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-family: "Pretendard-400";
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-family: "Pretendard-500";
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-family: "Pretendard-600";
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-family: "Pretendard-700";
+  font-weight: 700;
+}
+
 .arrow_icon {
   width: 70px;
   height: auto;
@@ -183,90 +218,84 @@ ol, ul {
 }
 
 #review .swiper-slide {
-  width: 350px;
-  height: 575px;
+  width: 427px;
+  height: 528px;
 }
-@media (max-width: 1199px) {
-  #review .swiper-slide {
-    width: 300px;
-    height: 470px;
-  }
-}
-@media (max-width: 420px) {
-  #review .swiper-slide {
-    width: 260px;
-    height: 380px;
-  }
-}
-#review .swiper-button-next,
-#review .swiper-button-prev {
-  display: none;
-}
-
-.review_card {
-  border-radius: 35px 35px 0 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  height: 575px;
-}
-@media (max-width: 1199px) {
-  .review_card {
-    width: 300px;
-    height: 470px;
-  }
-}
-@media (max-width: 420px) {
-  .review_card {
-    width: 260px;
-    height: 380px;
-  }
+#review .swiper-scrollbar {
+  width: 100% !important;
 }
 
 .review_img {
+  width: 427px;
+  height: 528px;
   object-fit: cover;
-  width: 100%;
-  height: 18rem;
+  opacity: 0.8;
+}
+
+.review_card {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: black;
 }
 @media (max-width: 1199px) {
-  .review_img {
-    height: 14rem;
+  .review_card {
+    width: 300px;
+    height: 470px;
   }
 }
 @media (max-width: 420px) {
-  .review_img {
-    height: 12rem;
+  .review_card {
+    width: 260px;
+    height: 380px;
   }
 }
 
+.review_event {
+  background-color: #F6F1EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review_title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-bottom: 1rem;
+}
+
+.text_multi {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 기존 방식 */
+  line-clamp: 2; /* 신형 표준 fallback */
+}
+
 .stars {
-  max-width: 140px;
+  max-width: 100px;
   height: auto;
 }
 @media (max-width: 1199px) {
   .stars {
-    width: 120px;
+    width: 80px;
   }
 }
 @media (max-width: 420px) {
   .stars {
-    width: 100px;
+    width: 60px;
   }
 }
 
 .review_text {
-  height: 18rem;
-  background-color: #EDDFDF;
-  padding: 1rem;
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-@media (max-width: 768px) {
-  .review_text {
-    height: 16rem;
-    text-align: center;
-  }
+  justify-content: end;
+  padding: 2rem;
+  color: white;
 }
 
 .review_bt {
@@ -299,6 +328,19 @@ ol, ul {
 }
 
 /* 바 전체 (옅은 회색) */
+@media (max-width: 1200px) {
+  .logo {
+    width: 200px;
+    height: auto;
+  }
+}
+@media (max-width: 420px) {
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+}
+
 #event .swiper-scrollbar {
   top: calc(50% + 38rem);
 }
@@ -570,10 +612,12 @@ ol, ul {
   margin-top: clamp(2rem, 1vw + 1.5rem, 70px);
 }
 .banner_set .banner_img1 {
-  background-color: rgba(113, 49, 49, 0.8);
+  background: url(../img/event/mi_banner.jpg) no-repeat center 42%/cover;
 }
 @media (max-width: 1199px) {
   .banner_set .banner_img1 {
+    background: d-none;
+    background-color: rgba(113, 49, 49, 0.8);
     width: 100%;
   }
 }
