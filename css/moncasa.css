@@ -249,7 +249,7 @@ ol, ul {
 @media (max-width: 420px) {
   #review .swiper-slide {
     width: 160px;
-    height: 190px;
+    height: 200px;
   }
 }
 #review .swiper-scrollbar {
@@ -277,7 +277,7 @@ ol, ul {
 @media (max-width: 420px) {
   .review_img {
     width: 160px;
-    height: 190px;
+    height: 200px;
   }
 }
 
@@ -303,7 +303,7 @@ ol, ul {
   .review_card {
     border-radius: 15px;
     width: 160px;
-    height: 190px;
+    height: 200px;
   }
 }
 
@@ -578,12 +578,12 @@ ol, ul {
 
 @media (max-width: 1200px) {
   .main_banner {
-    padding-top: 11rem;
+    padding-top: 10rem;
   }
 }
 @media (max-width: 420px) {
   .main_banner {
-    padding-top: 9rem;
+    padding-top: 8rem;
   }
 }
 
@@ -596,7 +596,7 @@ ol, ul {
 }
 @media (max-width: 1200px) {
   .vartical_text {
-    top: 60%;
+    top: 65%;
   }
 }
 @media (max-width: 420px) {

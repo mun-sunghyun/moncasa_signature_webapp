@@ -59,8 +59,6 @@
       height: auto;
       overflow: unset;
     }
-    
-
     .quick_btn {
       display: flex;
       justify-content: space-between;
@@ -174,10 +172,10 @@
 
 .main_banner {
   @media(max-width:1200px){
-    padding-top: 11rem;
+    padding-top: 10rem;
   }
   @media(max-width:420px){
-    padding-top: 9rem;
+    padding-top: 8rem;
   }
 }
 
@@ -188,7 +186,7 @@
   transform-origin: left top;
   left: 0.5rem;
   @media(max-width:1200px){
-    top: 60%;
+    top: 65%;
   }
   @media(max-width:420px){
     top: 75%;
@@ -452,10 +450,6 @@
     color: #11111180;
   }
 }
-
-//  .swiper-scrollbar {
-//     width: 500px;
-//   }
 .swiper-scrollbar {
   background: #e0e0e0 !important;
   height: 3px !important;
