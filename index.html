@@ -356,7 +356,7 @@ window.addEventListener("scroll", () => {
 
         <main>
             <!-- 기획전 -->
-            <section id="event" class="main_banner">
+            <section id="event" class="section_p main_banner">
                 <!-- Swiper -->
                 <div class="swiper event_Swiper">
                 <div class="swiper-wrapper d-flex">
@@ -404,7 +404,7 @@ window.addEventListener("scroll", () => {
             <section id="minimal" class=" container_1450 section_p">
                 <div class="gap-0 gap-xxl-5 gap-xl-5 d-flex flex-column flex-xl-row justify-content-between py-xl-5 mt-xl-5">
                 <!-- 미니멀 이미지 -->
-                    <div class="d-xl-flex col mt-4">
+                    <div class="d-xl-flex col mt-xl-4">
                         <div class="event_img event_img1 w-100 d-flex flex-column justify-content-between position-relative">
                             <div class="d-flex flex-column m-xl-0 ps-xl-5 pt-xl-5 gap-2">
                                 <h2 class="event_main_title mainColor-text d-flex">
@@ -546,7 +546,7 @@ window.addEventListener("scroll", () => {
             <section id="upcycling" class=" container_1450 section_p">
                 <div class="gap-0 gap-xxl-5 gap-xl-5 d-flex flex-column flex-xl-row justify-content-between">
                 <!-- 기획전 이미지 -->
-                    <div class="d-xl-flex col mt-4 order-2">
+                    <div class="d-xl-flex col mt-xl-4 order-2">
                         <div class="event_img event_img2 w-100 d-flex flex-column justify-content-between position-relative">
                             <div class="d-flex flex-column m-xl-0 ps-xl-5 pt-xl-5 gap-2">
                                 <h3 class="event_main_title text-white d-flex">
@@ -888,8 +888,8 @@ window.addEventListener("scroll", () => {
                 </div>
             </section>
             <!-- 취향찾기 완료 -->
-            <section id="taste" class="section_p">
-                <div class="taste_bg w-100 d-flex position-relative justify-content-center align-items-center pb-xl-5 mt-xl-3 mb-4 mb-xl-0">
+            <section id="taste" class="section_p mt-4 mb-4">
+                <div class="taste_bg w-100 d-flex position-relative justify-content-center align-items-center pb-xl-5 mt-xl-3">
                     <div class="container_1650 position-absolute top-50 mx-xl-auto mx-2 start-0 end-0">
                         <div class="swiper-button-prev position-absolute start-0 ps-md-4 d-block"></div>
                         <div class="swiper-button-next position-absolute end-0 pe-md-4 d-block"></div>
@@ -1429,7 +1429,7 @@ window.addEventListener("scroll", () => {
             return new Swiper(selector, {
                 loop: false,
                 slidesPerView: 2.3,
-                spaceBetween: 16,
+                spaceBetween: 10,
                 scrollbar: {
                     el: ".swiper-scrollbar",
                     draggable: true,
@@ -1440,9 +1440,9 @@ window.addEventListener("scroll", () => {
                         slidesPerView: 4.5,
                         spaceBetween: 20,
                     },
-                    991: { // 991px 이상 ~ 1199px → 2개씩
+                    768: { // 991px 이상 ~ 1199px → 2개씩
                         slidesPerView: 2.5,
-                        spaceBetween: 30,
+                        spaceBetween: 20,
                         grid: {
                             rows: 1,
                             fill: "row",
@@ -1450,7 +1450,7 @@ window.addEventListener("scroll", () => {
                     },
                     0: { // 모바일
                         slidesPerView: 2.3,
-                        spaceBetween: 16,
+                        spaceBetween: 10,
                         grid: {
                             rows: 1,
                             fill: "row",

@@ -403,6 +403,11 @@ ol, ul {
   right: 2rem;
   z-index: 1000;
 }
+@media (max-width: 1200px) {
+  .quick_menu {
+    right: 1rem;
+  }
+}
 .quick_menu li:nth-child(2) {
   margin: 0.3rem 0;
 }
