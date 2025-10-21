@@ -68,13 +68,33 @@
 // }
 
 #review {
+
+  .review_more {
+    color: #713131;
+    &:hover {
+      color: white !important;
+    }
+  }
   .swiper-slide {
     width: 427px;
     height: 528px;
+     @media(max-width:1200px){
+    width: 320px;
+    height: 400px;
+  }
+  @media(max-width:768px){
+    width: 260px;
+    height: 330px;
+  }
+  @media(max-width:420px){
+    width: 145px;
+    height: 179px;
+  }
   }
 
   .swiper-scrollbar {
-    width: 100% !important;
+      width: 100% !important;
+    
   }
 }
 
@@ -83,6 +103,18 @@
   height: 528px;
   object-fit: cover;
   opacity: 0.8;
+ @media(max-width:1200px){
+    width: 320px;
+    height: 400px;
+  }
+  @media(max-width:768px){
+    width: 260px;
+    height: 330px;
+  }
+  @media(max-width:420px){
+    width: 145px;
+    height: 179px;
+  }
 }
 
 .review_card {
@@ -91,14 +123,18 @@
   overflow: hidden;
   background-color: black;
 
-  @media(max-width:1199px){
-    width: 300px;
-    height: 470px;
+   @media(max-width:1200px){
+    width: 320px;
+    height: 400px;
   }
-
-  @media(max-width:420px){
+  @media(max-width:768px){
     width: 260px;
-    height: 380px;
+    height: 330px;
+  }
+  @media(max-width:420px){
+    border-radius: 15px;
+    width: 145px;
+    height: 179px;
   }
 }
 
@@ -112,6 +148,9 @@
   white-space: nowrap;   
   text-overflow: ellipsis;
   padding-bottom: 1rem;
+  @media(max-width:1200px){
+    padding-bottom: 0.5rem;
+  }
 }
 
 .text_multi {
@@ -120,6 +159,11 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2; /* 기존 방식 */
   line-clamp: 2; /* 신형 표준 fallback */
+}
+
+.bar_text {
+  font-size: 20px;
+  color: #D9D9D9;
 }
 
 .stars {
@@ -141,6 +185,12 @@
  justify-content: end;
  padding: 2rem;
  color: white;
+ @media(max-width:768px){
+  padding: 1rem;
+ }
+ @media(max-width:420px){
+  padding: 1rem;
+ }
 }
 
 .review_bt {
@@ -195,12 +245,12 @@
 //     // }
 // }
 
-.review_swiper .swiper-button-next,
-.review_swiper .swiper-button-prev {
-    color: #ADADAD !important;
-    user-select: none;
-    position: absolute;
-}  
+// .review_swiper .swiper-button-next,
+// .review_swiper .swiper-button-prev {
+//     color: #ADADAD !important;
+//     user-select: none;
+//     position: absolute;
+// }  
 
 
 

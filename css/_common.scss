@@ -31,7 +31,7 @@ $bigMaxwidth: 1650px;//1650
 :root {
   /* 기획전 */
   --fs-event-main: 50px;
-  --fs-event-sub: 30px;
+  --fs-event-sub: 28px;
   --fs-event-mid: 14px;
 
   /* 일반 텍스트 */
@@ -67,7 +67,7 @@ $bigMaxwidth: 1650px;//1650
     --fs-title-lg: 50px;
     --fs-title-md: 32px;
     --fs-body-md: 24px;
-    --fs-body-sm: 16px;
+    --fs-body-sm: 18px;
   }
 }
 
@@ -129,6 +129,7 @@ ol, ul {
 .container_1650 {
   max-width: $bigMaxwidth;
   margin: 0 auto;
+  width: 100%;
 }
 
 // 섹션 공통 패딩

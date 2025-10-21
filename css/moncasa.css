@@ -2,7 +2,7 @@
 :root {
   /* 기획전 */
   --fs-event-main: 50px;
-  --fs-event-sub: 30px;
+  --fs-event-sub: 28px;
   --fs-event-mid: 14px;
   /* 일반 텍스트 */
   --fs-title-lg: 18px;
@@ -34,7 +34,7 @@
     --fs-title-lg: 50px;
     --fs-title-md: 32px;
     --fs-body-md: 24px;
-    --fs-body-sm: 16px;
+    --fs-body-sm: 18px;
   }
 }
 html, body {
@@ -95,6 +95,7 @@ ol, ul {
 .container_1650 {
   max-width: 1650px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .section_p {
@@ -217,9 +218,33 @@ ol, ul {
   opacity: 1;
 }
 
+#review .review_more {
+  color: #713131;
+}
+#review .review_more:hover {
+  color: white !important;
+}
 #review .swiper-slide {
   width: 427px;
   height: 528px;
+}
+@media (max-width: 1200px) {
+  #review .swiper-slide {
+    width: 320px;
+    height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  #review .swiper-slide {
+    width: 260px;
+    height: 330px;
+  }
+}
+@media (max-width: 420px) {
+  #review .swiper-slide {
+    width: 145px;
+    height: 179px;
+  }
 }
 #review .swiper-scrollbar {
   width: 100% !important;
@@ -231,6 +256,24 @@ ol, ul {
   object-fit: cover;
   opacity: 0.8;
 }
+@media (max-width: 1200px) {
+  .review_img {
+    width: 320px;
+    height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .review_img {
+    width: 260px;
+    height: 330px;
+  }
+}
+@media (max-width: 420px) {
+  .review_img {
+    width: 145px;
+    height: 179px;
+  }
+}
 
 .review_card {
   position: relative;
@@ -238,16 +281,23 @@ ol, ul {
   overflow: hidden;
   background-color: black;
 }
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
   .review_card {
-    width: 300px;
-    height: 470px;
+    width: 320px;
+    height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .review_card {
+    width: 260px;
+    height: 330px;
   }
 }
 @media (max-width: 420px) {
   .review_card {
-    width: 260px;
-    height: 380px;
+    border-radius: 15px;
+    width: 145px;
+    height: 179px;
   }
 }
 
@@ -264,6 +314,11 @@ ol, ul {
   text-overflow: ellipsis;
   padding-bottom: 1rem;
 }
+@media (max-width: 1200px) {
+  .review_title {
+    padding-bottom: 0.5rem;
+  }
+}
 
 .text_multi {
   overflow: hidden;
@@ -271,6 +326,11 @@ ol, ul {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2; /* 기존 방식 */
   line-clamp: 2; /* 신형 표준 fallback */
+}
+
+.bar_text {
+  font-size: 20px;
+  color: #D9D9D9;
 }
 
 .stars {
@@ -297,6 +357,16 @@ ol, ul {
   padding: 2rem;
   color: white;
 }
+@media (max-width: 768px) {
+  .review_text {
+    padding: 1rem;
+  }
+}
+@media (max-width: 420px) {
+  .review_text {
+    padding: 1rem;
+  }
+}
 
 .review_bt {
   display: flex;
@@ -310,13 +380,6 @@ ol, ul {
   }
 }
 
-.review_swiper .swiper-button-next,
-.review_swiper .swiper-button-prev {
-  color: #ADADAD !important;
-  user-select: none;
-  position: absolute;
-}
-
 /*background-size: cover;*/
 /*background-repeat: no-repeat;*/ /* 배경 이미지 반복 안함 */
 /* 작은 화면 (모바일) - 버튼 안쪽으로 더 넣기 */
@@ -328,6 +391,86 @@ ol, ul {
 }
 
 /* 바 전체 (옅은 회색) */
+.quick_menu {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+.quick_menu li:nth-child(2) {
+  margin: 0.3rem 0;
+}
+.quick_menu a .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 95px;
+  border-radius: 50px;
+  background: #713131;
+  position: relative;
+  z-index: 999;
+}
+.quick_menu a .label {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  position: absolute;
+  right: 0;
+  font-family: "Pretendard-500";
+  font-size: 18px;
+  background-color: #ADADAD;
+  width: 95px;
+  height: 95px;
+  border-radius: 50px;
+}
+.quick_menu a:hover .label {
+  width: 220%;
+}
+
+@media (max-width: 1200px) {
+  .quick_menu {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    overflow: hidden;
+    gap: 4px;
+    align-items: center;
+  }
+  .quick_menu.active {
+    height: auto;
+    overflow: unset;
+  }
+  .quick_menu .quick_btn {
+    display: flex;
+    justify-content: space-between;
+    width: 55px;
+    height: 55px;
+  }
+  .quick_menu .quick_btn .icon {
+    width: 55px;
+    height: 55px;
+  }
+  .quick_menu .quick_btn .label {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width: 220%;
+    height: 55px;
+    font-family: "Pretendard-400";
+    font-size: 12px;
+  }
+  .quick_menu #mobile_quick {
+    width: 55px;
+    height: 55px;
+    background-color: #713131;
+    border-radius: 50px;
+    border: none;
+    flex-shrink: 0;
+  }
+}
 @media (max-width: 1200px) {
   .logo {
     width: 200px;
@@ -341,13 +484,33 @@ ol, ul {
   }
 }
 
-#event .swiper-scrollbar {
-  top: calc(50% + 38rem);
+#event .swiper-pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem 0 2rem;
+  width: 100% !important;
+  top: calc(50% + 37.5rem);
+}
+@media (max-width: 1200px) {
+  #event .swiper-pagination {
+    top: calc(50% + 54rem);
+  }
+}
+@media (max-width: 768px) {
+  #event .swiper-pagination {
+    top: calc(50% + 35.5rem);
+  }
 }
 @media (max-width: 420px) {
-  #event .swiper-scrollbar {
+  #event .swiper-pagination {
     top: calc(50% + 18rem);
   }
+}
+#event .swiper-pagination .swiper-pagination-bullet {
+  background: #713131;
+  border: none;
+  flex-grow: 1;
+  height: 2px;
 }
 
 .main_banner_title {
@@ -466,15 +629,15 @@ ol, ul {
 .event_sub_txt {
   font-family: "Pretendard-700";
   letter-spacing: -1px;
-  line-height: 150%;
+  line-height: 130%;
   font-size: var(--fs-event-sub);
 }
 .event_sub_txt.shadow_text {
   text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
 }
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .event_sub_txt {
-    line-height: 70px;
+    line-height: 120%;
   }
 }
 
@@ -696,28 +859,19 @@ ol, ul {
 .text_sm.gray_text {
   color: #999;
 }
-
-.percent {
-  font-family: "Pretendard-700";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media (max-width: 420px) {
-  .percent {
-    font-size: 35px;
-  }
-}
-@media (min-width: 420px) {
-  .percent {
-    font-size: clamp(40px, 2vw + 38px, 90px);
-  }
+.text_sm.soft_text {
+  color: rgba(17, 17, 17, 0.5019607843);
 }
 
 .swiper-scrollbar {
   background: #e0e0e0 !important;
-  height: 1px !important;
+  height: 3px !important;
   width: calc(70% - 2 * var(--swiper-scrollbar-sides-offset, 1%)) !important;
+}
+@media (max-width: 1200px) {
+  .swiper-scrollbar {
+    height: 2px !important;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -729,7 +883,7 @@ ol, ul {
   #taste .progress-fixed-wrapper {
     width: 400px !important;
     top: calc(50% - 1.3rem) !important;
-    left: 6.5rem !important;
+    left: 5.5rem !important;
   }
 }
 @media (max-width: 768px) {
@@ -739,8 +893,8 @@ ol, ul {
   }
   #taste .progress-fixed-wrapper {
     width: 350px !important;
-    top: calc(50% - 1.5rem) !important;
-    left: 4rem !important;
+    top: calc(50% - 0.5rem) !important;
+    left: 3rem !important;
   }
 }
 @media (max-width: 420px) {
@@ -750,13 +904,27 @@ ol, ul {
   #taste .progress-fixed-wrapper {
     width: 260px !important;
     top: calc(50% - 1.3rem) !important;
-    left: 2.5rem !important;
+    left: 2.2rem !important;
   }
 }
-.swiper-scrollbar {
-  width: 500px;
-  height: 2px;
-  background: #ddd;
+
+.text_ps {
+  padding-left: 6.5rem;
+}
+@media (max-width: 1200px) {
+  .text_ps {
+    padding-left: 5.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .text_ps {
+    padding-left: 3rem;
+  }
+}
+@media (max-width: 420px) {
+  .text_ps {
+    padding-left: 2.3rem;
+  }
 }
 
 .swiper-pagination {
@@ -780,11 +948,16 @@ ol, ul {
   justify-content: center;
   align-items: center;
 }
-.option-btn.border_none {
-  border: none;
+@media (max-width: 1200px) {
+  .option-btn.border_none {
+    border: none !important;
+  }
 }
 .option-btn.border_white {
   border: 1px solid white;
+}
+.option-btn.border_mainC {
+  border: 1px solid #713131;
 }
 .option-btn.min_w {
   min-width: 200px;
@@ -814,7 +987,7 @@ ol, ul {
 }
 .option-btn:hover {
   background-color: #713131 !important;
-  color: white;
+  color: white !important;
 }
 
 .swiper-button-next,
@@ -835,7 +1008,7 @@ ol, ul {
 .progress-fixed-wrapper {
   gap: 10px;
   width: 420px;
-  top: calc(50% + 3.5rem);
+  top: calc(50% + 4rem);
   left: 108px;
 }
 
@@ -852,19 +1025,26 @@ ol, ul {
   position: unset !important;
 }
 
+#interior .interior_box .border_white {
+  border-color: #713131;
+}
 @media (max-width: 1199px) {
-  .interior_box {
+  #interior .interior_box {
     background-color: #713131;
     color: white;
   }
+  #interior .interior_box .border_white {
+    border-color: white;
+  }
 }
 
-/* gnb */
-.gnb .gnb_li_a {
-  font-size: 25px;
-}
+.gnb .gnb_li_a,
 .gnb .gnb_li_a_bold {
   font-size: 25px;
+}
+
+.gnb_li_a.active {
+  text-decoration: underline;
 }
 
 .global_bt {
@@ -887,86 +1067,7 @@ ol, ul {
   color: currentColor;
 }
 
-.quick_menu {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 1000;
-}
-.quick_menu li:nth-child(2) {
-  margin: 0.3rem 0;
-}
-.quick_menu a .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 95px;
-  height: 95px;
-  border-radius: 50px;
-  background: #713131;
-  position: relative;
-  z-index: 999;
-}
-.quick_menu a .label {
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
-  position: absolute;
-  right: 0;
-  font-family: "Pretendard-500";
-  font-size: 18px;
-  background-color: #ADADAD;
-  width: 95px;
-  height: 95px;
-  border-radius: 50px;
-}
-.quick_menu a:hover .label {
-  width: 220%;
-}
-
-@media (max-width: 991px) {
-  .quick_menu {
-    width: 55px;
-    height: 55px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    overflow: hidden;
-    gap: 4px;
-    align-items: center;
-  }
-  .quick_menu.active {
-    height: auto;
-    overflow: unset;
-  }
-  .quick_menu .quick_btn {
-    display: flex;
-    justify-content: space-between;
-    width: 55px;
-    height: 55px;
-  }
-  .quick_menu .quick_btn .icon {
-    width: 55px;
-    height: 55px;
-  }
-  .quick_menu .quick_btn .label {
-    display: flex;
-    align-items: center;
-    padding-left: 15px;
-    width: 220%;
-    height: 55px;
-    font-family: "Pretendard-400";
-    font-size: 12px;
-  }
-  .quick_menu #mobile_quick {
-    width: 55px;
-    height: 55px;
-    background-color: #713131;
-    border-radius: 50px;
-    border: none;
-    flex-shrink: 0;
-  }
-}
+/* ===== 반응형 ===== */
 @media (max-width: 1200px) {
   .gnb .gnb_li_a {
     font-size: 20px;
@@ -993,7 +1094,7 @@ ol, ul {
     height: 22px;
   }
 }
-@media (max-width: 1200px) and (max-width: 420px) {
+@media (max-width: 420px) {
   .gnb .gnb_li_a {
     font-size: 14px;
     padding: 5px 15px;
