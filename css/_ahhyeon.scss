@@ -122,7 +122,7 @@
     }
     .swiper-pagination-bullet{
     background: #713131;
-    border: 0;
+    border-radius: 0;
     flex-grow: 1;
     height:2px;
     }
@@ -238,6 +238,9 @@
   letter-spacing: -0.5px;
   line-height: 150%;
   font-size: var(--fs-event-mid);
+  @media(max-width:420px){
+    line-height: 120%;
+  }
 }
 
 // 기획전 이미지
@@ -249,7 +252,7 @@
     padding: 2rem;
   }
   @media(max-width:420px){
-    padding:0.5rem;
+    padding:1rem;
   }
 }
 
@@ -462,40 +465,62 @@
 
 // 취향찾기
 #taste {
-  @media (max-width: 1200px) {
-    .options {
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr) !important;
-      width: auto !important;
+  .taste_bg{
+    background-color: #F5F5F5;
+    @media(max-width:1200px){
+      background-color: white;
     }
-    .progress-fixed-wrapper {
+  }
+  .progress-fixed-wrapper {
+    gap: 10px;
+    width: 420px;
+    top: calc(50% + 4rem);
+    left: 108px;
+
+    @media(max-width:1200px){
       width: 400px !important;
       top: calc(50% + -1.3rem) !important;
       left: 5.5rem !important;
     }
-  }
-  @media (max-width:768px) {
-    .swiper-button-prev:after,
-    .swiper-button-next:after { 
-      font-size: 18px;
-    }
-  .progress-fixed-wrapper {
+    @media (max-width:768px){
       width: 350px !important;
       top: calc(50% + -0.5rem) !important;
       left: 3rem !important;
     }
-  }
-  @media (max-width:420px) {
-    .options {
-      margin-top: 3rem !important;
-    }
-    .progress-fixed-wrapper {
+    @media (max-width:420px){
       width: 260px !important;
-      top: calc(50% + -1.3rem) !important;
+      top: calc(50% + -1.5rem) !important;
       left: 2.2rem !important;
     }
   }
+
+  .options {
+    @media (max-width: 1200px) {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      width: auto !important;
+    }
+    @media (max-width:420px) {
+      margin-top: 3rem !important;
+    }
+  }
+  @media(max-width:768px) {
+    .swiper-button-prev:after,
+    .swiper-button-next:after { 
+      font-size: 18px;
+    }
+  }
 }
+.swiper-button-next,
+  .swiper-button-prev {
+    color: #ADADAD;
+    top: calc(50% + 6.5rem);
+    z-index: 10;
+  }
+
+  .swiper-button-next {
+    pointer-events: none;
+  }
 
 .text_ps {
   padding-left: 6.5rem;
@@ -528,68 +553,48 @@
     @include flex-center;
 
     &.border_none{
-    @media(max-width:1200px){
-      border: none !important;
+      @media(max-width:1200px){
+        border: none !important;
+      }
     }
-    
-    }
-    
     &.border_white{
       border: 1px solid white;
     }
-
     &.border_mainC{
       border: 1px solid #713131;
     }
-
     &.min_w{
       min-width: 200px;
       @media (max-width:1200px){
         min-width: 160px;
       }
       @media (max-width:768px){
+        min-width: 140px;
+      }
+      @media(max-width:420px){
         min-width: 120px;
-      } 
+      }
     }
-
     &.min_h{
       min-height: 70px;
       @media (max-width:1200px){
         min-height: 60px;
       }
-       @media (max-width:768px){
+      @media (max-width:768px){
+        min-height: 55px;
+      }
+      @media(max-width:420px){
         min-height: 50px;
       }
     }
-
     &:hover {
       background-color: $mainColor !important;
       color : white !important;
     }
   }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: #ADADAD;
-    top: calc(50% + 6.5rem);
-    z-index: 10;
-  }
-
-  .swiper-button-next {
-    pointer-events: none;
-  }
-
   .top_fixed_box {
     z-index: 10;
   }
-
-  .progress-fixed-wrapper {
-    gap: 10px;
-    width: 420px;
-    top: calc(50% + 4rem);
-    left: 108px;
-  }
-
   .taste_icon {
     width: 68.333px;
     height: 50px;
