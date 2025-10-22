@@ -148,11 +148,19 @@
 
 .review_title {
   overflow: hidden;
-  white-space: nowrap;   
   text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* 기존 방식 */
   padding-bottom: 1rem;
   @media(max-width:1200px){
     padding-bottom: 0.5rem;
+  }
+  @media(max-width:420px){
+    -webkit-line-clamp: 2; /* 기존 방식 */
+    white-space: normal;
+    line-height: 1.1rem;
   }
 }
 
@@ -162,6 +170,9 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2; /* 기존 방식 */
   line-clamp: 2; /* 신형 표준 fallback */
+  @media(max-width:420px){
+    display: none;
+  }
 }
 
 .bar_text {
@@ -192,7 +203,8 @@
   padding: 1rem;
  }
  @media(max-width:420px){
-  padding: 1rem;
+  padding: 0;
+  padding: 0 12px 10px 12px;
  }
 }
 
@@ -438,5 +450,16 @@
   }
   strong {
     font-size: var(--fs-body-sm);
+  }
+}
+.footer_logo {
+  width: 289px;
+  height: auto;
+  @media(max-width:1200px){
+    width: 250px;
+  }
+  @media(max-width:420px){
+  width: 203.77px;
+  height: auto;
   }
 }

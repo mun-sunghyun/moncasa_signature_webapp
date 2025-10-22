@@ -316,13 +316,23 @@ ol, ul {
 
 .review_title {
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* 기존 방식 */
   padding-bottom: 1rem;
 }
 @media (max-width: 1200px) {
   .review_title {
     padding-bottom: 0.5rem;
+  }
+}
+@media (max-width: 420px) {
+  .review_title {
+    -webkit-line-clamp: 2; /* 기존 방식 */
+    white-space: normal;
+    line-height: 1.1rem;
   }
 }
 
@@ -332,6 +342,11 @@ ol, ul {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2; /* 기존 방식 */
   line-clamp: 2; /* 신형 표준 fallback */
+}
+@media (max-width: 420px) {
+  .text_multi {
+    display: none;
+  }
 }
 
 .bar_text {
@@ -370,7 +385,8 @@ ol, ul {
 }
 @media (max-width: 420px) {
   .review_text {
-    padding: 1rem;
+    padding: 0;
+    padding: 0 12px 10px 12px;
   }
 }
 
@@ -394,6 +410,22 @@ ol, ul {
 }
 #footer strong {
   font-size: var(--fs-body-sm);
+}
+
+.footer_logo {
+  width: 289px;
+  height: auto;
+}
+@media (max-width: 1200px) {
+  .footer_logo {
+    width: 250px;
+  }
+}
+@media (max-width: 420px) {
+  .footer_logo {
+    width: 203.77px;
+    height: auto;
+  }
 }
 
 /* 바 전체 (옅은 회색) */
@@ -490,7 +522,7 @@ ol, ul {
 }
 @media (max-width: 420px) {
   .logo {
-    width: 150px;
+    width: 115px;
     height: auto;
   }
 }
@@ -1139,12 +1171,12 @@ ol, ul {
     padding: 5px 15px;
   }
   .global_bt {
-    font-size: 14px;
+    font-size: 10px;
     padding: 5px 10px;
   }
   .global_bt svg {
-    width: 23px;
-    height: 22px;
+    width: 15px;
+    height: 15px;
   }
 }
 #hd {
