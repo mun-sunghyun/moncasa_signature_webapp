@@ -89,6 +89,13 @@
       border: none;
       flex-shrink: 0;
     }
+    .mobile_btn {
+      width: 55px;
+      height: 55px;
+      border-radius: 50px;
+      background-color: $mainColor;
+      border: none;
+    }
   }
 }
 
@@ -109,17 +116,12 @@
   .swiper-pagination {
     display: flex;
     justify-content: space-between;
-    padding: 0 2rem 0 2rem;
+    padding: 0 1rem 0 1rem;
     width: 100% !important;
-     top: calc(50% + 37.5rem);
-    @media(max-width:1200px){
-      top: calc(50% + 54rem);
-    }
-    @media(max-width:768px){
-      top: calc(50% + 35.5rem);
-    }
+    top: 95.5%;
+    
     @media(max-width:420px){
-      top: calc(50% + 18rem);
+      top: 93%;
     }
     .swiper-pagination-bullet{
     background: #713131;
@@ -186,6 +188,9 @@
   transform-origin: left top;
   left: 0.5rem;
   @media(max-width:1200px){
+    top: 50%;
+  }
+  @media(max-width:768px){
     top: 65%;
   }
   @media(max-width:420px){
@@ -273,6 +278,14 @@
   }
 }
 
+.up_icon{
+  width: 40px;
+  height: 40px;
+    @media(max-width:420px){
+      width: 20px;
+      height: 20px;
+  }
+}
 //기획전 상품
 .prod_name {
   font-family: $mainFont700;
@@ -427,6 +440,7 @@
   }
 }
 
+
 .text_md {
   font-size: var(--fs-body-md);
 
@@ -436,8 +450,11 @@
   &.gray_text {
     color: #999;
   }
-  &.mdtxt_gap {
-    gap: clamp(15px, 1vw + 14px, 35px);
+  &.soft_text {
+    color: #11111180;
+    @media(max-width:1200px){
+      color: #FFFFFF80;
+    }
   }
 }
 
@@ -461,35 +478,67 @@
 }
 
 // 취향찾기
+
+.arrow_ico{
+  @media(max-width:768px){
+    width: 30px;
+    height: auto;
+  }
+}
+
 #taste {
+
   .taste_bg{
     background-color: #F5F5F5;
+    padding: 100px 0 150px 0;
     @media(max-width:1200px){
       background-color: white;
+      padding: 120px 0 100px 0;
+    }
+    @media(max-width:420px){
+      padding: 60px 0 30px 0;
     }
   }
   .progress-fixed-wrapper {
     gap: 10px;
     width: 420px;
-    top: calc(50% + 4rem);
-    left: 108px;
+    top: calc(50% - 2rem);
+    left: 155px;
 
     @media(max-width:1200px){
       width: 400px !important;
-      top: calc(50% + -1.3rem) !important;
+      top: calc(50% - 1.3rem) !important;
       left: 5.5rem !important;
     }
     @media (max-width:768px){
       width: 350px !important;
-      top: calc(50% + -0.5rem) !important;
-      left: 3rem !important;
+      top: calc(50% - 4rem) !important;
+      left: 5.5rem !important;
     }
     @media (max-width:420px){
       width: 260px !important;
-      top: calc(50% + -1.5rem) !important;
-      left: 2.2rem !important;
+      top: calc(50% - 4.3rem) !important;
+      left: 3.5rem !important;
     }
   }
+  .result-btn {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transition: 0.3s;
+}
+  .result-btn.active {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.restart-btn {
+  margin-left: 10px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.restart-btn:hover {
+  opacity: 1;
+}
 
   .options {
     @media (max-width: 1200px) {
@@ -511,7 +560,7 @@
 .swiper-button-next,
   .swiper-button-prev {
     color: #ADADAD;
-    top: calc(50% + 6.5rem);
+    top: calc(50%);
     z-index: 10;
   }
 
@@ -520,9 +569,9 @@
   }
 
 .text_ps {
-  padding-left: 6.5rem;
+  padding-left: 3.5rem;
   @media(max-width:1200px){
-    padding-left: 5.5rem;
+    padding-left: 3.2rem;
   }
   @media(max-width:768px){
     padding-left: 3rem;
@@ -541,6 +590,54 @@
     }
   }
 
+  .taste_box{
+    gap: 160px;
+    @media(max-width:1200px){
+      gap: 120px;
+    }
+    @media(max-width:768px){
+      gap: 80px;
+    }
+    @media (max-width:420px){
+      gap: 50px;
+    }
+  }
+  .bar {
+    font-size: 50px;
+    color:#D9D9D9;
+    @media(max-width:768px){
+      font-size: 30px;
+    }
+    @media(max-width:420px){
+      font-size: 20px;
+    }
+  }
+  .out_btn {
+    gap: 50px;
+    padding-top: 150px;
+    @media(max-width:1200px){
+      gap: 30px;
+      padding-top: 100px;
+    }
+    @media(max-width:768px){
+      gap: 20px;
+      padding-top: 80px;
+    }
+    @media(max-width:420px){
+      gap: 10px;
+      padding-top: 60px;
+    }
+
+  }
+  .taste_btn{
+    border: none !important;
+    color:#ADADAD;
+    background-color: transparent !important;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+  }
   .option-btn {
     border: 1px solid #909090;
     font-size: var(--fs-body-md);
@@ -565,9 +662,6 @@
       @media (max-width:1200px){
         min-width: 160px;
       }
-      @media (max-width:768px){
-        min-width: 140px;
-      }
       @media(max-width:420px){
         min-width: 120px;
       }
@@ -576,9 +670,6 @@
       min-height: 70px;
       @media (max-width:1200px){
         min-height: 60px;
-      }
-      @media (max-width:768px){
-        min-height: 55px;
       }
       @media(max-width:420px){
         min-height: 50px;

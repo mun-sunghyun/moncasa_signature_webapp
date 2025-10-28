@@ -155,6 +155,14 @@ ol, ul {
 .fw-600 { font-family: $mainFont600; font-weight: 600; }
 .fw-700 { font-family: $mainFont700; font-weight: 700; }
 
+.px-100 {
+  @media(min-width:1200px){
+  padding-left: 100px;
+  padding-right: 100px;
+  }
+}
+
+
 
 // 태그 배지 스타일
 // .tag {
