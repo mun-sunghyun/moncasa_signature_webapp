@@ -531,8 +531,11 @@
   cursor: pointer;
 }
 
+button {
+  padding: 0;
+}
+
 .restart-btn {
-  margin-left: 10px;
   opacity: 0.8;
   transition: 0.3s;
 }

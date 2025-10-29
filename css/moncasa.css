@@ -1019,8 +1019,10 @@ ol, ul {
   opacity: 1;
   cursor: pointer;
 }
+#taste button {
+  padding: 0;
+}
 #taste .restart-btn {
-  margin-left: 10px;
   opacity: 0.8;
   transition: 0.3s;
 }
