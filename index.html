@@ -1167,7 +1167,7 @@ window.addEventListener("scroll", () => {
 
                     if(Object.keys(selectedButtons).length === ulCount){
                         
-                        const combinedValue = Object.values(selectedButtons).join('+');
+                        const combinedValue = Object.values(selectedButtons).join(',');
 
                         const link = document.querySelector('#select-list #searchLink');
                         link.href = `http://moncasa.cafe24.com/product/search.html?keyword=${combinedValue}`;
